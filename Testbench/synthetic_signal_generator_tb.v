@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module synthetic_signal_generator_tb;
 
     reg clk;
@@ -39,3 +41,5 @@ module synthetic_signal_generator_tb;
         $monitor("Time=%0t | State=%b | Alpha=%d | Beta=%d | Theta=%d | GSR=%d",
                   $time, pain_state, alpha_power, beta_power, theta_power, gsr_level);
     end
+
+endmodule

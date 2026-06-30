@@ -1,5 +1,5 @@
 module moving_average_filter #(
-    parameter input_width = 7
+    parameter input_width = 8
 )(
     input  wire       clk,
     input  wire       reset,
@@ -7,26 +7,28 @@ module moving_average_filter #(
     output reg  [input_width-1:0] smoothed_rhythm
 );
 
+    localparam SUM_WIDTH = input_width + 2;
+
     reg [input_width-1:0] delay_1;
     reg [input_width-1:0] delay_2;
     reg [input_width-1:0] delay_3;
 
-    wire [input_width+1:0] sum;
+    wire [SUM_WIDTH-1:0] sum;
     wire [input_width-1:0] average_result;
 
-    assign sum = {2'b00, rhythm} +
-                 {2'b00, delay_1} +
-                 {2'b00, delay_2} +
-                 {2'b00, delay_3};
+    assign sum = {{2{1'b0}}, rhythm} +
+                 {{2{1'b0}}, delay_1} +
+                 {{2{1'b0}}, delay_2} +
+                 {{2{1'b0}}, delay_3};
 
-    assign average_result = sum[8:2];
+    assign average_result = sum >> 2;
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            delay_1          <= 8'd0;
-            delay_2          <= 8'd0;
-            delay_3          <= 8'd0;
-            smoothed_rhythm  <= 8'd0;
+            delay_1          <= {input_width{1'b0}};
+            delay_2          <= {input_width{1'b0}};
+            delay_3          <= {input_width{1'b0}};
+            smoothed_rhythm  <= {input_width{1'b0}};
         end else begin
             delay_1          <= rhythm;
             delay_2          <= delay_1;

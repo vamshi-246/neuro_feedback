@@ -2,7 +2,7 @@
 
 module moving_average_filter_tb;
 
-    parameter input_width = 7;
+    parameter input_width = 8;
 
     reg clk;
     reg reset;

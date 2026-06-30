@@ -1,5 +1,5 @@
 module power #(
-    parameter input_width = 7,
+    parameter input_width = 8,
     parameter WINDOW_SIZE  = 16
 )(
     input  wire       clk,

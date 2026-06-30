@@ -1,5 +1,5 @@
 module feature_vector_generator #(
-    parameter input_width = 7
+    parameter input_width = 8
 )(
     input wire clk,
     input wire reset,
@@ -11,7 +11,7 @@ module feature_vector_generator #(
 );
 always @(posedge clk or posedge reset) begin
     if (reset) begin
-        vector_out <= 32'b0;
+        vector_out <= {(input_width * 4){1'b0}};
     end else begin
         vector_out <= {alpha, beta, theta, gsr};
     end
