@@ -2,13 +2,17 @@
 
 module moving_average_filter_tb;
 
+    parameter input_width = 7;
+
     reg clk;
     reg reset;
-    reg [7:0] rhythm;
+    reg [input_width-1:0] rhythm;
 
-    wire [7:0] smoothed_rhythm;
+    wire [input_width-1:0] smoothed_rhythm;
 
-    moving_average_filter dut (
+    moving_average_filter #(
+        .input_width(input_width)
+    ) dut (
         .clk(clk),
         .reset(reset),
         .rhythm(rhythm),
@@ -20,17 +24,17 @@ module moving_average_filter_tb;
     initial begin
         clk = 0;
         reset = 1;
-        rhythm = 8'd0;
+        rhythm = 0;
 
         #12;
         reset = 0;
 
-        rhythm = 8'd80; #10;
-        rhythm = 8'd78; #10;
-        rhythm = 8'd85; #10;
-        rhythm = 8'd81; #10;
+        rhythm = 80; #10;
+        rhythm = 78; #10;
+        rhythm = 85; #10;
+        rhythm = 81; #10;
 
-        if (smoothed_rhythm != 8'd81) begin
+        if (smoothed_rhythm != 81) begin
             $display("FAIL: expected 81, got %0d", smoothed_rhythm);
         end else begin
             $display("PASS: moving average output = %0d", smoothed_rhythm);

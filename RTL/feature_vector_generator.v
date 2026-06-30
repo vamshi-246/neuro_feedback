@@ -1,11 +1,13 @@
-module feature_vector_generator(
+module feature_vector_generator #(
+    parameter input_width = 7
+)(
     input wire clk,
     input wire reset,
-    input wire [7:0] alpha,
-    input wire [7:0] beta,
-    input wire [7:0] theta,
-    input wire [7:0] gsr,
-    output reg [31:0] vector_out
+    input wire [input_width-1:0] alpha,
+    input wire [input_width-1:0] beta,
+    input wire [input_width-1:0] theta,
+    input wire [input_width-1:0] gsr,
+    output reg [input_width*4-1:0] vector_out
 );
 always @(posedge clk or posedge reset) begin
     if (reset) begin

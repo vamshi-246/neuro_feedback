@@ -1,22 +1,37 @@
-module power (
+module power #(
+    parameter input_width = 7,
+    parameter WINDOW_SIZE  = 16
+)(
     input  wire       clk,
     input  wire       reset,
-    input  wire [7:0] feature_signal,
-    output reg  [15:0] power_out,
+    input  wire [input_width-1:0] feature_signal,
+    output reg  [input_width*2-1:0] power_out,
     output reg        power_valid
 );
 
-    parameter WINDOW_SIZE = 16;
-    parameter SHIFT_BITS  = 4;
+    function integer clog2;
+        input integer value;
+        integer temp;
+        begin
+            temp = value - 1;
+            for (clog2 = 0; temp > 0; clog2 = clog2 + 1)
+                temp = temp >> 1;
+        end
+    endfunction
 
-    reg [15:0] square_buffer [0:WINDOW_SIZE-1];
-    reg [3:0]  write_index;
-    reg [4:0]  sample_count;
-    reg [19:0] sum_sq;
+    localparam SQUARE_WIDTH = input_width * 2;
+    localparam INDEX_WIDTH   = (WINDOW_SIZE > 1) ? clog2(WINDOW_SIZE) : 1;
+    localparam ACC_WIDTH     = SQUARE_WIDTH + clog2(WINDOW_SIZE);
+    localparam SHIFT_BITS    = clog2(WINDOW_SIZE);
 
-    wire [15:0] newest_square;
-    wire [15:0] oldest_square;
-    wire [19:0] updated_sum;
+    reg [SQUARE_WIDTH-1:0] square_buffer [0:WINDOW_SIZE-1];
+    reg [INDEX_WIDTH-1:0]  write_index;
+    reg [INDEX_WIDTH:0]    sample_count;
+    reg [ACC_WIDTH-1:0]    sum_sq;
+
+    wire [SQUARE_WIDTH-1:0] newest_square;
+    wire [SQUARE_WIDTH-1:0] oldest_square;
+    wire [ACC_WIDTH-1:0]    updated_sum;
 
     integer i;
 

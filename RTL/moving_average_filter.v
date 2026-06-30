@@ -1,23 +1,25 @@
-module moving_average_filter (
+module moving_average_filter #(
+    parameter input_width = 7
+)(
     input  wire       clk,
     input  wire       reset,
-    input  wire [7:0] rhythm,
-    output reg  [7:0] smoothed_rhythm
+    input  wire [input_width-1:0] rhythm,
+    output reg  [input_width-1:0] smoothed_rhythm
 );
 
-    reg [7:0] delay_1;
-    reg [7:0] delay_2;
-    reg [7:0] delay_3;
+    reg [input_width-1:0] delay_1;
+    reg [input_width-1:0] delay_2;
+    reg [input_width-1:0] delay_3;
 
-    wire [9:0] sum;
-    wire [7:0] average_result;
+    wire [input_width+1:0] sum;
+    wire [input_width-1:0] average_result;
 
     assign sum = {2'b00, rhythm} +
                  {2'b00, delay_1} +
                  {2'b00, delay_2} +
                  {2'b00, delay_3};
 
-    assign average_result = sum[9:2];
+    assign average_result = sum[8:2];
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
