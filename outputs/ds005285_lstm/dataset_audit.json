@@ -1,0 +1,2206 @@
+[
+  {
+    "subject":"sub-001",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-001\/ses-1\/eeg\/sub-001_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub1.cnt"
+  },
+  {
+    "subject":"sub-001",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-001\/ses-2\/eeg\/sub-001_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub1.cnt"
+  },
+  {
+    "subject":"sub-001",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-001\/ses-3\/eeg\/sub-001_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub1.cnt"
+  },
+  {
+    "subject":"sub-001",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-001\/ses-4\/eeg\/sub-001_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub1.cnt"
+  },
+  {
+    "subject":"sub-002",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-002\/ses-1\/eeg\/sub-002_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub2.cnt"
+  },
+  {
+    "subject":"sub-002",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-002\/ses-2\/eeg\/sub-002_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub2.cnt"
+  },
+  {
+    "subject":"sub-002",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-002\/ses-3\/eeg\/sub-002_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub2.cnt"
+  },
+  {
+    "subject":"sub-002",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-002\/ses-4\/eeg\/sub-002_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub2.cnt"
+  },
+  {
+    "subject":"sub-003",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-003\/ses-1\/eeg\/sub-003_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub3.cnt"
+  },
+  {
+    "subject":"sub-003",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-003\/ses-2\/eeg\/sub-003_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub3.cnt"
+  },
+  {
+    "subject":"sub-003",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-003\/ses-3\/eeg\/sub-003_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub3.cnt"
+  },
+  {
+    "subject":"sub-003",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-003\/ses-4\/eeg\/sub-003_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub3.cnt"
+  },
+  {
+    "subject":"sub-004",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-004\/ses-1\/eeg\/sub-004_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub5.cnt"
+  },
+  {
+    "subject":"sub-004",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-004\/ses-2\/eeg\/sub-004_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub5.cnt"
+  },
+  {
+    "subject":"sub-004",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-004\/ses-3\/eeg\/sub-004_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub5.cnt"
+  },
+  {
+    "subject":"sub-004",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-004\/ses-4\/eeg\/sub-004_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub5.cnt"
+  },
+  {
+    "subject":"sub-005",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-005\/ses-1\/eeg\/sub-005_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub6.cnt"
+  },
+  {
+    "subject":"sub-005",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-005\/ses-2\/eeg\/sub-005_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub6.cnt"
+  },
+  {
+    "subject":"sub-005",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-005\/ses-3\/eeg\/sub-005_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub6.cnt"
+  },
+  {
+    "subject":"sub-005",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-005\/ses-4\/eeg\/sub-005_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub6.cnt"
+  },
+  {
+    "subject":"sub-006",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-006\/ses-1\/eeg\/sub-006_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub7.cnt"
+  },
+  {
+    "subject":"sub-006",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-006\/ses-2\/eeg\/sub-006_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub7.cnt"
+  },
+  {
+    "subject":"sub-006",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-006\/ses-3\/eeg\/sub-006_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub7.cnt"
+  },
+  {
+    "subject":"sub-006",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-006\/ses-4\/eeg\/sub-006_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub7.cnt"
+  },
+  {
+    "subject":"sub-007",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-007\/ses-1\/eeg\/sub-007_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub8.cnt"
+  },
+  {
+    "subject":"sub-007",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-007\/ses-2\/eeg\/sub-007_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub8.cnt"
+  },
+  {
+    "subject":"sub-007",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-007\/ses-3\/eeg\/sub-007_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub8.cnt"
+  },
+  {
+    "subject":"sub-007",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-007\/ses-4\/eeg\/sub-007_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub8.cnt"
+  },
+  {
+    "subject":"sub-008",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-008\/ses-1\/eeg\/sub-008_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub9.cnt"
+  },
+  {
+    "subject":"sub-008",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-008\/ses-2\/eeg\/sub-008_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub9.cnt"
+  },
+  {
+    "subject":"sub-008",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-008\/ses-3\/eeg\/sub-008_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub9.cnt"
+  },
+  {
+    "subject":"sub-008",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-008\/ses-4\/eeg\/sub-008_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub9.cnt"
+  },
+  {
+    "subject":"sub-009",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-009\/ses-1\/eeg\/sub-009_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub10.cnt"
+  },
+  {
+    "subject":"sub-009",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-009\/ses-2\/eeg\/sub-009_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub10.cnt"
+  },
+  {
+    "subject":"sub-009",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-009\/ses-3\/eeg\/sub-009_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub10.cnt"
+  },
+  {
+    "subject":"sub-009",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-009\/ses-4\/eeg\/sub-009_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub10.cnt"
+  },
+  {
+    "subject":"sub-010",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-010\/ses-1\/eeg\/sub-010_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub11.cnt"
+  },
+  {
+    "subject":"sub-010",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-010\/ses-2\/eeg\/sub-010_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub11.cnt"
+  },
+  {
+    "subject":"sub-010",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-010\/ses-3\/eeg\/sub-010_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub11.cnt"
+  },
+  {
+    "subject":"sub-010",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-010\/ses-4\/eeg\/sub-010_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub11.cnt"
+  },
+  {
+    "subject":"sub-011",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-011\/ses-1\/eeg\/sub-011_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub12.cnt"
+  },
+  {
+    "subject":"sub-011",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-011\/ses-2\/eeg\/sub-011_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub12.cnt"
+  },
+  {
+    "subject":"sub-011",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-011\/ses-3\/eeg\/sub-011_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub12.cnt"
+  },
+  {
+    "subject":"sub-011",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-011\/ses-4\/eeg\/sub-011_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub12.cnt"
+  },
+  {
+    "subject":"sub-012",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-012\/ses-1\/eeg\/sub-012_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub13.cnt"
+  },
+  {
+    "subject":"sub-012",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-012\/ses-2\/eeg\/sub-012_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub13.cnt"
+  },
+  {
+    "subject":"sub-012",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-012\/ses-3\/eeg\/sub-012_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub13.cnt"
+  },
+  {
+    "subject":"sub-012",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-012\/ses-4\/eeg\/sub-012_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub13.cnt"
+  },
+  {
+    "subject":"sub-013",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-013\/ses-1\/eeg\/sub-013_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub14.cnt"
+  },
+  {
+    "subject":"sub-013",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-013\/ses-2\/eeg\/sub-013_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub14.cnt"
+  },
+  {
+    "subject":"sub-013",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-013\/ses-3\/eeg\/sub-013_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub14.cnt"
+  },
+  {
+    "subject":"sub-013",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-013\/ses-4\/eeg\/sub-013_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub14.cnt"
+  },
+  {
+    "subject":"sub-014",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-014\/ses-1\/eeg\/sub-014_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub15.cnt"
+  },
+  {
+    "subject":"sub-014",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-014\/ses-2\/eeg\/sub-014_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub15.cnt"
+  },
+  {
+    "subject":"sub-014",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-014\/ses-3\/eeg\/sub-014_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub15.cnt"
+  },
+  {
+    "subject":"sub-014",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-014\/ses-4\/eeg\/sub-014_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub15.cnt"
+  },
+  {
+    "subject":"sub-015",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-015\/ses-1\/eeg\/sub-015_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub16.cnt"
+  },
+  {
+    "subject":"sub-015",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-015\/ses-2\/eeg\/sub-015_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub16.cnt"
+  },
+  {
+    "subject":"sub-015",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-015\/ses-3\/eeg\/sub-015_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub16.cnt"
+  },
+  {
+    "subject":"sub-015",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-015\/ses-4\/eeg\/sub-015_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub16.cnt"
+  },
+  {
+    "subject":"sub-016",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-016\/ses-1\/eeg\/sub-016_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub17.cnt"
+  },
+  {
+    "subject":"sub-016",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-016\/ses-2\/eeg\/sub-016_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub17.cnt"
+  },
+  {
+    "subject":"sub-016",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-016\/ses-3\/eeg\/sub-016_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub17.cnt"
+  },
+  {
+    "subject":"sub-016",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-016\/ses-4\/eeg\/sub-016_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub17.cnt"
+  },
+  {
+    "subject":"sub-017",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-017\/ses-1\/eeg\/sub-017_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub18.cnt"
+  },
+  {
+    "subject":"sub-017",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-017\/ses-2\/eeg\/sub-017_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub18.cnt"
+  },
+  {
+    "subject":"sub-017",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-017\/ses-3\/eeg\/sub-017_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub18.cnt"
+  },
+  {
+    "subject":"sub-017",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-017\/ses-4\/eeg\/sub-017_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub18.cnt"
+  },
+  {
+    "subject":"sub-018",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-018\/ses-1\/eeg\/sub-018_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub19.cnt"
+  },
+  {
+    "subject":"sub-018",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-018\/ses-2\/eeg\/sub-018_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub19.cnt"
+  },
+  {
+    "subject":"sub-018",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-018\/ses-3\/eeg\/sub-018_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub19.cnt"
+  },
+  {
+    "subject":"sub-018",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-018\/ses-4\/eeg\/sub-018_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub19.cnt"
+  },
+  {
+    "subject":"sub-019",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-019\/ses-1\/eeg\/sub-019_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub20.cnt"
+  },
+  {
+    "subject":"sub-019",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-019\/ses-2\/eeg\/sub-019_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub20.cnt"
+  },
+  {
+    "subject":"sub-019",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-019\/ses-3\/eeg\/sub-019_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub20.cnt"
+  },
+  {
+    "subject":"sub-019",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-019\/ses-4\/eeg\/sub-019_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub20.cnt"
+  },
+  {
+    "subject":"sub-020",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-020\/ses-1\/eeg\/sub-020_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub22.cnt"
+  },
+  {
+    "subject":"sub-020",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-020\/ses-2\/eeg\/sub-020_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub22.cnt"
+  },
+  {
+    "subject":"sub-020",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-020\/ses-3\/eeg\/sub-020_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub22.cnt"
+  },
+  {
+    "subject":"sub-020",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-020\/ses-4\/eeg\/sub-020_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub22.cnt"
+  },
+  {
+    "subject":"sub-021",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-021\/ses-1\/eeg\/sub-021_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub23.cnt"
+  },
+  {
+    "subject":"sub-021",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-021\/ses-2\/eeg\/sub-021_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub23.cnt"
+  },
+  {
+    "subject":"sub-021",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-021\/ses-3\/eeg\/sub-021_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub23.cnt"
+  },
+  {
+    "subject":"sub-021",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-021\/ses-4\/eeg\/sub-021_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub23.cnt"
+  },
+  {
+    "subject":"sub-022",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-022\/ses-1\/eeg\/sub-022_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub24.cnt"
+  },
+  {
+    "subject":"sub-022",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-022\/ses-2\/eeg\/sub-022_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub24.cnt"
+  },
+  {
+    "subject":"sub-022",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-022\/ses-3\/eeg\/sub-022_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub24.cnt"
+  },
+  {
+    "subject":"sub-022",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-022\/ses-4\/eeg\/sub-022_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub24.cnt"
+  },
+  {
+    "subject":"sub-023",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-023\/ses-1\/eeg\/sub-023_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub25.cnt"
+  },
+  {
+    "subject":"sub-023",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-023\/ses-2\/eeg\/sub-023_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub25.cnt"
+  },
+  {
+    "subject":"sub-023",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-023\/ses-3\/eeg\/sub-023_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub25.cnt"
+  },
+  {
+    "subject":"sub-023",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-023\/ses-4\/eeg\/sub-023_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub25.cnt"
+  },
+  {
+    "subject":"sub-024",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-024\/ses-1\/eeg\/sub-024_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub26.cnt"
+  },
+  {
+    "subject":"sub-024",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-024\/ses-2\/eeg\/sub-024_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub26.cnt"
+  },
+  {
+    "subject":"sub-024",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-024\/ses-3\/eeg\/sub-024_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub26.cnt"
+  },
+  {
+    "subject":"sub-024",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-024\/ses-4\/eeg\/sub-024_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub26.cnt"
+  },
+  {
+    "subject":"sub-025",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-025\/ses-1\/eeg\/sub-025_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub27.cnt"
+  },
+  {
+    "subject":"sub-025",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-025\/ses-2\/eeg\/sub-025_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub27.cnt"
+  },
+  {
+    "subject":"sub-025",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-025\/ses-3\/eeg\/sub-025_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub27.cnt"
+  },
+  {
+    "subject":"sub-025",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-025\/ses-4\/eeg\/sub-025_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub27.cnt"
+  },
+  {
+    "subject":"sub-026",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-026\/ses-1\/eeg\/sub-026_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub28.cnt"
+  },
+  {
+    "subject":"sub-026",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-026\/ses-2\/eeg\/sub-026_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub28.cnt"
+  },
+  {
+    "subject":"sub-026",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-026\/ses-3\/eeg\/sub-026_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub28.cnt"
+  },
+  {
+    "subject":"sub-026",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-026\/ses-4\/eeg\/sub-026_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub28.cnt"
+  },
+  {
+    "subject":"sub-027",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-027\/ses-1\/eeg\/sub-027_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub29.cnt"
+  },
+  {
+    "subject":"sub-027",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-027\/ses-2\/eeg\/sub-027_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub29.cnt"
+  },
+  {
+    "subject":"sub-027",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-027\/ses-3\/eeg\/sub-027_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub29.cnt"
+  },
+  {
+    "subject":"sub-027",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-027\/ses-4\/eeg\/sub-027_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub29.cnt"
+  },
+  {
+    "subject":"sub-028",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-028\/ses-1\/eeg\/sub-028_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub31.cnt"
+  },
+  {
+    "subject":"sub-028",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-028\/ses-2\/eeg\/sub-028_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub31.cnt"
+  },
+  {
+    "subject":"sub-028",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-028\/ses-3\/eeg\/sub-028_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub31.cnt"
+  },
+  {
+    "subject":"sub-028",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-028\/ses-4\/eeg\/sub-028_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub31.cnt"
+  },
+  {
+    "subject":"sub-029",
+    "session":"ses-1",
+    "condition":"SIT",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-029\/ses-1\/eeg\/sub-029_ses-1_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\SIT\\sub32.cnt"
+  },
+  {
+    "subject":"sub-029",
+    "session":"ses-2",
+    "condition":"VR",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-029\/ses-2\/eeg\/sub-029_ses-2_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR\\sub32.cnt"
+  },
+  {
+    "subject":"sub-029",
+    "session":"ses-3",
+    "condition":"VR_cTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-029\/ses-3\/eeg\/sub-029_ses-3_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_cTENS\\sub32.cnt"
+  },
+  {
+    "subject":"sub-029",
+    "session":"ses-4",
+    "condition":"VR_sTENS",
+    "set_path":"\/home\/vamshi\/IIT Mandi Academic Folder\/HARDWARE_PROJECTS\/neuro_feedback\/datasets\/ds005285-download\/sub-029\/ses-4\/eeg\/sub-029_ses-4_task-29ByANT_eeg.set",
+    "sampling_frequency":1000.0,
+    "power_line_frequency":50.0,
+    "event_columns":[
+      "onset",
+      "duration",
+      "sample",
+      "value"
+    ],
+    "rating_columns":[
+
+    ],
+    "n_stimulus_events":40,
+    "provenance_comment":"Original file: H:\\2022VRandTENS\\raw_data\\pre\\VR_sTENS\\sub32.cnt"
+  }
+]

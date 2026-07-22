@@ -1,0 +1,32 @@
+{
+  "gate_order": [
+    "input",
+    "forget",
+    "cell",
+    "output"
+  ],
+  "note": "Rows 0:16,16:32,32:48,48:64 of each LSTM weight/bias are i,f,g,o.",
+  "arrays": {
+    "lstm_weight_ih_l0": [
+      64,
+      20
+    ],
+    "lstm_weight_hh_l0": [
+      64,
+      16
+    ],
+    "lstm_bias_ih_l0": [
+      64
+    ],
+    "lstm_bias_hh_l0": [
+      64
+    ],
+    "classifier_weight": [
+      2,
+      16
+    ],
+    "classifier_bias": [
+      2
+    ]
+  }
+}

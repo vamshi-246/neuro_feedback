@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "checks": {
+    "two_participants_loaded": true,
+    "control_session_verified": true,
+    "requested_channels_or_documented_substitutes": true,
+    "stimulus_labels_valid": true,
+    "tensor_contract_valid": true,
+    "tensor_finite": true,
+    "logits_shape_valid": true,
+    "loss_finite": true,
+    "gradients_exist": true,
+    "gradients_finite": true,
+    "nonzero_gradient": true,
+    "gradient_norm_finite": true,
+    "parameter_counts_valid": true,
+    "rejection_below_limit": true
+  },
+  "subjects": [
+    "sub-001",
+    "sub-002"
+  ],
+  "tensor_shape": [
+    16,
+    3,
+    20
+  ],
+  "time_steps": 3,
+  "loss": 0.6924582719802856,
+  "pre_clip_gradient_norm": 0.42100992798805237,
+  "gradients": {
+    "lstm.weight_ih_l0": {
+      "finite": true,
+      "norm": 0.3231661915779114
+    },
+    "lstm.weight_hh_l0": {
+      "finite": true,
+      "norm": 0.03109653852880001
+    },
+    "lstm.bias_ih_l0": {
+      "finite": true,
+      "norm": 0.04012010246515274
+    },
+    "lstm.bias_hh_l0": {
+      "finite": true,
+      "norm": 0.04012010246515274
+    },
+    "classifier.weight": {
+      "finite": true,
+      "norm": 0.19336415827274323
+    },
+    "classifier.bias": {
+      "finite": true,
+      "norm": 0.17674000561237335
+    }
+  },
+  "parameter_counts": {
+    "lstm.weight_ih_l0": 1280,
+    "lstm.weight_hh_l0": 1024,
+    "lstm.bias_ih_l0": 64,
+    "lstm.bias_hh_l0": 64,
+    "classifier.weight": 32,
+    "classifier.bias": 2
+  },
+  "total_parameters": 2466,
+  "rating_observation": "No trial-level rating column exists in the audited local ds005285 v1.0.0 events.tsv files; ratings are retained as NaN and are not fabricated."
+}

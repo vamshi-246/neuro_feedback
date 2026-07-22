@@ -1,0 +1,130 @@
+{
+  "dataset": "ds005285",
+  "dataset_doi": "doi:10.18112/openneuro.ds005285",
+  "modality": "eeg",
+  "task": "29ByANT",
+  "control_condition": "SIT",
+  "requested_channels": [
+    "Fz",
+    "Cz",
+    "C3",
+    "C4"
+  ],
+  "line_frequency_hz": 50.0,
+  "bandpass_hz": [
+    1.0,
+    45.0
+  ],
+  "target_sfreq_hz": 250.0,
+  "epoch_s": [
+    -0.5,
+    1.0
+  ],
+  "baseline_s": [
+    -0.5,
+    0.0
+  ],
+  "bands_hz": {
+    "delta": [
+      1.0,
+      4.0
+    ],
+    "theta": [
+      4.0,
+      8.0
+    ],
+    "alpha": [
+      8.0,
+      13.0
+    ],
+    "beta": [
+      13.0,
+      30.0
+    ],
+    "gamma": [
+      30.0,
+      45.0
+    ]
+  },
+  "feature_window_s": 1.0,
+  "feature_stride_s": 0.25,
+  "feature_overlap_fraction": 0.75,
+  "multitaper_bandwidth_hz": 4.0,
+  "max_peak_to_peak_v": 0.0005,
+  "min_peak_to_peak_v": 5e-08,
+  "max_rejection_fraction": 0.25,
+  "input_size": 20,
+  "hidden_size": 16,
+  "num_layers": 1,
+  "num_classes": 2,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "max_epochs": 100,
+  "early_stopping_patience": 12,
+  "early_stopping_min_delta": 0.0001,
+  "gradient_clip_norm": 1.0,
+  "class_weight_ratio_trigger": 1.2,
+  "seed": 20250722,
+  "config_hash": "f33f70946b61",
+  "control_session": "ses-1",
+  "feature_info": {
+    "window_samples": 250,
+    "stride_samples": 63,
+    "window_s": 1.0,
+    "stride_s": 0.252,
+    "effective_overlap_fraction": 0.748,
+    "time_steps": 3,
+    "window_start_samples": [
+      0,
+      63,
+      126
+    ],
+    "window_start_times_relative_stimulus_s": [
+      -0.5,
+      -0.248,
+      0.0040000000000000036
+    ],
+    "features_per_step": 20
+  },
+  "feature_names": [
+    "Fz_delta_log_relative_power",
+    "Fz_theta_log_relative_power",
+    "Fz_alpha_log_relative_power",
+    "Fz_beta_log_relative_power",
+    "Fz_gamma_log_relative_power",
+    "Cz_delta_log_relative_power",
+    "Cz_theta_log_relative_power",
+    "Cz_alpha_log_relative_power",
+    "Cz_beta_log_relative_power",
+    "Cz_gamma_log_relative_power",
+    "C3_delta_log_relative_power",
+    "C3_theta_log_relative_power",
+    "C3_alpha_log_relative_power",
+    "C3_beta_log_relative_power",
+    "C3_gamma_log_relative_power",
+    "C4_delta_log_relative_power",
+    "C4_theta_log_relative_power",
+    "C4_alpha_log_relative_power",
+    "C4_beta_log_relative_power",
+    "C4_gamma_log_relative_power"
+  ],
+  "time_steps": 3,
+  "total_parameters": 2466,
+  "parameter_counts": {
+    "lstm.weight_ih_l0": 1280,
+    "lstm.weight_hh_l0": 1024,
+    "lstm.bias_ih_l0": 64,
+    "lstm.bias_hh_l0": 64,
+    "classifier.weight": 32,
+    "classifier.bias": 2
+  },
+  "pytorch_lstm_gate_order": [
+    "input",
+    "forget",
+    "cell",
+    "output"
+  ],
+  "class_weights": null,
+  "best_epoch": 7
+}

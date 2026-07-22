@@ -1,0 +1,39 @@
+{
+  "best_epoch": 7,
+  "validation": {
+    "loss": 0.6851335684458415,
+    "accuracy": 0.5583333333333333,
+    "balanced_accuracy": 0.5583333333333333,
+    "macro_f1": 0.5545906576090762,
+    "sensitivity": 0.4666666666666667,
+    "specificity": 0.65,
+    "confusion_matrix": [
+      [
+        78,
+        42
+      ],
+      [
+        64,
+        56
+      ]
+    ]
+  },
+  "test": {
+    "loss": 0.6692817529042562,
+    "accuracy": 0.6,
+    "balanced_accuracy": 0.6,
+    "macro_f1": 0.5982142857142857,
+    "sensitivity": 0.5333333333333333,
+    "specificity": 0.6666666666666666,
+    "confusion_matrix": [
+      [
+        80,
+        40
+      ],
+      [
+        56,
+        64
+      ]
+    ]
+  }
+}
