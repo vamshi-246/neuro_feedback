@@ -1,0 +1,38 @@
+from pathlib import Path
+
+import mne
+import numpy as np
+from scipy.io import loadmat
+
+root = Path("datasets/ds005285-download")
+sid = "sub-001"
+
+set_path = (
+    root
+    / "derivatives"
+    / "rerefer"
+    / f"{sid}_29ByANT.set"
+)
+
+epochs = mne.read_epochs_eeglab(
+    set_path,
+    verbose="ERROR",
+)
+
+# MNE order: trials × channels × time
+X = epochs.get_data()
+
+# MNE does not automatically retain EEGLAB's custom rating fields.
+mat = loadmat(set_path, simplify_cells=True)
+records = mat["event"]
+
+if isinstance(records, dict):
+    records = [records]
+
+ratings = np.array([r["rating"] for r in records])
+laser_power = np.array([r["laser_power"] for r in records])
+
+print("EEG shape:", X.shape)
+print("Time:", epochs.tmin, "to", epochs.tmax)
+print("Ratings:", ratings)
+print("Laser powers:", np.unique(laser_power))
