@@ -5,7 +5,6 @@ module synthetic_signal_generator (
     output reg [7:0]  alpha_power,
     output reg [7:0]  beta_power,
     output reg [7:0]  theta_power,
-    output reg [7:0]  gsr_level,
     output reg [1:0]  pain_state
 );
 
@@ -47,28 +46,24 @@ module synthetic_signal_generator (
                 alpha_power = 8'd80;
                 beta_power  = 8'd20;
                 theta_power = 8'd30;
-                gsr_level   = 8'd15;
             end
 
             MED_PAIN: begin
                 alpha_power = 8'd50;
                 beta_power  = 8'd50;
                 theta_power = 8'd40;
-                gsr_level   = 8'd45;
             end
 
             HIGH_PAIN: begin
                 alpha_power = 8'd20;
                 beta_power  = 8'd80;
                 theta_power = 8'd60;
-                gsr_level   = 8'd85;
             end
 
             default: begin
                 alpha_power = 8'd0;
                 beta_power  = 8'd0;
                 theta_power = 8'd0;
-                gsr_level   = 8'd0;
             end
 
         endcase

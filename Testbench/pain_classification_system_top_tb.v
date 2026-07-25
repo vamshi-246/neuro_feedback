@@ -9,21 +9,17 @@ module pain_classification_system_top_tb;
     wire [7:0] alpha_raw;
     wire [7:0] beta_raw;
     wire [7:0] theta_raw;
-    wire [7:0] gsr_raw;
     wire [7:0] alpha_filtered;
     wire [7:0] beta_filtered;
     wire [7:0] theta_filtered;
-    wire [7:0] gsr_filtered;
     wire [15:0] alpha_window_power;
     wire [15:0] beta_window_power;
     wire [15:0] theta_window_power;
-    wire [15:0] gsr_window_power;
     wire alpha_power_valid;
     wire beta_power_valid;
     wire theta_power_valid;
-    wire gsr_power_valid;
     wire preprocessing_valid;
-    wire [31:0] feature_vector;
+    wire [23:0] feature_vector;
     wire [4:0] pain_score;
     wire [1:0] raw_pain_level;
     wire [1:0] classified_pain_state;
@@ -40,19 +36,15 @@ module pain_classification_system_top_tb;
         .alpha_raw(alpha_raw),
         .beta_raw(beta_raw),
         .theta_raw(theta_raw),
-        .gsr_raw(gsr_raw),
         .alpha_filtered(alpha_filtered),
         .beta_filtered(beta_filtered),
         .theta_filtered(theta_filtered),
-        .gsr_filtered(gsr_filtered),
         .alpha_window_power(alpha_window_power),
         .beta_window_power(beta_window_power),
         .theta_window_power(theta_window_power),
-        .gsr_window_power(gsr_window_power),
         .alpha_power_valid(alpha_power_valid),
         .beta_power_valid(beta_power_valid),
         .theta_power_valid(theta_power_valid),
-        .gsr_power_valid(gsr_power_valid),
         .preprocessing_valid(preprocessing_valid),
         .feature_vector(feature_vector),
         .pain_score(pain_score),
@@ -97,7 +89,7 @@ module pain_classification_system_top_tb;
                 error_count = error_count + 1;
             end
 
-            if (feature_vector !== {alpha_filtered, beta_filtered, theta_filtered, gsr_filtered}) begin
+            if (feature_vector !== {alpha_filtered, beta_filtered, theta_filtered}) begin
                 $display("FAIL: feature vector does not match filtered outputs");
                 error_count = error_count + 1;
             end
@@ -116,15 +108,18 @@ module pain_classification_system_top_tb;
         #1;
         check_snapshot(2'd0, 2'd0, 2'd0, 5'd0);
 
+        // Score formula is now 2*alpha_code + 2*beta_code + theta_code (0-10,
+        // GSR dropped): LOW=0, MED=5, HIGH=10 for this DUT's fixed synthetic
+        // signal values -- see synthetic_signal_generator.v.
         wait (synthetic_pain_state == 2'd1);
         repeat (8) @(posedge clk);
         #1;
-        check_snapshot(2'd1, 2'd1, 2'd1, 5'd8);
+        check_snapshot(2'd1, 2'd1, 2'd1, 5'd5);
 
         wait (synthetic_pain_state == 2'd2);
         repeat (8) @(posedge clk);
         #1;
-        check_snapshot(2'd2, 2'd2, 2'd2, 5'd16);
+        check_snapshot(2'd2, 2'd2, 2'd2, 5'd10);
 
         wait (synthetic_pain_state == 2'd0);
         repeat (8) @(posedge clk);
@@ -142,11 +137,11 @@ module pain_classification_system_top_tb;
     end
 
     initial begin
-        $monitor("Time=%0t | synth_state=%0d | raw=(%0d,%0d,%0d,%0d) | filt=(%0d,%0d,%0d,%0d) | score=%0d | raw_level=%0d | class_state=%0d | pre_valid=%0b",
+        $monitor("Time=%0t | synth_state=%0d | raw=(%0d,%0d,%0d) | filt=(%0d,%0d,%0d) | score=%0d | raw_level=%0d | class_state=%0d | pre_valid=%0b",
                  $time,
                  synthetic_pain_state,
-                 alpha_raw, beta_raw, theta_raw, gsr_raw,
-                 alpha_filtered, beta_filtered, theta_filtered, gsr_filtered,
+                 alpha_raw, beta_raw, theta_raw,
+                 alpha_filtered, beta_filtered, theta_filtered,
                  pain_score, raw_pain_level, classified_pain_state, preprocessing_valid);
     end
 

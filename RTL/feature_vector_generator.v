@@ -6,14 +6,13 @@ module feature_vector_generator #(
     input wire [input_width-1:0] alpha,
     input wire [input_width-1:0] beta,
     input wire [input_width-1:0] theta,
-    input wire [input_width-1:0] gsr,
-    output reg [input_width*4-1:0] vector_out
+    output reg [input_width*3-1:0] vector_out
 );
 always @(posedge clk or posedge reset) begin
     if (reset) begin
-        vector_out <= {(input_width * 4){1'b0}};
+        vector_out <= {(input_width * 3){1'b0}};
     end else begin
-        vector_out <= {alpha, beta, theta, gsr};
+        vector_out <= {alpha, beta, theta};
     end
 end
 endmodule

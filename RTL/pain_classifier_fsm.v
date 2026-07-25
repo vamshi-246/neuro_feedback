@@ -9,7 +9,10 @@ module pain_classifier_fsm(
     localparam LOW_PAIN          = 2'b00;
     localparam MODERATE_PAIN     = 2'b01;
     localparam HIGH_PAIN         = 2'b10;
-    localparam SCORE_STRONG_HIGH = 5'd14;
+    // Rescaled for the 0-10 (GSR-dropped) score range: only the single
+    // highest-possible combination now qualifies as an instant bypass,
+    // matching the old formula's near-max-only bypass behavior (14 of 16).
+    localparam SCORE_STRONG_HIGH = 5'd10;
 
     reg low_confirm_pending;
     reg moderate_confirm_pending;

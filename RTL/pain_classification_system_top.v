@@ -6,9 +6,7 @@ module pain_classification_system_top #(
     parameter [7:0] BETA_LOW_MAX   = 8'd35,
     parameter [7:0] BETA_HIGH_MIN  = 8'd65,
     parameter [7:0] THETA_LOW_MAX  = 8'd35,
-    parameter [7:0] THETA_HIGH_MIN = 8'd55,
-    parameter [7:0] GSR_LOW_MAX    = 8'd30,
-    parameter [7:0] GSR_HIGH_MIN   = 8'd65
+    parameter [7:0] THETA_HIGH_MIN = 8'd55
 )(
     input  wire       clk,
     input  wire       reset,
@@ -16,21 +14,17 @@ module pain_classification_system_top #(
     output wire [7:0] alpha_raw,
     output wire [7:0] beta_raw,
     output wire [7:0] theta_raw,
-    output wire [7:0] gsr_raw,
     output wire [7:0] alpha_filtered,
     output wire [7:0] beta_filtered,
     output wire [7:0] theta_filtered,
-    output wire [7:0] gsr_filtered,
     output wire [15:0] alpha_window_power,
     output wire [15:0] beta_window_power,
     output wire [15:0] theta_window_power,
-    output wire [15:0] gsr_window_power,
     output wire       alpha_power_valid,
     output wire       beta_power_valid,
     output wire       theta_power_valid,
-    output wire       gsr_power_valid,
     output wire       preprocessing_valid,
-    output wire [31:0] feature_vector,
+    output wire [23:0] feature_vector,
     output wire [4:0] pain_score,
     output wire [1:0] raw_pain_level,
     output wire [1:0] classified_pain_state
@@ -44,7 +38,6 @@ module pain_classification_system_top #(
         .alpha_power(alpha_raw),
         .beta_power(beta_raw),
         .theta_power(theta_raw),
-        .gsr_level(gsr_raw),
         .pain_state(synthetic_pain_state)
     );
 
@@ -73,15 +66,6 @@ module pain_classification_system_top #(
         .reset(reset),
         .rhythm(theta_raw),
         .smoothed_rhythm(theta_filtered)
-    );
-
-    moving_average_filter #(
-        .input_width(8)
-    ) gsr_filter (
-        .clk(clk),
-        .reset(reset),
-        .rhythm(gsr_raw),
-        .smoothed_rhythm(gsr_filtered)
     );
 
     // The synthetic generator already emits per-feature magnitudes, so these
@@ -120,21 +104,9 @@ module pain_classification_system_top #(
         .power_valid(theta_power_valid)
     );
 
-    power #(
-        .input_width(8),
-        .WINDOW_SIZE(POWER_WINDOW_SIZE)
-    ) gsr_power_monitor (
-        .clk(clk),
-        .reset(reset),
-        .feature_signal(gsr_filtered),
-        .power_out(gsr_window_power),
-        .power_valid(gsr_power_valid)
-    );
-
     assign preprocessing_valid = alpha_power_valid &
                                  beta_power_valid &
-                                 theta_power_valid &
-                                 gsr_power_valid;
+                                 theta_power_valid;
 
     feature_vector_generator #(
         .input_width(8)
@@ -144,7 +116,6 @@ module pain_classification_system_top #(
         .alpha(alpha_filtered),
         .beta(beta_filtered),
         .theta(theta_filtered),
-        .gsr(gsr_filtered),
         .vector_out(feature_vector)
     );
 
@@ -155,9 +126,7 @@ module pain_classification_system_top #(
         .beta_low_max(BETA_LOW_MAX),
         .beta_high_min(BETA_HIGH_MIN),
         .theta_low_max(THETA_LOW_MAX),
-        .theta_high_min(THETA_HIGH_MIN),
-        .gsr_low_max(GSR_LOW_MAX),
-        .gsr_high_min(GSR_HIGH_MIN)
+        .theta_high_min(THETA_HIGH_MIN)
     ) pain_engine (
         .clk(clk),
         .reset(reset),
