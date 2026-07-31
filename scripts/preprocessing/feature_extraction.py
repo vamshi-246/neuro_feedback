@@ -34,7 +34,7 @@ WINDOWS_S = [(0.0, 0.3), (0.3, 0.6), (0.6, 1.0)]
 
 def _bandpower(signal_1d: np.ndarray, srate: float, low: float, high: float) -> float:
     nyq = srate / 2.0
-    b, a = butter(4, [low / nyq, high / nyq], btype="bandpass")
+    b, a = butter(4, [low / nyq, high / nyq], btype="bandpass") # type: ignore
     filtered = filtfilt(b, a, signal_1d)
     return float(np.mean(filtered ** 2))
 
