@@ -18,6 +18,8 @@ import numpy as np
 import torch
 from torch import nn
 
+from feature_extraction import quantize_to_uint8
+
 
 class PainLSTM(nn.Module):
     def __init__(self, input_size=3, hidden_size=16, n_classes=3):
@@ -56,7 +58,7 @@ def main():
     args = ap.parse_args()
 
     d = np.load(args.data, allow_pickle=True)
-    X = d["features_uint8"].astype(np.float32) / 255.0  # (N, 3 steps, 3 bands) -> [0,1]
+    raw_power = d["raw_power"].astype(np.float64)   # (N, 3 steps, 3 bands)
     y = d["labels"].astype(np.int64)
     dataset_id, subject_id = d["dataset_id"], d["subject_id"]
 
@@ -67,6 +69,18 @@ def main():
 
     print(f"Subjects -> train:{len(train_keys)} val:{len(val_keys)} test:{len(test_keys)}")
     print(f"Trials   -> train:{train_mask.sum()} val:{val_mask.sum()} test:{test_mask.sum()}")
+
+    # Fit the 0-255 scaling on TRAIN trials only, then apply the same fixed
+    # bounds to val/test -- this is the leakage-safe step that used to happen
+    # (incorrectly, pool-wide) in build_dataset.py. See DS005285_LSTM_ARCHITECTURE.md
+    # for why this discipline matters.
+    log_power_train = np.log1p(raw_power[train_mask])
+    band_lo = np.percentile(log_power_train, 1, axis=0)
+    band_hi = np.percentile(log_power_train, 99, axis=0)
+    print(f"Quantization bounds fit on train only -> lo:{band_lo.round(2).tolist()} "
+          f"hi:{band_hi.round(2).tolist()}")
+
+    X = quantize_to_uint8(raw_power, band_lo, band_hi).astype(np.float32) / 255.0  # (N,3,3) -> [0,1]
 
     X_train = torch.from_numpy(X[train_mask])
     y_train = torch.from_numpy(y[train_mask])

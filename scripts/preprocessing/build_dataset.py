@@ -20,7 +20,7 @@ import numpy as np
 
 from dataset_registry import REGISTRY, s3_set_url, s3_fdt_url, subject_ids
 from eeglab_io import load_recording, pick_channels
-from feature_extraction import extract_trial_features, quantize_to_uint8, bin_rating
+from feature_extraction import extract_trial_features, bin_rating
 
 COMMON_CHANNELS = ["Fz", "Cz", "C3", "C4"]
 
@@ -29,7 +29,17 @@ def _download(url: str, dest: str):
     if os.path.exists(dest) and os.path.getsize(dest) > 0:
         return
     os.makedirs(os.path.dirname(dest), exist_ok=True)
-    urllib.request.urlretrieve(url, dest)
+    try:
+        urllib.request.urlretrieve(url, dest)
+    except Exception:
+        # A failed/interrupted transfer (dropped connection, DNS hiccup, etc.)
+        # can leave a truncated file sitting at `dest`. Without this cleanup,
+        # the exists-and-nonzero check above would wrongly treat that broken
+        # leftover as "already downloaded" on every future run and never
+        # retry it. Delete it so the next run re-attempts from scratch.
+        if os.path.exists(dest):
+            os.remove(dest)
+        raise
 
 
 def process_subject(spec, subject_id: str, cache_dir: str):
@@ -95,27 +105,22 @@ def main():
     ratings = np.concatenate(all_ratings, axis=0)      # (N,)
     labels = np.concatenate(all_labels, axis=0)        # (N,)
 
-    # NOTE: fit on the whole pool here only because this is a small smoke-test
-    # run across 5 subjects. The real training run MUST fit these bounds on
-    # the training-subject split only, exactly like DS005285_LSTM_ARCHITECTURE.md
-    # already does for its 20-feature contract -- reuse that discipline here.
-    log_power = np.log1p(raw_power)
-    band_lo = np.percentile(log_power, 1, axis=0)
-    band_hi = np.percentile(log_power, 99, axis=0)
-    quantized = quantize_to_uint8(raw_power, band_lo, band_hi)
-
+    # Deliberately NOT quantized to 0-255 here. Turning raw band power into
+    # the RTL's 0-255 scale requires picking a low/high bound, and those
+    # bounds must be fit on TRAIN-subject trials only (same discipline as
+    # DS005285_LSTM_ARCHITECTURE.md) -- this script doesn't know the
+    # train/val/test split, only train_lstm.py does, so the quantization step
+    # now happens there instead, after the split.
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     np.savez(
         args.out,
-        features_uint8=quantized,       # (N, 3 time steps, 3 bands: alpha,beta,theta)
+        raw_power=raw_power,            # (N, 3 time steps, 3 bands: alpha,beta,theta), un-quantized
         ratings=ratings,                # (N,) real 0-10 pain score
         labels=labels,                  # (N,) 0=Low 1=Moderate 2=High
         subject_id=np.array(all_subject),
         dataset_id=np.array(all_dataset),
-        band_lo=band_lo,
-        band_hi=band_hi,
     )
-    print(f"\nSaved {quantized.shape[0]} trials to {args.out}")
+    print(f"\nSaved {raw_power.shape[0]} trials to {args.out}")
     print("Label distribution:", {int(k): int(v) for k, v in zip(*np.unique(labels, return_counts=True))})
 
 
