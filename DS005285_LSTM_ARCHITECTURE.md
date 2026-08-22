@@ -1,5 +1,14 @@
 # DS005285 LSTM Architecture
 
+> **Superseded in part — see [RESULTS.md](RESULTS.md).**
+>
+> This document describes the original single-dataset (ds005285) design: three bands
+> (alpha/beta/theta), 20 features, 29 participants. The pipeline has since expanded to
+> nine datasets and 678 participants, and the feature set was rebuilt with
+> evoked-potential, delta and gamma features that measurably outperform the three
+> bands recorded here. The subject-splitting, normalization and leakage discipline
+> below still applies unchanged.
+
 Generated only after the executable sanity gate passed on 2026-07-22 18:07:10.
 
 ## Dataset scope and control-session selection
