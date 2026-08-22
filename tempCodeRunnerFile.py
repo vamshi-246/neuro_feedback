@@ -1,6 +1,0 @@
-set_id)
-# print(labels)
-# print(ratings)
-# print(subject_id)
-# print(band_hi)
-# print(band_lo)

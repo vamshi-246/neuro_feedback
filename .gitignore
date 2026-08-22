@@ -2,3 +2,10 @@ datasets/
 data_cache/
 __pycache__/
 *.py[cod]
+# Derived feature archives and trained checkpoints.
+# These regenerate from the scripts and several exceed GitHub's 100 MB limit:
+#   python scripts/preprocessing/build_rich_pilot.py --datasets ds005284 ds005285 \
+#       ds005286 ds005289 ds005291 ds005292 ds005293 ds005280 ds005473 \
+#       --out outputs/rich_full/rich_all9_features.npz
+outputs/**/*.npz
+outputs/**/*.pt
