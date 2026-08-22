@@ -2,19 +2,16 @@
 Registry of the OpenNeuro laser-pain datasets this pipeline knows how to read.
 
 Every dataset below comes from the same lab (Institute of Psychology, CAS) and
-follows the same processing convention: the lab's own MATLAB pipeline hides the
-real 0-10 pain rating inside `derivatives/mark_ica/sub-XXX_<task>.set` (paired
+follows the same processing convention: the lab's own MATLAB pipeline stores the
+real 0-10 pain rating inside `derivatives/rerefer/sub-XXX_<task>.set` (paired
 with a `.fdt` file holding the actual voltage samples) as an `EEG.event().rating`
-field. The raw `sub-XXX/.../events.tsv` files never carry the rating, only the
-stimulus trigger code -- see DS005285_LSTM_ARCHITECTURE.md and the chat history
-for how this was discovered and verified.
+field. Raw BIDS event files carry stimulus events, while the released
+single-trial behavioral tables and derivatives provide the supervised rating.
 
-Only the 5 datasets with a steady, predictable gap between laser pulses and no
-known structural bugs are listed here (the "clean five" chosen after reviewing
-all 9 candidates: ds005285, ds005284, ds005286, ds005291, ds005473). The other
-4 (ds005289, ds005292, ds005280, ds005293) are deliberately left out for now --
-see the chat notes on why (wildly uneven trial timing, or a trigger-code bug
-that silently drops most trials).
+``REGISTRY`` contains only datasets approved for feature building and pooled
+training. ``DOWNLOAD_REGISTRY`` also contains candidates whose files may be
+prefetched for the next QC checkpoint. Keeping these contracts separate means
+downloading a candidate cannot silently admit it into a pooled rebuild.
 """
 
 from dataclasses import dataclass
@@ -33,12 +30,22 @@ class DatasetSpec:
 
 
 REGISTRY = {
-    "ds005285": DatasetSpec("ds005285", "29ByANT", 29, "mark_ica", pre_stim_s=1.0),
-    "ds005284": DatasetSpec("ds005284", "26ByBiosemi", 26, "mark_ica", pre_stim_s=1.0),
-    "ds005286": DatasetSpec("ds005286", "30ByANT", 30, "mark_ica", pre_stim_s=1.1),
-    "ds005291": DatasetSpec("ds005291", "65ByANT", 65, "mark_ica", pre_stim_s=1.1),
-    "ds005473": DatasetSpec("ds005473", "29ByBP", 29, "mark_ica", pre_stim_s=1.0),
+    "ds005285": DatasetSpec("ds005285", "29ByANT", 29, "rerefer", pre_stim_s=1.0),
+    "ds005284": DatasetSpec("ds005284", "26ByBiosemi", 26, "rerefer", pre_stim_s=1.0),
+    "ds005286": DatasetSpec("ds005286", "30ByANT", 30, "rerefer", pre_stim_s=1.1),
+    "ds005291": DatasetSpec("ds005291", "65ByANT", 65, "rerefer", pre_stim_s=1.1),
+    "ds005473": DatasetSpec("ds005473", "29ByBP", 29, "rerefer", pre_stim_s=1.0),
+    "ds005280": DatasetSpec("ds005280", "223ByBP", 223, "rerefer", pre_stim_s=1.0),
+    "ds005292": DatasetSpec("ds005292", "142ByBiosemi", 142, "rerefer", pre_stim_s=1.0),
+    "ds005289": DatasetSpec("ds005289", "39ByBP", 39, "rerefer", pre_stim_s=1.0),
+    "ds005293": DatasetSpec("ds005293", "95ByBP", 95, "rerefer", pre_stim_s=1.0),
 }
+
+
+CANDIDATE_REGISTRY = {}
+
+
+DOWNLOAD_REGISTRY = {**REGISTRY, **CANDIDATE_REGISTRY}
 
 
 def s3_set_url(spec: DatasetSpec, subject_id: str) -> str:
