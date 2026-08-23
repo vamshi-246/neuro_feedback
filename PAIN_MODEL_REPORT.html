@@ -1,0 +1,661 @@
+<title>Laser-Evoked Pain Decoding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#F6F8F7;
+  --surface:#FFFFFF;
+  --surface-sunk:#EDF1F0;
+  --ink:#141B1D;
+  --ink-soft:#3A484B;
+  --muted:#67787B;
+  --line:#D6DEDC;
+  --line-soft:#E6ECEA;
+  --accent:#1B5F5A;
+  --accent-soft:#E3F0EE;
+  --gain:#1C6A42;
+  --gain-soft:#E1F0E6;
+  --loss:#9E3327;
+  --loss-soft:#F7E5E2;
+  --flat:#6A7679;
+  --flat-soft:#E9EDEC;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1213;
+    --surface:#161C1D;
+    --surface-sunk:#1D2425;
+    --ink:#E9EEEC;
+    --ink-soft:#BAC7C6;
+    --muted:#8B9B9D;
+    --line:#2B3536;
+    --line-soft:#232B2C;
+    --accent:#57B5AC;
+    --accent-soft:#14312F;
+    --gain:#5CB283;
+    --gain-soft:#152B20;
+    --loss:#DE8172;
+    --loss-soft:#2E1B18;
+    --flat:#8B9B9D;
+    --flat-soft:#212828;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1213;
+  --surface:#161C1D;
+  --surface-sunk:#1D2425;
+  --ink:#E9EEEC;
+  --ink-soft:#BAC7C6;
+  --muted:#8B9B9D;
+  --line:#2B3536;
+  --line-soft:#232B2C;
+  --accent:#57B5AC;
+  --accent-soft:#14312F;
+  --gain:#5CB283;
+  --gain-soft:#152B20;
+  --loss:#DE8172;
+  --loss-soft:#2E1B18;
+  --flat:#8B9B9D;
+  --flat-soft:#212828;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px 96px}
+.col{max-width:68ch}
+
+h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif;font-weight:600;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;letter-spacing:-.015em}
+h2{font-size:clamp(1.4rem,3vw,1.85rem);line-height:1.2;margin-bottom:.5rem}
+h3{font-size:1.12rem;line-height:1.3;font-weight:600}
+p{margin:0 0 1rem}
+a{color:var(--accent)}
+strong{font-weight:600}
+
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 .6rem;
+}
+
+header.top{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+header.top .lede{font-size:1.12rem;color:var(--ink-soft);max-width:60ch;margin-top:1.1rem}
+.meta{
+  display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:1.8rem;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;color:var(--muted);
+}
+
+section{padding:52px 0;border-bottom:1px solid var(--line-soft)}
+section:last-of-type{border-bottom:none}
+.section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:1.4rem;flex-wrap:wrap}
+.section-head .n{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.8rem;
+  color:var(--accent);font-weight:600;
+}
+
+/* headline stat band */
+.standing{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;
+  margin:1.6rem 0;
+}
+.standing div{background:var(--surface);padding:18px 20px}
+.standing .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.standing .v{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.7rem;font-weight:600;line-height:1.25;margin-top:6px;font-variant-numeric:tabular-nums}
+.standing .s{font-size:.82rem;color:var(--muted);margin-top:2px}
+.v.up{color:var(--gain)}
+
+/* tables */
+.tw{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:9px 14px;text-align:left;border-bottom:1px solid var(--line-soft)}
+tbody tr:last-child td{border-bottom:none}
+th{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;
+  background:var(--surface-sunk);border-bottom:1px solid var(--line);
+}
+td.num,th.num{text-align:right;font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+tr.best td{background:var(--accent-soft)}
+tr.best td:first-child{font-weight:600}
+.up{color:var(--gain);font-weight:500}
+.down{color:var(--loss);font-weight:500}
+
+/* experiment entries */
+.exp{
+  border:1px solid var(--line);border-radius:3px;background:var(--surface);
+  margin:0 0 14px;overflow:hidden;
+}
+.exp-head{
+  display:flex;align-items:center;gap:14px;padding:14px 18px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line-soft);background:var(--surface);
+}
+.exp-n{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;color:var(--muted);
+  font-variant-numeric:tabular-nums;min-width:1.6rem;
+}
+.exp-head h3{flex:1;min-width:200px}
+.chip{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.66rem;letter-spacing:.08em;
+  text-transform:uppercase;padding:4px 9px;border-radius:2px;font-weight:600;white-space:nowrap;
+}
+.chip.win{background:var(--gain-soft);color:var(--gain)}
+.chip.flat{background:var(--flat-soft);color:var(--flat)}
+.chip.bad{background:var(--loss-soft);color:var(--loss)}
+.chip.info{background:var(--accent-soft);color:var(--accent)}
+.exp-body{padding:16px 18px}
+.exp-body p:last-child{margin-bottom:0}
+.exp-body .col{max-width:none}
+.result{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.83rem;
+  background:var(--surface-sunk);border-left:2px solid var(--line);
+  padding:10px 14px;margin:0 0 .9rem;white-space:pre-wrap;font-variant-numeric:tabular-nums;
+  overflow-x:auto;
+}
+
+.callout{
+  border:1px solid var(--line);border-left:3px solid var(--accent);
+  background:var(--surface);padding:16px 20px;border-radius:3px;margin:1.4rem 0;
+}
+.callout p:last-child{margin-bottom:0}
+.callout h3{margin-bottom:.5rem}
+
+ul{margin:0 0 1rem;padding-left:1.15rem}
+li{margin-bottom:.4rem}
+
+.feat{
+  columns:2;column-gap:32px;font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.82rem;line-height:1.9;margin:1rem 0;
+}
+.feat span{display:block;break-inside:avoid}
+.feat b{color:var(--accent);font-weight:600;margin-right:.5rem}
+@media (max-width:640px){.feat{columns:1}}
+
+footer{padding:40px 0 0;color:var(--muted);font-size:.85rem}
+
+/* Printing and PDF export. Forces the light palette regardless of the reader's
+   theme -- a dark ground would empty a printer cartridge and reads poorly on paper --
+   and keeps each experiment entry whole rather than split across a page break. */
+@media print{
+  :root,:root[data-theme="dark"]{
+    --ground:#FFFFFF; --surface:#FFFFFF; --surface-sunk:#F2F5F4;
+    --ink:#111718; --ink-soft:#333F42; --muted:#5A686B;
+    --line:#C9D3D1; --line-soft:#E2E8E7;
+    --accent:#14514D; --accent-soft:#EDF5F4;
+    --gain:#155537; --gain-soft:#EBF4EF; --loss:#8A2B21; --loss-soft:#FAEEEC;
+    --flat:#5A686B; --flat-soft:#F0F3F2;
+  }
+  body{background:#fff;font-size:10.5pt;line-height:1.5}
+  .wrap{max-width:none;padding:0}
+  header.top{padding:0 0 18pt}
+  h1{font-size:26pt}
+  h2{font-size:15pt}
+  h3{font-size:11.5pt}
+  section{padding:18pt 0;border-bottom:none;break-inside:auto}
+  .section-head{break-after:avoid}
+  .exp,.callout,.standing,.tw,.feat{break-inside:avoid}
+  .exp{margin-bottom:9pt}
+  .result{font-size:8.5pt}
+  table{font-size:8.5pt}
+  th,td{padding:4pt 7pt}
+  a{color:inherit;text-decoration:none}
+  footer{padding-top:18pt}
+}
+@page{margin:16mm 14mm}
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <p class="eyebrow">Progress report</p>
+  <h1>Predicting pain from EEG</h1>
+  <p class="lede">What the data is, every change we tried, what each one did to the numbers, and where the model stands today. Nineteen experiments on 678 participants. Two of them worked.</p>
+  <div class="meta">
+    <span>678 participants</span>
+    <span>28,452 trials</span>
+    <span>9 datasets</span>
+    <span>19 experiments</span>
+  </div>
+</header>
+
+<section>
+  <div class="section-head"><span class="n">01</span><h2>Where we stand</h2></div>
+  <div class="col">
+    <p>The model looks at a short slice of EEG recorded around a laser pulse and predicts whether the person rated that pulse <strong>Low</strong>, <strong>Moderate</strong>, or <strong>High</strong> pain. It is scored on people it has never seen.</p>
+  </div>
+
+  <div class="standing">
+    <div><div class="k">Started at</div><div class="v">44.8%</div><div class="s">pooled balanced accuracy</div></div>
+    <div><div class="k">Now</div><div class="v up">49.1%</div><div class="s">pooled balanced accuracy</div></div>
+    <div><div class="k">Honest metric now</div><div class="v up">45.1%</div><div class="s">dataset-macro, see §3</div></div>
+    <div><div class="k">Chance</div><div class="v">33.3%</div><div class="s">three classes</div></div>
+  </div>
+
+  <div class="col">
+    <p>Every gain came from <strong>two</strong> of the nineteen changes: rebuilding the features to include the evoked potential, and then cutting those features down to the 16 that matter. Everything else — different labels, more electrodes, connectivity measures, a CNN, synthetic data, coupling features, domain adaptation — made no difference or made things worse.</p>
+    <p>One further result sits outside the headline because it needs something from the user: <strong>personalising the model to an individual adds about 10 points</strong>, but requires 60–80 labelled trials from that person first, and only two of the nine datasets recorded enough trials per participant to test it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-head"><span class="n">02</span><h2>The data</h2></div>
+  <div class="col">
+    <p>We use the public laser-evoked potential collection released by the Institute of Psychology, Chinese Academy of Sciences — nine separate experiments published together in <em>Scientific Data</em> (2025) as the largest nociceptive EEG dataset available.</p>
+    <p><strong>What one trial is.</strong> A laser pulse of a known energy (1.0–4.5 joules) is fired at the back of the participant's hand. Their EEG is recorded, and they say how much it hurt on a 0–10 scale. That pairing — brain signal plus a number — is one trial. There are 28,452 of them.</p>
+    <p><strong>How the rating becomes a class.</strong> Ratings below 4 are Low, 4 to below 7 are Moderate, 7 and above are High.</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Dataset</th><th class="num">Participants</th><th class="num">Median trials each</th><th>EEG system</th></tr></thead>
+    <tbody>
+      <tr><td>ds005280</td><td class="num">223</td><td class="num">29</td><td>Brain Products</td></tr>
+      <tr><td>ds005292</td><td class="num">142</td><td class="num">30</td><td>Biosemi</td></tr>
+      <tr><td>ds005293</td><td class="num">95</td><td class="num">66</td><td>Brain Products</td></tr>
+      <tr><td>ds005291</td><td class="num">65</td><td class="num">30</td><td>ANT</td></tr>
+      <tr><td>ds005289</td><td class="num">39</td><td class="num">10</td><td>Brain Products</td></tr>
+      <tr><td>ds005286</td><td class="num">30</td><td class="num">30</td><td>ANT</td></tr>
+      <tr><td>ds005285</td><td class="num">29</td><td class="num">160</td><td>ANT</td></tr>
+      <tr><td>ds005473</td><td class="num">29</td><td class="num">129</td><td>Brain Products</td></tr>
+      <tr><td>ds005284</td><td class="num">26</td><td class="num">14</td><td>Biosemi</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="col">
+    <p><strong>Class balance.</strong> Low 7,443 · Moderate 12,710 · High 8,299. Moderate is about twice as common as Low — a mild imbalance, which matters later.</p>
+    <p><strong>Channels.</strong> The recordings carry 32–64 electrodes and 30 are common to all nine. We use four: <strong>Fz, Cz, C3, C4</strong>. Sampling is 1000 Hz, and each epoch runs from 1 second before the laser to 2 seconds after.</p>
+  </div>
+
+  <div class="callout">
+    <h3>How the data is split</h3>
+    <p>Participants — not trials — are divided into three groups, so no person ever appears in more than one. A model is trained on one group, tuned on the second, and the third is held in reserve and <strong>has never been used</strong>.</p>
+    <p style="margin-top:.7rem"><strong>406 training</strong> (16,930 trials) · <strong>136 validation</strong> (5,722 trials) · <strong>136 held-out test</strong> (5,800 trials, untouched)</p>
+    <p style="margin-top:.7rem">Splitting by person is essential. Splitting by trial would let the same participant appear on both sides, and the model would recognise the person rather than the pain — which inflates results dramatically.</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-head"><span class="n">03</span><h2>How we measure</h2></div>
+  <div class="col">
+    <p>Three numbers appear throughout, and they answer different questions. This section matters for reading everything below.</p>
+
+    <h3 style="margin-top:1.5rem">Plain accuracy is misleading here</h3>
+    <p>A model that always answers "Moderate" and learns nothing at all scores <strong>43.7%</strong> plain accuracy, because Moderate is the most common answer. Plain accuracy hides failure.</p>
+
+    <h3 style="margin-top:1.5rem">Balanced accuracy is the fair score</h3>
+    <p>It scores each class separately and averages the three. The always-Moderate model scores exactly <strong>33.3%</strong> — chance for three classes, no matter how uneven the data. This is the number we track.</p>
+
+    <h3 style="margin-top:1.5rem">Pooled vs dataset-macro</h3>
+    <p>This distinction only became clear late in the work, and it changed our reported figures.</p>
+    <p>The nine datasets were recorded on different machines, and each leaves a detectable signature. They also have very different answer mixes — ds005286 is 54% High, ds005292 is 41% Low. So a model can score by <em>recognising the equipment</em> and answering with that site's typical label, without reading pain at all.</p>
+    <p>We measured exactly how much that is worth:</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>What the model is given</th><th class="num">Balanced accuracy</th></tr></thead>
+    <tbody>
+      <tr><td>Chance</td><td class="num">0.3333</td></tr>
+      <tr><td><strong>Which dataset the trial came from — no EEG at all</strong></td><td class="num">0.4064</td></tr>
+      <tr><td>EEG features only</td><td class="num">0.4803</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="col">
+    <p>Knowing only the source dataset, with no brain data whatsoever, gets 40.6%. So roughly half the apparent advantage over chance was available without reading any EEG.</p>
+    <p><strong>Pooled</strong> scoring throws all validation trials into one pile and rewards that shortcut. <strong>Dataset-macro</strong> scores each dataset separately and then averages — and inside a single dataset, knowing which dataset it is tells you nothing. The shortcut earns zero.</p>
+    <p>We report both. Dataset-macro is the honest one and runs about 4 points below pooled.</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-head"><span class="n">04</span><h2>Every experiment, in order</h2></div>
+  <div class="col">
+    <p>Listed chronologically. Each entry says what was changed, what happened to the numbers, and why.</p>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">00</span><h3>Starting point</h3><span class="chip info">Baseline</span></div>
+    <div class="exp-body">
+      <div class="result">dataset-macro 0.4139    pooled 0.4479</div>
+      <p>A small LSTM (2,466 parameters) reading three numbers per time step: alpha, beta and theta band power averaged across the four electrodes, in three time windows after the laser. These three bands were chosen because the existing FPGA design already expected them.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">01</span><h3>Ordered labels instead of three separate names</h3><span class="chip bad">Worse</span></div>
+    <div class="exp-body">
+      <div class="result">dataset-macro 0.4094    pooled 0.4353    (−0.5 / −1.3)</div>
+      <p>The classifier treated Low, Moderate and High as three unrelated names. We rebuilt it to understand that they are ordered, asking two linked questions instead: "is this at least Moderate?" and "is this High?"</p>
+      <p><strong>Result: slightly worse.</strong> The label structure was not the problem.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">02</span><h3>Keep the four electrodes separate instead of averaging</h3><span class="chip flat">No change</span></div>
+    <div class="exp-body">
+      <div class="result">dataset-macro 0.4175    pooled 0.4567    (+0.4 / +0.9)</div>
+      <p>The original features averaged all four electrodes into one number per band, which destroys any left-right or front-back difference. We gave the model all four separately — four times the input information.</p>
+      <p><strong>Result: within noise.</strong> Four times the spatial detail bought nothing.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">03</span><h3>Diagnostic: is the limit the model or the features?</h3><span class="chip info">Finding</span></div>
+    <div class="exp-body">
+      <div class="result">training 99.99%    validation 40.4%</div>
+      <p>Two changes had failed, so instead of trying a third we ran a test: give a powerful model permission to memorise the training data completely, and see what happens on new people.</p>
+      <p>It memorised the training trials <strong>perfectly</strong> and carried almost none of it to new participants. That single result redirected the project — it ruled out the model, the labels, the split and the training recipe in one step, and pointed at the features.</p>
+      <p>Confirming it: gradient-boosted trees, a completely different kind of model, landed in the same 45–48% band as the LSTM. When unrelated methods agree that precisely, you are measuring the data, not the method.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">04</span><h3>Normalise each person to remove individual differences</h3><span class="chip bad">Worse</span></div>
+    <div class="exp-body">
+      <div class="result">pooled 0.4584 → 0.4283    (−3.0)</div>
+      <p>People differ in skull thickness, electrode contact and baseline rhythms, so the same number means different things for different people. We centred each participant on their own average to remove that.</p>
+      <p><strong>Result: clearly worse.</strong> A person's average <em>carries real information</em> — participants genuinely differ in how much pain they reported, and centring deleted that.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">05</span><h3>Diagnostic: does it read trials, or just rank people?</h3><span class="chip info">Finding</span></div>
+    <div class="exp-body">
+      <div class="result">model 40.6%    "predict this person's usual answer" 61.1%</div>
+      <p>Within a single person, simply predicting whatever that person usually reports beats the model by 20 points. The model's genuine trial-by-trial advantage is about <strong>+3.9</strong> balanced points over that baseline.</p>
+      <p>Real, but thin. Much of the headline score reflects base rates rather than reading individual trials.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">06</span><h3>Rebuild the features from raw signal</h3><span class="chip win">Improved · +2.3</span></div>
+    <div class="exp-body">
+      <div class="result">dataset-macro 0.4139 → 0.4370    pooled 0.4479 → 0.4750</div>
+      <p>This is the change that worked. The old features used only alpha, beta and theta band power — a choice inherited from the FPGA design, not from what predicts laser pain. Three well-established markers were missing entirely:</p>
+      <ul>
+        <li><strong>The N2–P2 evoked potential.</strong> The largest and most reliable cortical response to a painful laser: a dip around 220 ms followed by a peak around 400 ms, biggest at the top of the head. Band power cannot represent it — squaring the signal to get power destroys the polarity that distinguishes the dip from the peak.</li>
+        <li><strong>Delta (1–4 Hz) and gamma (30–45 Hz).</strong> Neither was computed at all.</li>
+        <li><strong>Absolute power</strong> alongside the baseline-relative ratio.</li>
+      </ul>
+      <p>We rebuilt from the raw 24 GB of recordings: <strong>194 features per trial</strong> instead of 36, covering evoked potential, five bands, signal-shape measures and channel coupling.</p>
+      <p>We verified the evoked potential is genuinely present before trusting it — measuring the peaks from the averaged waveform with <em>no</em> search window imposed:</p>
+      <div class="result">        N2                    P2                  N2–P2
+Fz     −9.92 µV @ 243 ms     +7.74 µV @ 422 ms    17.66 µV
+Cz     −9.40 µV @ 221 ms     +9.06 µV @ 403 ms    18.46 µV  ← largest
+C3     −6.04 µV @ 238 ms     +6.54 µV @ 439 ms    12.57 µV
+C4     −8.06 µV @ 219 ms     +7.73 µV @ 405 ms    15.80 µV</div>
+      <p>Largest at Cz, which is the vertex maximum a laser-evoked potential must show. Nothing forced that — all four channels ran through identical code. Its size also rises with reported pain (Low 16.07 → Moderate 17.41 → High 22.78 µV at Cz).</p>
+      <p><strong>Which groups carry the gain:</strong></p>
+      <div class="tw"><table>
+        <thead><tr><th>Feature group</th><th class="num">Columns</th><th class="num">Dataset-macro</th></tr></thead>
+        <tbody>
+          <tr class="best"><td>Delta + gamma only</td><td class="num">48</td><td class="num">0.4467</td></tr>
+          <tr><td>Evoked potential only</td><td class="num">32</td><td class="num">0.4363</td></tr>
+          <tr><td>All five bands</td><td class="num">120</td><td class="num">0.4312</td></tr>
+          <tr><td>Signal shape (Hjorth, entropy)</td><td class="num">12</td><td class="num">0.4192</td></tr>
+          <tr><td><em>Old alpha/beta/theta</em></td><td class="num">36</td><td class="num">0.4146</td></tr>
+          <tr><td>Channel coupling</td><td class="num">30</td><td class="num">0.3939</td></tr>
+        </tbody>
+      </table></div>
+      <p><strong>32 evoked-potential columns beat all 36 alpha/beta/theta columns. So do delta and gamma alone.</strong> The three bands currently wired into the hardware are the weakest option tested.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">07</span><h3>Predict the 0–10 score, then convert to a class</h3><span class="chip flat">No change</span></div>
+    <div class="exp-body">
+      <div class="result">correlation r = 0.403    average miss 1.80 rating points
+93% of people tracked in the right direction</div>
+      <p>Classifying three buckets treats a 6.9 predicted as 7.0 as a total failure, identical to predicting 2.0. We trained the model on the actual number instead, then converted afterwards.</p>
+      <p><strong>Result: a tie on accuracy</strong> (0.4856 vs 0.4803 pooled — within noise). But it revealed something important: the same model scores anywhere from <strong>0.33 to 0.49</strong> depending only on where the class boundaries are drawn. The official 4 and 7 cut-offs perform worst, because a regression model's predictions cluster near the middle and almost everything lands in Moderate.</p>
+      <p>It also produces things a classifier cannot: a number per trial, a per-person trend, and a confidence level.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">08</span><h3>Use 14 electrodes instead of 4</h3><span class="chip flat">No change</span></div>
+    <div class="exp-body">
+      <div class="result">correlation 0.403 → 0.418    people tracked correctly 93% → 89%
+training-vs-validation gap 0.001 → 0.038</div>
+      <p>Using the montage from the supervisor's own published work — 14 of its 17 sites are present in all nine datasets.</p>
+      <p><strong>Result: a wash, with a warning sign.</strong> Two metrics improved slightly, two got slightly worse, and the gap between training and validation performance widened — the model beginning to memorise. 294 inputs per time step is more than 16,930 trials support.</p>
+      <p>Consistent with the physiology: the response is largest at the vertex, and the extra frontal and parietal sites added more noise than signal. This supports keeping a small montage on the hardware.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">09</span><h3>MVAR — directed connectivity between electrodes</h3><span class="chip bad">Worse</span></div>
+    <div class="exp-body">
+      <div class="result">dataset-macro 0.4415 → (244 extra columns) → pooled 0.4803 → 0.4753</div>
+      <p>All existing features are snapshots of how much energy sat in a band. None describe how the signal <em>moves</em>, and the one relationship feature we had was symmetric — it could say two electrodes rise and fall together but not which one leads.</p>
+      <p>A multivariate autoregressive model captures both: signal dynamics, and directed influence between channels via partial directed coherence. We verified the fit recovers a known driving relationship almost exactly (0.795 against a true 0.8, with ~0 in the reverse direction).</p>
+      <p><strong>Result: slightly worse.</strong> 244 extra columns from the same 16,930 trials gave the model more places to find patterns that do not survive to new people. Four nearby electrodes on a shared average reference may also simply not have much directional structure to find.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">10</span><h3>Train on one homogeneous dataset instead of pooling nine</h3><span class="chip bad">Worse</span></div>
+    <div class="exp-body">
+      <div class="result">lost on 7 of 9 datasets    average −2.69 points</div>
+      <p>One dataset means one machine, one protocol, one lab — less variation for the model to explain. We tested it as a paired comparison: the same validation participants scored twice, once by a model trained on their dataset alone and once by the pooled model.</p>
+      <p><strong>Result: pooling wins clearly.</strong> ds005473 scores well either way, but scores <em>better</em> with all nine datasets behind it — it is an easier recording, not evidence for homogeneity. The 678 participants are an asset.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">11</span><h3>A CNN reading the raw waveform</h3><span class="chip flat">No change</span></div>
+    <div class="exp-body">
+      <div class="result">CNN alone 0.4705    hybrid 0.4773    LSTM alone 0.4750    (pooled)</div>
+      <p>Every feature so far is something we chose to compute, so anything we did not think to measure was discarded before any model saw it. We saved the raw waveforms and let a convolutional network learn its own features, then tested three configurations: CNN alone, CNN plus the engineered features, and — the decisive one — CNN plus features with the feature branch frozen, so the CNN could only help by finding something genuinely new.</p>
+      <p><strong>Result: nothing new to find.</strong> The frozen test came out <em>below</em> the features alone.</p>
+      <p>The useful conclusion: a network free to invent any filter it wanted found no more than our hand-computed features already capture. The feature engineering is not leaving anything on the table — and 13,699 CNN parameters bought nothing over a fixed arithmetic recipe, which matters for the hardware.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">12</span><h3>Personalise the model to each user</h3><span class="chip win">Improved · +10.0</span></div>
+    <div class="exp-body">
+      <div class="result">no calibration    0.4789
+10 trials         0.4614      40 trials   0.5548
+20 trials         0.5015      80 trials   0.5791   (+10.02, 32 of 43 improved)</div>
+      <p>The device will be used by one known person who can sit through a short setup. So we asked: does showing the model some of that person's own trials help?</p>
+      <p><strong>Below 40 trials it hurts</strong> — too little to learn a person, too much to ignore them. It overtakes between 40 and 60 and keeps climbing.</p>
+      <p>Only 12 validation participants have enough trials to test this, so we retrained the shared model once per participant with that person left out, making 32 more usable. The 32 retrained and the 11 original participants agreed closely (+8.19 and +6.09), which is the check that the method is sound.</p>
+      <p><strong>The version that works costs almost nothing in hardware.</strong> Freezing the entire network and retraining only its final 16→3 output layer gave the largest gain. The recurrent weights never move — personalising a user means storing <strong>51 numbers</strong>, not a second model.</p>
+      <p><em>Caveats:</em> only two datasets have participants with enough trials; it helped 32 of 43 people, so 11 got worse; and it requires 60–80 <em>labelled</em> trials, meaning 10–25 minutes of the user being stimulated and rating each one.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">13</span><h3>Discovery: the score was inflated by equipment fingerprints</h3><span class="chip info">Finding</span></div>
+    <div class="exp-body">
+      <div class="result">identify the source dataset from features:  51.9%   (chance 11.1%)
+predict pain from dataset identity alone:  0.4064   (chance 0.3333)</div>
+      <p>Prompted by a question about how the datasets were being combined. The model can partly tell which machine recorded a trial, and the datasets have very different answer mixes — so it can score by recognising equipment rather than reading pain.</p>
+      <p>This is why all figures from here on use <strong>dataset-macro</strong>, which removes the shortcut. It also corrected an earlier alarming result: we had found that laser energy alone appeared to beat all the EEG features. On the honest metric, laser energy alone scores <strong>0.3539</strong> — barely above chance — because the energy ranges differ per dataset, so it was partly just identifying the site. <strong>The EEG features clearly beat it.</strong></p>
+      <p>The feature rebuild survives the correction: <strong>0.4139 → 0.4415</strong> on the metric that cannot be gamed.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">14</span><h3>Synthetic data to balance the classes</h3><span class="chip bad">Worse</span></div>
+    <div class="exp-body">
+      <div class="result">class weighting (current)   0.4415
+random oversampling         0.4311
+SMOTE within-subject        0.4136
+SMOTE                       0.4046</div>
+      <p>Generating extra Low and High trials to match Moderate. Tested four ways, including a within-subject variant that only blends one person's own trials rather than inventing a physiology belonging to nobody.</p>
+      <p><strong>Result: all worse.</strong> Two reasons. The pipeline already corrects imbalance by weighting, and doing the same job twice adds nothing. And the imbalance is only <strong>1.88 to 1</strong> — mild. These methods are built for 1-in-100 cases. Interpolating new points between real ones in 194 dimensions lands them where other classes live, blurring the boundaries.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">15</span><h3>Phase-amplitude coupling and peak alpha frequency</h3><span class="chip flat">No change</span></div>
+    <div class="exp-body">
+      <div class="result">PAC features alone   0.3519    (chance 0.3333)
+value added to the full set   +0.14</div>
+      <p>From the project's neurofeedback guidebook, which lists coupling as a pain biomarker and cites a 2024 study finding beta–gamma coupling correlated with clinical pain. Band power cannot represent it, because squaring the signal discards the phase coupling is defined by.</p>
+      <p><strong>Result: nothing.</strong> Coupling alone is barely above chance here.</p>
+      <p><strong>An important limitation for anyone citing that biomarker:</strong> beta–gamma coupling is <em>not measurable in this data at all</em>. When a slow rhythm modulates a fast one, the evidence sits at carrier ± modulator. Beta modulation needs roughly 40 Hz of gamma bandwidth; these recordings carry <strong>no measurable content above 45 Hz</strong> (checked on three datasets — power from 52 to 100 Hz is flat zero). We confirmed the method itself works by testing it on synthetic signals with known coupling: delta and theta were detected at 50× and 53× above control, alpha fell to 4.9×, beta to 1.2× — indistinguishable from nothing.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">16</span><h3>Feature selection and hyperparameter tuning</h3><span class="chip win">Improved · +0.8</span></div>
+    <div class="exp-body">
+      <div class="result">all 235 features, defaults    0.4429
+16 features, tuned            0.4505</div>
+      <p>Every model until now used library default settings, and no search for the best subset had been run. Both choices were made by cross-validation <em>inside the training participants</em>, with validation scored exactly once at the end — otherwise, with enough candidates, one wins by luck and that luck does not repeat.</p>
+      <p><strong>Fewer features is dramatically better:</strong></p>
+      <div class="result">16 columns   0.4526  ← best      96 columns   0.4328
+32 columns   0.4438              128 columns  0.4325
+48 columns   0.4418              all 235      0.4390</div>
+      <p><strong>16 columns beat 235.</strong> We spent much of this project adding features, and the answer was to remove them.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">17</span><h3>Ensembling four different models</h3><span class="chip flat">Mixed</span></div>
+    <div class="exp-body">
+      <div class="result">dataset-macro 0.4505 → 0.4477    pooled 0.4878 → 0.4912</div>
+      <p>Averaging tuned boosting, default boosting, extra-trees and logistic regression, since they make different mistakes.</p>
+      <p><strong>Result: helps the pooled number, hurts the honest one.</strong> Which counts as "best" depends on which figure is reported.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head"><span class="exp-n">18</span><h3>Domain-adversarial training</h3><span class="chip flat">No change</span></div>
+    <div class="exp-body">
+      <div class="result">strength 0.0 (off)   0.4131        strength 0.3   0.4125
+strength 0.1         0.4122        strength 1.0   0.3918</div>
+      <p>The direct attack on the fingerprinting problem found in §13. The network gets a second head that tries to guess which machine recorded the trial, with a gradient reversal in front of it — so the shared layers are pushed <em>away</em> from anything that identifies equipment. What survives is whatever predicts pain the same way on every machine.</p>
+      <p><strong>The mechanism works but does not help.</strong> Site identifiability fell as the pressure increased (0.276 → 0.247 → 0.233), confirming it did its job. But pain prediction stayed flat, and at full strength it degraded — the pressure damages the representation faster than it removes the shortcut.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head"><span class="n">05</span><h2>What the hardware should carry</h2></div>
+  <div class="col">
+    <p>The current RTL concatenates exactly <code>{alpha, beta, theta}</code>. Those three bands are the weakest option we measured. The 16 features selected by search, ranked by importance:</p>
+  </div>
+
+  <div class="feat">
+    <span><b>01</b>Cz delta absolute power (w0)</span>
+    <span><b>02</b>Cz evoked-potential RMS</span>
+    <span><b>03</b>Cz theta absolute power (w0)</span>
+    <span><b>04</b>Cz N2–P2 amplitude</span>
+    <span><b>05</b>C3–C4 delta coupling</span>
+    <span><b>06</b>Cz N2 amplitude</span>
+    <span><b>07</b>C3 delta absolute power (w0)</span>
+    <span><b>08</b>Cz Hjorth mobility</span>
+    <span><b>09</b>C3 Hjorth complexity</span>
+    <span><b>10</b>Cz delta absolute power (w1)</span>
+    <span><b>11</b>C4 delta absolute power (w0)</span>
+    <span><b>12</b>Cz–C3 delta coupling</span>
+    <span><b>13</b>Cz N2 window mean</span>
+    <span><b>14</b>Cz P2 window mean</span>
+    <span><b>15</b>Cz P2 amplitude</span>
+  </div>
+
+  <div class="col">
+    <p>Four things stand out:</p>
+    <ul>
+      <li><strong>Cz dominates</strong> — 9 of the 15. The vertex maximum, found independently by a ranker that knows no physiology.</li>
+      <li><strong>Evoked-potential features are 6 of the 15</strong> — exactly what the original pipeline discarded.</li>
+      <li><strong>Delta is the dominant band.</strong> Of the RTL's current three: theta appears once, alpha zero times, beta zero times.</li>
+      <li><strong>Absolute power beat relative power.</strong> Every band entry is absolute, not the baseline-normalised ratio the pipeline was built on.</li>
+    </ul>
+    <p>One implementation note: evoked-potential values are <strong>signed</strong> — an N2 amplitude is negative by definition — so the existing unsigned power quantiser cannot represent them.</p>
+    <p>Four electrodes are sufficient; 14 gave no gain and began to overfit.</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-head"><span class="n">06</span><h2>What the task itself can support</h2></div>
+  <div class="col">
+    <p>Separately from any method, we measured what each version of the question can reach — same participants, same split, EEG features only.</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Question</th><th class="num">Classes</th><th class="num">Chance</th><th class="num">Achieved</th><th class="num">Above chance</th></tr></thead>
+    <tbody>
+      <tr class="best"><td>Low vs High (Moderate dropped)</td><td class="num">2</td><td class="num">50%</td><td class="num">72.4%</td><td class="num up">+22.4</td></tr>
+      <tr><td>Severe or not (rating ≥ 7)</td><td class="num">2</td><td class="num">50%</td><td class="num">67.5%</td><td class="num up">+17.5</td></tr>
+      <tr><td>Laser energy, lowest vs highest</td><td class="num">2</td><td class="num">50%</td><td class="num">65.6%</td><td class="num up">+15.6</td></tr>
+      <tr><td><strong>Low / Moderate / High (current)</strong></td><td class="num">3</td><td class="num">33%</td><td class="num">48.0%</td><td class="num up">+14.7</td></tr>
+      <tr><td>Any pain (rating ≥ 4)</td><td class="num">2</td><td class="num">50%</td><td class="num">63.2%</td><td class="num up">+13.1</td></tr>
+      <tr><td>Laser energy, 3 levels</td><td class="num">3</td><td class="num">33%</td><td class="num">43.0%</td><td class="num up">+9.7</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="col">
+    <p><strong>Predicting what the person felt is easier than predicting what the laser did.</strong> Stimulus energy scores below subjective rating on both the two-class and three-class comparisons. For a device intended to read pain rather than detect stimulation, that is the result you want.</p>
+    <p>Note that a two-class task starts at 50%, so 72% there is a smaller real improvement than the gap to 48% suggests. The "above chance" column is the fair comparison.</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-head"><span class="n">07</span><h2>Summary and open questions</h2></div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Change</th><th class="num">Dataset-macro</th><th>Outcome</th></tr></thead>
+    <tbody>
+      <tr><td>Starting point</td><td class="num">0.4139</td><td>—</td></tr>
+      <tr><td>Ordered labels</td><td class="num">0.4094</td><td class="down">worse</td></tr>
+      <tr><td>Per-channel input</td><td class="num">0.4175</td><td>no change</td></tr>
+      <tr><td>Per-subject normalisation</td><td class="num">—</td><td class="down">worse</td></tr>
+      <tr class="best"><td><strong>Rebuilt features (ERP, delta, gamma)</strong></td><td class="num">0.4370</td><td class="up">improved +2.3</td></tr>
+      <tr><td>Score prediction</td><td class="num">—</td><td>tie</td></tr>
+      <tr><td>14 electrodes</td><td class="num">—</td><td>no change</td></tr>
+      <tr><td>MVAR connectivity</td><td class="num">—</td><td class="down">worse</td></tr>
+      <tr><td>Single-dataset training</td><td class="num">—</td><td class="down">worse</td></tr>
+      <tr><td>CNN / hybrid</td><td class="num">—</td><td>no change</td></tr>
+      <tr><td>Synthetic class balancing</td><td class="num">0.4046–0.4311</td><td class="down">worse</td></tr>
+      <tr><td>Phase-amplitude coupling</td><td class="num">0.4429</td><td>no change</td></tr>
+      <tr class="best"><td><strong>Feature selection + tuning</strong></td><td class="num">0.4505</td><td class="up">improved +0.8</td></tr>
+      <tr><td>Ensembling</td><td class="num">0.4477</td><td>mixed</td></tr>
+      <tr><td>Domain-adversarial</td><td class="num">0.4131</td><td>no change</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="col">
+    <h3 style="margin-top:1.8rem">What we can say with confidence</h3>
+    <ul>
+      <li>The evoked potential is the most valuable EEG feature for this task, and the bands currently in the hardware are the weakest choice available.</li>
+      <li>Compact feature sets beat large ones — 16 columns beat 235.</li>
+      <li>Four unrelated model families (recurrent, trees, convolutional, hybrid) all converge to 44–48%. That is a property of the data, not of any one method.</li>
+      <li>Pooled multi-site evaluation is inflated by roughly 4 points of equipment fingerprinting.</li>
+      <li>Personalisation adds about 10 points, at the cost of 60–80 labelled trials per user.</li>
+    </ul>
+
+    <h3 style="margin-top:1.8rem">Open questions for discussion</h3>
+    <ul>
+      <li><strong>Is three-class subjective rating the right target?</strong> It reaches 48%. "Severe or not" reaches 67.5% on the same data and is clinically meaningful, but changes what the device reports and what the hardware's state machine does.</li>
+      <li><strong>Should personalisation be part of the product?</strong> It is the largest single gain measured, but only two datasets could test it, and it requires a calibration session.</li>
+      <li><strong>Should the held-out test set be spent now?</strong> Every figure here is validation. The 136 reserved participants have never been used and can only be used once.</li>
+      <li><strong>Are other sensors possible?</strong> Pain is a whole-body response. EEG sees one slice, and the remaining large gains likely require signals we do not have.</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <h3>A note on comparing against synthetic-data results</h3>
+    <p>Published pain-estimation accuracies in the 95% range are typically measured on <em>synthetically generated</em> data, where the signals were produced from the labels by a known rule. Those numbers are not comparable to results on real recordings. Where the same models are tested on real data, they commonly report figures in the 40% range without per-person calibration.</p>
+    <p style="margin-top:.7rem">Every number in this report is measured on real recordings from participants the model has never seen.</p>
+  </div>
+</section>
+
+<footer>
+  <p>All results measured on the same locked participant split. Held-out test set (136 participants, 5,800 trials) remains unused. Feature archives regenerate from the build scripts; commands are recorded in the repository.</p>
+</footer>
+
+</div>
