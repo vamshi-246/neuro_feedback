@@ -45,6 +45,7 @@ from mvar_features import (
     extract_mvar_features,
     mvar_feature_names,
 )
+from pac_features import extract_pac_features, pac_feature_names
 from rich_feature_extraction import (
     RichFeatureError,
     extract_rich_features,
@@ -59,7 +60,7 @@ PILOT_DATASETS = ["ds005284", "ds005286", "ds005289", "ds005291"]
 
 def process_subject_rich(
     spec, subject_id, cache_dir, channels,
-    include_coupling=True, mvar_order=0,
+    include_coupling=True, mvar_order=0, include_pac=False,
 ):
     """Return (features, ratings, epoch_index, qc) for one cached subject."""
 
@@ -127,6 +128,11 @@ def process_subject_rich(
             [features, extract_mvar_features(subset, rec.srate, onset, order=mvar_order)],
             axis=1,
         )
+    if include_pac:
+        features = np.concatenate(
+            [features, extract_pac_features(subset, rec.srate, onset, channels)],
+            axis=1,
+        )
     return (
         features,
         np.asarray(ratings, dtype=np.float64),
@@ -164,6 +170,15 @@ def main():
             f"coupling features."
         ),
     )
+    ap.add_argument(
+        "--include-pac",
+        action="store_true",
+        help=(
+            "Add phase-amplitude coupling, peak alpha frequency and alpha asymmetry. "
+            "Coupling asks whether a slow rhythm controls a fast one, which band power "
+            "cannot represent because squaring discards phase."
+        ),
+    )
     args = ap.parse_args()
 
     args.out = _normalize_npz_path(args.out)
@@ -172,6 +187,8 @@ def main():
     names = rich_feature_names(channels, include_coupling=include_coupling)
     if args.mvar_order > 0:
         names = names + mvar_feature_names(channels, order=args.mvar_order)
+    if args.include_pac:
+        names = names + pac_feature_names(channels)
     print(f"Datasets: {args.datasets}")
     print(f"Channels: {channels}")
     print(f"Rich features per trial: {len(names)}")
@@ -194,6 +211,7 @@ def main():
                     spec, subject_id, args.cache_dir, channels,
                     include_coupling=include_coupling,
                     mvar_order=args.mvar_order,
+                    include_pac=args.include_pac,
                 )
             except Exception as exc:  # noqa: BLE001 -- collect every failure, abort later
                 failures.append((dataset_id, subject_id, type(exc).__name__, str(exc)))

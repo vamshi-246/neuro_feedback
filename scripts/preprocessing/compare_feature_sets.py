@@ -62,15 +62,37 @@ def trial_keys(dataset_id, subject_id, epoch_index):
     ]
 
 
+# Set once by main(); the dataset label of every validation row, needed for the
+# dataset-macro column.
+VALIDATION_DATASETS = None
+
+
 def evaluate_columns(tag, X, y, train_mask, val_mask, seed):
+    """Fit on the training rows and report pooled and dataset-macro scores.
+
+    Pooled throws every validation trial into one pile. That rewards a model for
+    recognising WHICH dataset a trial came from, because the nine datasets have very
+    different class mixes and are partly identifiable from the signal -- dataset
+    identity alone scores 0.4064 pooled with no EEG at all. Dataset-macro scores each
+    dataset separately and averages, where knowing the dataset is worth nothing
+    because it is constant within each group. Both are printed: pooled for continuity
+    with earlier numbers, dataset-macro as the one that cannot be gamed.
+    """
+
     model = HistGradientBoostingClassifier(random_state=seed)
     model.fit(X[train_mask], y[train_mask],
               sample_weight=balanced_sample_weights(y[train_mask]))
     pred = model.predict(X[val_mask])
     bal = balanced_accuracy_score(y[val_mask], pred)
     acc = accuracy_score(y[val_mask], pred)
-    print(f"  {tag:<44}{X.shape[1]:>6}{bal:>12.4f}{acc:>10.4f}")
-    return bal
+    truth = y[val_mask]
+    macro = float(np.mean([
+        balanced_accuracy_score(truth[VALIDATION_DATASETS == ds],
+                                pred[VALIDATION_DATASETS == ds])
+        for ds in sorted(set(VALIDATION_DATASETS.tolist()))
+    ]))
+    print(f"  {tag:<44}{X.shape[1]:>6}{macro:>14.4f}{bal:>10.4f}{acc:>9.4f}")
+    return macro
 
 
 def main():
@@ -130,6 +152,8 @@ def main():
         split_label = f"fresh seeded split (seed {args.split_seed})"
     train_mask = keys_mask(dataset_id, subject_id, train_keys)
     val_mask = keys_mask(dataset_id, subject_id, val_keys)
+    global VALIDATION_DATASETS
+    VALIDATION_DATASETS = dataset_id[val_mask]
     print(f"Split: {split_label}")
 
     print(f"Matched trials: {len(pairs)}   "
@@ -150,6 +174,10 @@ def main():
     is_new_band = lambda n: (":delta:" in n or ":gamma:" in n) and "coupling" not in n
     is_shape = lambda n: "hjorth" in n or "spectral_entropy" in n
     is_coupling = lambda n: "coupling" in n
+    # PAC names read "Cz:pac:delta_phase_gamma_amp:response", so they carry band words
+    # without the ":band:" pattern is_band matches. No overlap between the groups.
+    is_pac = lambda n: ":pac:" in n or "peak_alpha_frequency" in n \
+        or "alpha_peak_power" in n or "alpha_asymmetry" in n
 
     # Stimulus intensity alone already beat all 36 old EEG columns on the pooled
     # archive (0.4727 vs 0.4584).  It is therefore the real bar: an EEG feature
@@ -157,24 +185,34 @@ def main():
     # rediscovering how hard the laser fired.
     laser = rich["laser_power"].astype(np.float64)[rich_idx].reshape(-1, 1)
 
-    print(f"  {'feature set':<44}{'cols':>6}{'VAL balanced':>12}{'val acc':>10}")
-    print("  " + "-" * 72)
+    print(f"  {'feature set':<44}{'cols':>6}{'DATASET-MACRO':>14}"
+          f"{'pooled':>10}{'acc':>9}")
+    print("  " + "-" * 83)
     baseline_laser = evaluate_columns("BAR: laser power alone (no EEG)",
                                       laser, y, train_mask, val_mask, args.seed)
     old = evaluate_columns("OLD: alpha/beta/theta relative power",
                            X_old, y, train_mask, val_mask, args.seed)
-    print("  " + "-" * 72)
+    print("  " + "-" * 83)
     evaluate_columns("NEW: ERP (N2-P2) only", pick(is_erp), y, train_mask, val_mask, args.seed)
     evaluate_columns("NEW: 5 bands only", pick(is_band), y, train_mask, val_mask, args.seed)
     evaluate_columns("NEW: delta + gamma only", pick(is_new_band), y, train_mask, val_mask, args.seed)
     evaluate_columns("NEW: shape (Hjorth + entropy) only", pick(is_shape), y, train_mask, val_mask, args.seed)
     evaluate_columns("NEW: coupling only", pick(is_coupling), y, train_mask, val_mask, args.seed)
-    print("  " + "-" * 72)
+    if any(is_pac(n) for n in rich_names):
+        evaluate_columns("NEW: PAC + alpha frequency only",
+                         pick(is_pac), y, train_mask, val_mask, args.seed)
+    print("  " + "-" * 83)
+    if any(is_pac(n) for n in rich_names):
+        without_pac = evaluate_columns("NEW: everything EXCEPT PAC",
+                                       pick(lambda n: not is_pac(n)),
+                                       y, train_mask, val_mask, args.seed)
+    else:
+        without_pac = None
     without_erp = evaluate_columns("NEW: everything EXCEPT ERP",
                                    pick(lambda n: not is_erp(n)), y, train_mask, val_mask, args.seed)
     full = evaluate_columns("NEW: everything", X_new, y, train_mask, val_mask, args.seed)
 
-    print("  " + "-" * 72)
+    print("  " + "-" * 83)
     erp_plus_laser = evaluate_columns(
         "NEW: ERP + laser power",
         np.hstack([pick(is_erp), laser]), y, train_mask, val_mask, args.seed)
@@ -182,8 +220,12 @@ def main():
         "NEW: everything + laser power",
         np.hstack([X_new, laser]), y, train_mask, val_mask, args.seed)
 
-    print(f"\n  Full new set vs old set:       {100*(full-old):+6.2f} points balanced accuracy")
+    print(f"\n  All figures below are dataset-macro, the metric site fingerprinting"
+          f" cannot inflate.")
+    print(f"  Full new set vs old set:       {100*(full-old):+6.2f} points")
     print(f"  Value of ERP within new set:   {100*(full-without_erp):+6.2f} points")
+    if without_pac is not None:
+        print(f"  Value of PAC within new set:   {100*(full-without_pac):+6.2f} points")
     print(f"  EEG gain ON TOP of laser power:{100*(full_plus_laser-baseline_laser):+6.2f} points")
     print(
         "\n  How to read the last line, which is the one that decides this:\n"
