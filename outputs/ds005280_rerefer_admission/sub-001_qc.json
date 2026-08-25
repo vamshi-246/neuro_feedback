@@ -1,0 +1,79 @@
+{
+  "allow_subject_skip": false,
+  "archive_written": true,
+  "bands_hz": [
+    {
+      "high": 13.0,
+      "low": 8.0,
+      "name": "alpha"
+    },
+    {
+      "high": 30.0,
+      "low": 13.0,
+      "name": "beta"
+    },
+    {
+      "high": 8.0,
+      "low": 4.0,
+      "name": "theta"
+    }
+  ],
+  "baseline_window_s": [
+    -0.5,
+    0.0
+  ],
+  "build_id": "7a387e9f60944389b666345b9b2d4e8f",
+  "build_status": "complete",
+  "channels": [
+    "Fz",
+    "Cz",
+    "C3",
+    "C4"
+  ],
+  "created_utc": "2026-08-10T16:36:05.729273+00:00",
+  "expected_subject_keys": [
+    [
+      "ds005280",
+      "sub-001"
+    ]
+  ],
+  "output_path": "D:\\Neuro_feedback\\neuro_feedback_new\\outputs\\ds005280_rerefer_admission\\sub-001_features.npz",
+  "post_windows_s": [
+    [
+      0.0,
+      0.3
+    ],
+    [
+      0.3,
+      0.6
+    ],
+    [
+      0.6,
+      1.0
+    ]
+  ],
+  "schema_version": 1,
+  "selected_datasets": [
+    "ds005280"
+  ],
+  "subject_failures": [],
+  "subjects": [
+    {
+      "accepted_trials": 28,
+      "dataset_id": "ds005280",
+      "derivative_stage": "rerefer",
+      "input_trials": 28,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-001"
+    }
+  ],
+  "successful_subject_keys": [
+    [
+      "ds005280",
+      "sub-001"
+    ]
+  ]
+}
