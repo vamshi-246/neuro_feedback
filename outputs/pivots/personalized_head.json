@@ -1,0 +1,120 @@
+{
+  "Three classes: Low / Moderate / High": {
+    "training origin (where the shrinkage was chosen)|bias-only": [
+      0.49392804675855806,
+      0.5260926172451149,
+      0.5180787035769231,
+      0.5304189211806739,
+      0.5316311285934148,
+      0.5413994638767966
+    ],
+    "training origin (where the shrinkage was chosen)|head-only": [
+      0.49392804675855806,
+      0.5189464295850453,
+      0.5273185101408417,
+      0.5290356587944844,
+      0.5520181687796103,
+      0.5635991410385124
+    ],
+    "training origin (where the shrinkage was chosen)|blended": [
+      0.49624395600195964,
+      0.5234584748276316,
+      0.5173008504977671,
+      0.5228189764590037,
+      0.537370734407282,
+      0.5522434459459996
+    ],
+    "training origin (where the shrinkage was chosen)|global": 0.49021321290253184,
+    "training origin (where the shrinkage was chosen)|subjects": 29,
+    "validation origin (never trained on)|bias-only": [
+      0.5673632918522786,
+      0.5707958317556042,
+      0.5897452437781335,
+      0.5887278421811689,
+      0.5898721660897205,
+      0.6037013405496089
+    ],
+    "validation origin (never trained on)|head-only": [
+      0.5673632918522786,
+      0.5331357221024207,
+      0.5708193511494845,
+      0.5968908802136935,
+      0.6104226663843814,
+      0.6063897612426109
+    ],
+    "validation origin (never trained on)|blended": [
+      0.5476218802613061,
+      0.5678073240294498,
+      0.5751475831887999,
+      0.5963040804889603,
+      0.6184270240580874,
+      0.6149152707843143
+    ],
+    "validation origin (never trained on)|global": 0.5317191992185549,
+    "validation origin (never trained on)|subjects": 12,
+    "shrinkage": {
+      "bias-only": 10.0,
+      "head-only": 30.0,
+      "blended": 30.0
+    }
+  },
+  "Severe or not (rating >= 7)  -- pivot 1 and pivot 2 together": {
+    "training origin (where the shrinkage was chosen)|bias-only": [
+      0.7111814144928394,
+      0.7074030411992347,
+      0.7200038847602267,
+      0.722073149632023,
+      0.724075612800573,
+      0.720807089549708
+    ],
+    "training origin (where the shrinkage was chosen)|head-only": [
+      0.7111814144928394,
+      0.723628782519372,
+      0.7345139545905062,
+      0.7406045576417803,
+      0.7534091664475442,
+      0.7435482972826836
+    ],
+    "training origin (where the shrinkage was chosen)|blended": [
+      0.7177869835602341,
+      0.7239534338516715,
+      0.7393589813569249,
+      0.7408547235589278,
+      0.7572851669037798,
+      0.7487109749900068
+    ],
+    "training origin (where the shrinkage was chosen)|global": 0.7203721757283355,
+    "training origin (where the shrinkage was chosen)|subjects": 29,
+    "validation origin (never trained on)|bias-only": [
+      0.7486369355868296,
+      0.756542956389192,
+      0.7724512910475264,
+      0.7703442931071954,
+      0.7818830937313619,
+      0.7817568311050991
+    ],
+    "validation origin (never trained on)|head-only": [
+      0.7486369355868296,
+      0.7489116567856035,
+      0.7758964355042335,
+      0.7902512117906483,
+      0.8022432443266475,
+      0.7958288149005531
+    ],
+    "validation origin (never trained on)|blended": [
+      0.7526165287127643,
+      0.7526200169623084,
+      0.7794962767040962,
+      0.7896472275901729,
+      0.7911017026654178,
+      0.7907092402262027
+    ],
+    "validation origin (never trained on)|global": 0.7573051772601084,
+    "validation origin (never trained on)|subjects": 12,
+    "shrinkage": {
+      "bias-only": 30.0,
+      "head-only": 30.0,
+      "blended": 30.0
+    }
+  }
+}
