@@ -1,0 +1,402 @@
+{
+  "input_output_format": {
+    "total_bits": 16,
+    "fractional_bits": 12,
+    "notation": "Q4.12"
+  },
+  "coefficient_format": {
+    "total_bits": 16,
+    "fractional_bits": 14,
+    "notation": "Q2.14"
+  },
+  "segmentation": {
+    "type": "uniform_x",
+    "continuity": "exact_at_quantized_boundaries"
+  },
+  "input_range": {
+    "minimum": -8.0,
+    "maximum": 7.999755859375
+  },
+  "saturation": {
+    "magnitude": 8.0,
+    "magnitude_raw": 32768,
+    "inclusive": false,
+    "rule": "abs(x) > saturation"
+  },
+  "symmetry": "sigmoid(-x) = 1 - sigmoid(x)",
+  "right_half_boundaries_raw": [
+    0,
+    1024,
+    2048,
+    3072,
+    4096,
+    5120,
+    6144,
+    7168,
+    8192,
+    9216,
+    10240,
+    11264,
+    12288,
+    13312,
+    14336,
+    15360,
+    16384,
+    17408,
+    18432,
+    19456,
+    20480,
+    21504,
+    22528,
+    23552,
+    24576,
+    25600,
+    26624,
+    27648,
+    28672,
+    29696,
+    30720,
+    31744,
+    32768
+  ],
+  "right_half_boundaries": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0,
+    5.25,
+    5.5,
+    5.75,
+    6.0,
+    6.25,
+    6.5,
+    6.75,
+    7.0,
+    7.25,
+    7.5,
+    7.75,
+    8.0
+  ],
+  "segments": [
+    {
+      "index": 0,
+      "x_start_raw": 0,
+      "x_end_raw": 1024,
+      "slope_raw": 4083,
+      "intercept_raw": 8192,
+      "slope": 0.24920654296875,
+      "intercept": 0.5
+    },
+    {
+      "index": 1,
+      "x_start_raw": 1024,
+      "x_end_raw": 2048,
+      "slope_raw": 3965,
+      "intercept_raw": 8220,
+      "slope": 0.24200439453125,
+      "intercept": 0.501708984375
+    },
+    {
+      "index": 2,
+      "x_start_raw": 2048,
+      "x_end_raw": 3072,
+      "slope_raw": 3718,
+      "intercept_raw": 8344,
+      "slope": 0.2269287109375,
+      "intercept": 0.50927734375
+    },
+    {
+      "index": 3,
+      "x_start_raw": 3072,
+      "x_end_raw": 4096,
+      "slope_raw": 3416,
+      "intercept_raw": 8568,
+      "slope": 0.20849609375,
+      "intercept": 0.52294921875
+    },
+    {
+      "index": 4,
+      "x_start_raw": 4096,
+      "x_end_raw": 5120,
+      "slope_raw": 3038,
+      "intercept_raw": 8944,
+      "slope": 0.1854248046875,
+      "intercept": 0.5458984375
+    },
+    {
+      "index": 5,
+      "x_start_raw": 5120,
+      "x_end_raw": 6144,
+      "slope_raw": 2658,
+      "intercept_raw": 9416,
+      "slope": 0.1622314453125,
+      "intercept": 0.57470703125
+    },
+    {
+      "index": 6,
+      "x_start_raw": 6144,
+      "x_end_raw": 7168,
+      "slope_raw": 2247,
+      "intercept_raw": 10032,
+      "slope": 0.13714599609375,
+      "intercept": 0.6123046875
+    },
+    {
+      "index": 7,
+      "x_start_raw": 7168,
+      "x_end_raw": 8192,
+      "slope_raw": 1896,
+      "intercept_raw": 10644,
+      "slope": 0.11572265625,
+      "intercept": 0.649658203125
+    },
+    {
+      "index": 8,
+      "x_start_raw": 8192,
+      "x_end_raw": 9216,
+      "slope_raw": 1573,
+      "intercept_raw": 11288,
+      "slope": 0.09600830078125,
+      "intercept": 0.68896484375
+    },
+    {
+      "index": 9,
+      "x_start_raw": 9216,
+      "x_end_raw": 10240,
+      "slope_raw": 1274,
+      "intercept_raw": 11960,
+      "slope": 0.0777587890625,
+      "intercept": 0.72998046875
+    },
+    {
+      "index": 10,
+      "x_start_raw": 10240,
+      "x_end_raw": 11264,
+      "slope_raw": 1040,
+      "intercept_raw": 12544,
+      "slope": 0.0634765625,
+      "intercept": 0.765625
+    },
+    {
+      "index": 11,
+      "x_start_raw": 11264,
+      "x_end_raw": 12288,
+      "slope_raw": 830,
+      "intercept_raw": 13120,
+      "slope": 0.0506591796875,
+      "intercept": 0.80078125
+    },
+    {
+      "index": 12,
+      "x_start_raw": 12288,
+      "x_end_raw": 13312,
+      "slope_raw": 654,
+      "intercept_raw": 13648,
+      "slope": 0.0399169921875,
+      "intercept": 0.8330078125
+    },
+    {
+      "index": 13,
+      "x_start_raw": 13312,
+      "x_end_raw": 14336,
+      "slope_raw": 539,
+      "intercept_raw": 14020,
+      "slope": 0.03289794921875,
+      "intercept": 0.855712890625
+    },
+    {
+      "index": 14,
+      "x_start_raw": 14336,
+      "x_end_raw": 15360,
+      "slope_raw": 403,
+      "intercept_raw": 14496,
+      "slope": 0.02459716796875,
+      "intercept": 0.884765625
+    },
+    {
+      "index": 15,
+      "x_start_raw": 15360,
+      "x_end_raw": 16384,
+      "slope_raw": 334,
+      "intercept_raw": 14756,
+      "slope": 0.0203857421875,
+      "intercept": 0.900634765625
+    },
+    {
+      "index": 16,
+      "x_start_raw": 16384,
+      "x_end_raw": 17408,
+      "slope_raw": 248,
+      "intercept_raw": 15100,
+      "slope": 0.01513671875,
+      "intercept": 0.921630859375
+    },
+    {
+      "index": 17,
+      "x_start_raw": 17408,
+      "x_end_raw": 18432,
+      "slope_raw": 190,
+      "intercept_raw": 15348,
+      "slope": 0.0115966796875,
+      "intercept": 0.936767578125
+    },
+    {
+      "index": 18,
+      "x_start_raw": 18432,
+      "x_end_raw": 19456,
+      "slope_raw": 161,
+      "intercept_raw": 15480,
+      "slope": 0.00982666015625,
+      "intercept": 0.94482421875
+    },
+    {
+      "index": 19,
+      "x_start_raw": 19456,
+      "x_end_raw": 20480,
+      "slope_raw": 123,
+      "intercept_raw": 15660,
+      "slope": 0.00750732421875,
+      "intercept": 0.955810546875
+    },
+    {
+      "index": 20,
+      "x_start_raw": 20480,
+      "x_end_raw": 21504,
+      "slope_raw": 91,
+      "intercept_raw": 15820,
+      "slope": 0.00555419921875,
+      "intercept": 0.965576171875
+    },
+    {
+      "index": 21,
+      "x_start_raw": 21504,
+      "x_end_raw": 22528,
+      "slope_raw": 90,
+      "intercept_raw": 15824,
+      "slope": 0.0054931640625,
+      "intercept": 0.9658203125
+    },
+    {
+      "index": 22,
+      "x_start_raw": 22528,
+      "x_end_raw": 23552,
+      "slope_raw": 45,
+      "intercept_raw": 16072,
+      "slope": 0.00274658203125,
+      "intercept": 0.98095703125
+    },
+    {
+      "index": 23,
+      "x_start_raw": 23552,
+      "x_end_raw": 24576,
+      "slope_raw": 48,
+      "intercept_raw": 16056,
+      "slope": 0.0029296875,
+      "intercept": 0.97998046875
+    },
+    {
+      "index": 24,
+      "x_start_raw": 24576,
+      "x_end_raw": 25600,
+      "slope_raw": 34,
+      "intercept_raw": 16140,
+      "slope": 0.0020751953125,
+      "intercept": 0.985107421875
+    },
+    {
+      "index": 25,
+      "x_start_raw": 25600,
+      "x_end_raw": 26624,
+      "slope_raw": 27,
+      "intercept_raw": 16184,
+      "slope": 0.00164794921875,
+      "intercept": 0.98779296875
+    },
+    {
+      "index": 26,
+      "x_start_raw": 26624,
+      "x_end_raw": 27648,
+      "slope_raw": 16,
+      "intercept_raw": 16256,
+      "slope": 0.0009765625,
+      "intercept": 0.9921875
+    },
+    {
+      "index": 27,
+      "x_start_raw": 27648,
+      "x_end_raw": 28672,
+      "slope_raw": 19,
+      "intercept_raw": 16236,
+      "slope": 0.00115966796875,
+      "intercept": 0.990966796875
+    },
+    {
+      "index": 28,
+      "x_start_raw": 28672,
+      "x_end_raw": 29696,
+      "slope_raw": 19,
+      "intercept_raw": 16236,
+      "slope": 0.00115966796875,
+      "intercept": 0.990966796875
+    },
+    {
+      "index": 29,
+      "x_start_raw": 29696,
+      "x_end_raw": 30720,
+      "slope_raw": 10,
+      "intercept_raw": 16300,
+      "slope": 0.0006103515625,
+      "intercept": 0.994873046875
+    },
+    {
+      "index": 30,
+      "x_start_raw": 30720,
+      "x_end_raw": 31744,
+      "slope_raw": 2,
+      "intercept_raw": 16360,
+      "slope": 0.0001220703125,
+      "intercept": 0.99853515625
+    },
+    {
+      "index": 31,
+      "x_start_raw": 31744,
+      "x_end_raw": 32768,
+      "slope_raw": 16,
+      "intercept_raw": 16252,
+      "slope": 0.0009765625,
+      "intercept": 0.991943359375
+    }
+  ],
+  "error_over_all_input_codes": {
+    "max_abs_error": 0.0005771737125996879,
+    "rms_error": 0.00015333690538872163,
+    "mean_abs_error": 0.0001151949736914902,
+    "max_abs_error_lsb": 2.3641035268083215
+  },
+  "segment_search": [
+    {
+      "segment_count": 32,
+      "max_abs_error": 0.0005771737125996879,
+      "rms_error": 0.00015333690538872163,
+      "mean_abs_error": 0.0001151949736914902,
+      "max_abs_error_lsb": 2.3641035268083215
+    }
+  ]
+}
