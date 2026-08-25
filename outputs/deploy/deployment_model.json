@@ -1,0 +1,1928 @@
+{
+  "three_class__fixed": {
+    "task": "three_class",
+    "n_features": 16,
+    "n_classes": 3,
+    "scores": {
+      "dataset_macro_validation": 0.44589580831503384,
+      "per_user_baseline_deep_users": 0.5673632918522786,
+      "deep_users": 12,
+      "dataset_macro_8bit": 0.4463870115485129
+    },
+    "standardized_form": {
+      "mean": [
+        2.330920058954186,
+        6.221285170882767,
+        1.6772958026922553,
+        22.63634358853771,
+        0.4006643759911209,
+        11.24671036853714,
+        -11.389633220000459,
+        4.673756698779276,
+        4.675570430576766,
+        1.508253875926481,
+        5.420368231761699,
+        1.5948983652094038,
+        2.398708343322115,
+        1.3057119307375549,
+        0.6528689360079681,
+        -2.7453052976458294
+      ],
+      "sd": [
+        1.46597783545724,
+        3.0508349817643263,
+        1.3947934120928722,
+        15.068775951248364,
+        0.4251153009654404,
+        6.495683736371172,
+        10.039355654781914,
+        1.6442154129203728,
+        0.9667363613373926,
+        1.3380313796032428,
+        1.0227826827535258,
+        3.7414091371654346,
+        1.342043509366658,
+        1.2804739971339032,
+        0.3020827426731524,
+        6.852791501688805
+      ],
+      "W": [
+        [
+          -0.04712087878283795,
+          0.07881855979329846,
+          -0.07948304276932558,
+          -0.06220520869622768,
+          -0.08822345012319603,
+          -0.04814645415701865,
+          0.0622163647838201,
+          -0.07255451806092389,
+          -0.03684942184891909,
+          -0.05440738216690713,
+          -0.019643300847178455,
+          -0.10021997639057917,
+          -0.0326124888551902,
+          -0.05088069992468362,
+          -0.04946656068047274,
+          -0.06249803684315073
+        ],
+        [
+          -0.08181226447540225,
+          -0.07818103112479992,
+          -0.06516933489766959,
+          0.043491337234189756,
+          0.03634941693378603,
+          0.044638781925590246,
+          -0.03639693815037176,
+          0.05759787192141167,
+          0.05499802687536775,
+          -0.01790613433783505,
+          -0.02322595528304905,
+          -0.03748757428988017,
+          0.033227028680769766,
+          -0.0185112103670549,
+          -0.03333132136922988,
+          -0.047106920604161745
+        ],
+        [
+          0.12893314325823887,
+          -0.000637528668502442,
+          0.1446523776669983,
+          0.01871387146203921,
+          0.05187403318940908,
+          0.0035076722314300443,
+          -0.025819426633448796,
+          0.014956646139512591,
+          -0.01814860502644689,
+          0.07231351650474407,
+          0.04286925613022854,
+          0.13770755068045834,
+          -0.0006145398255794441,
+          0.06939191029173875,
+          0.08279788204970186,
+          0.10960495744731535
+        ]
+      ],
+      "b": [
+        -0.04253118771896937,
+        0.07327653427677908,
+        -0.030745346557805416
+      ]
+    },
+    "folded_form": {
+      "W_eff": [
+        [
+          -0.032142968088014034,
+          0.025835078024350224,
+          -0.056985530674440274,
+          -0.00412808637526224,
+          -0.20752828685027294,
+          -0.007412068707630119,
+          0.0061972468077854575,
+          -0.04412713656056551,
+          -0.0381173433860926,
+          -0.04066226173487813,
+          -0.01920574250856003,
+          -0.026786692584630775,
+          -0.02430061963533567,
+          -0.039735832229760515,
+          -0.16375169346894666,
+          -0.009120084395935391
+        ],
+        [
+          -0.05580729973989336,
+          -0.0256261094395827,
+          -0.04672328843300436,
+          0.002886189122122208,
+          0.08550484268911564,
+          0.006872068243662337,
+          -0.0036254257147504566,
+          0.03503061184611402,
+          0.056890408879710426,
+          -0.013382447236136293,
+          -0.022708592621572703,
+          -0.01001964043907839,
+          0.024758533124198324,
+          -0.014456529697978025,
+          -0.11033838303465655,
+          -0.006874121384336981
+        ],
+        [
+          0.08795026782790648,
+          -0.00020896858476880098,
+          0.10370881910744688,
+          0.0012418972531401179,
+          0.12202344416115514,
+          0.0005400004639680338,
+          -0.0025718210930350464,
+          0.009096524714451708,
+          -0.018773065493615997,
+          0.05404470897101584,
+          0.04191433513013374,
+          0.03680633302370889,
+          -0.00045791348886256296,
+          0.054192361927738714,
+          0.2740900765036007,
+          0.015994205780272792
+        ]
+      ],
+      "b_eff": [
+        1.0824431497003222,
+        -0.03483074050573727,
+        -1.0476124091945929
+      ]
+    },
+    "max_abs_difference_between_forms": 1.3322676295501878e-15,
+    "columns": [
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 0,
+        "name": "Cz:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.1421758700880336,
+        "quantizer_high": 5.094701544242948
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential erp_rms",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.0,
+          0.6
+        ],
+        "signed": false,
+        "hardware": "mean or RMS over the window",
+        "index": 1,
+        "name": "Cz:erp_erp_rms",
+        "family": "rich",
+        "quantizer_low": 2.058918162750315,
+        "quantizer_high": 15.242246429231797
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 2,
+        "name": "Cz:theta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.4982950508475965,
+        "quantizer_high": 4.524620318968613
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 3,
+        "name": "Cz:erp_n2p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 3.7897116774599504,
+        "quantizer_high": 68.58911411517097
+      },
+      {
+        "channel": "C3-C4",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "index": 4,
+        "name": "C3-C4:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.7222745663432016,
+        "quantizer_high": 0.9580291888844615
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.3,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 5,
+        "name": "Cz:erp_p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 1.8769363866185662,
+        "quantizer_high": 31.202181994217316
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 6,
+        "name": "Cz:erp_n2_amplitude",
+        "family": "rich",
+        "quantizer_low": -43.258663732474105,
+        "quantizer_high": 1.7718766705097078
+      },
+      {
+        "channel": "Cz",
+        "primitive": "log-power difference",
+        "band": "delta/gamma",
+        "band_hz": [
+          [
+            1.0,
+            4.0
+          ],
+          [
+            30.0,
+            45.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "index": 7,
+        "name": "Cz:w0:delta_over_gamma",
+        "family": "ratio",
+        "quantizer_low": 0.7817689372899288,
+        "quantizer_high": 8.164598986810022
+      },
+      {
+        "channel": "Cz",
+        "primitive": "AR-model band power",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "least-squares AR fit per trial, then spectrum evaluation",
+        "index": 8,
+        "name": "mvar:parametric_power:theta:Cz",
+        "family": "MVAR",
+        "quantizer_low": 2.523381682743419,
+        "quantizer_high": 6.788060481899193
+      },
+      {
+        "channel": "C4",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 9,
+        "name": "C4:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.7695508497536148,
+        "quantizer_high": 4.173974654818137
+      },
+      {
+        "channel": "Cz",
+        "primitive": "AR-model band power",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "least-squares AR fit per trial, then spectrum evaluation",
+        "index": 10,
+        "name": "mvar:parametric_power:delta:Cz",
+        "family": "MVAR",
+        "quantizer_low": 3.1033810287604777,
+        "quantizer_high": 7.741961271948556
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.25,
+          0.45
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "index": 11,
+        "name": "Cz:erp_p2_window_mean",
+        "family": "rich",
+        "quantizer_low": -5.917206206565449,
+        "quantizer_high": 12.829528553091365
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.3,
+          0.6
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 12,
+        "name": "Cz:delta:w1:log_absolute",
+        "family": "rich",
+        "quantizer_low": -0.8813220836864435,
+        "quantizer_high": 5.114953464506119
+      },
+      {
+        "channel": "C3",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 13,
+        "name": "C3:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.8514122892050022,
+        "quantizer_high": 3.9758937605880544
+      },
+      {
+        "channel": "Cz-C3",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "index": 14,
+        "name": "Cz-C3:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.34084357828684614,
+        "quantizer_high": 0.9798164381118419
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.25
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "index": 15,
+        "name": "Cz:erp_n2_window_mean",
+        "family": "rich",
+        "quantizer_low": -23.293165610201473,
+        "quantizer_high": 11.720445380234578
+      }
+    ]
+  },
+  "three_class__no_mvar": {
+    "task": "three_class",
+    "n_features": 16,
+    "n_classes": 3,
+    "scores": {
+      "dataset_macro_validation": 0.43863672297596396,
+      "per_user_baseline_deep_users": 0.5541352412204827,
+      "deep_users": 12,
+      "dataset_macro_8bit": 0.43850539678033146
+    },
+    "standardized_form": {
+      "mean": [
+        2.330920058954186,
+        6.221285170882767,
+        1.6772958026922553,
+        0.4006643759911209,
+        11.24671036853714,
+        22.63634358853771,
+        -11.389633220000459,
+        1.3057119307375549,
+        4.673756698779276,
+        2.398708343322115,
+        1.508253875926481,
+        -0.7965465426114552,
+        1.5948983652094038,
+        -2.7453052976458294,
+        -1.5946268879115169,
+        0.0525175702035154
+      ],
+      "sd": [
+        1.46597783545724,
+        3.0508349817643263,
+        1.3947934120928722,
+        0.4251153009654404,
+        6.495683736371172,
+        15.068775951248364,
+        10.039355654781914,
+        1.2804739971339032,
+        1.6442154129203728,
+        1.342043509366658,
+        1.3380313796032428,
+        1.4137791701102287,
+        3.7414091371654346,
+        6.852791501688805,
+        1.3817643512543811,
+        0.013638663957943657
+      ],
+      "W": [
+        [
+          -0.18224116628725848,
+          0.0791696141837029,
+          -0.06555939899362215,
+          -0.0968967685672494,
+          -0.06688513230999647,
+          -0.0749437104030733,
+          0.06921214256784174,
+          -0.05973382817116663,
+          -0.020476541499611922,
+          -0.000827906935408071,
+          0.06489497524361436,
+          0.13003529069241235,
+          -0.09134489891270832,
+          -0.06933453922440852,
+          -0.10967093938463862,
+          0.11561683879257531
+        ],
+        [
+          -0.07770593606525468,
+          -0.056191620799442454,
+          -0.058221107874029544,
+          0.004062593591460184,
+          0.057167696363709865,
+          0.057523908310771074,
+          -0.04935292938084028,
+          -0.02186716484680199,
+          0.01738296630541232,
+          0.0028447596863373312,
+          -0.08536535099275225,
+          -0.08066524588892875,
+          -0.04629984151291868,
+          -0.03334273777203781,
+          -0.005540713888770416,
+          -0.04952145242227784
+        ],
+        [
+          0.25994710235251006,
+          -0.022977993384258863,
+          0.12378050686765549,
+          0.09283417497579112,
+          0.009717435946290456,
+          0.017419802092300284,
+          -0.019859213186999878,
+          0.08160099301797338,
+          0.003093575194196717,
+          -0.0020168527509273134,
+          0.020470375749144922,
+          -0.04937004480348762,
+          0.13764474042562586,
+          0.10267727699644227,
+          0.11521165327340922,
+          -0.06609538637030096
+        ]
+      ],
+      "b": [
+        -0.04635562697592714,
+        0.07445896971914732,
+        -0.028103342743219007
+      ]
+    },
+    "folded_form": {
+      "W_eff": [
+        [
+          -0.12431372554170798,
+          0.025950146322866133,
+          -0.04700294568731221,
+          -0.22793055989091904,
+          -0.010296857886643663,
+          -0.004973443804960457,
+          0.006894082145090141,
+          -0.04664977836712765,
+          -0.012453685410503797,
+          -0.0006169002194264028,
+          0.04850033880584865,
+          0.09197708768214051,
+          -0.02441457097149044,
+          -0.010117707390823388,
+          -0.07937021915862724,
+          8.477138167572186
+        ],
+        [
+          -0.05300621481839671,
+          -0.01841843991409405,
+          -0.04174174280524412,
+          0.009556451113930739,
+          0.008800874347316473,
+          0.0038174240891812807,
+          -0.004915945911063789,
+          -0.01707739860063341,
+          0.010572195205576847,
+          0.0021197223983295747,
+          -0.06379921449829154,
+          -0.05705646793667181,
+          -0.01237497419167484,
+          -0.004865570149598279,
+          -0.0040098833666829614,
+          -3.6309606699734496
+        ],
+        [
+          0.1773199403601026,
+          -0.007531706408771567,
+          0.08874468849255905,
+          0.21837410877699281,
+          0.0014959835393277819,
+          0.0011560197157790477,
+          -0.001978136234026195,
+          0.06372717696776478,
+          0.0018814902049251955,
+          -0.0015028221789017211,
+          0.015298875692448156,
+          -0.03492061974547154,
+          0.036789545163164974,
+          0.014983277540421074,
+          0.08338010252531033,
+          -4.846177497598992
+        ]
+      ],
+      "b_eff": [
+        0.11914301414086344,
+        0.3466519718133322,
+        -0.4657949859541989
+      ]
+    },
+    "max_abs_difference_between_forms": 1.1102230246251565e-15,
+    "columns": [
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 0,
+        "name": "Cz:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.1421758700880336,
+        "quantizer_high": 5.094701544242948
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential erp_rms",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.0,
+          0.6
+        ],
+        "signed": false,
+        "hardware": "mean or RMS over the window",
+        "index": 1,
+        "name": "Cz:erp_erp_rms",
+        "family": "rich",
+        "quantizer_low": 2.058918162750315,
+        "quantizer_high": 15.242246429231797
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 2,
+        "name": "Cz:theta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.4982950508475965,
+        "quantizer_high": 4.524620318968613
+      },
+      {
+        "channel": "C3-C4",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "index": 3,
+        "name": "C3-C4:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.7222745663432016,
+        "quantizer_high": 0.9580291888844615
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.3,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 4,
+        "name": "Cz:erp_p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 1.8769363866185662,
+        "quantizer_high": 31.202181994217316
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 5,
+        "name": "Cz:erp_n2p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 3.7897116774599504,
+        "quantizer_high": 68.58911411517097
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 6,
+        "name": "Cz:erp_n2_amplitude",
+        "family": "rich",
+        "quantizer_low": -43.258663732474105,
+        "quantizer_high": 1.7718766705097078
+      },
+      {
+        "channel": "C3",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 7,
+        "name": "C3:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.8514122892050022,
+        "quantizer_high": 3.9758937605880544
+      },
+      {
+        "channel": "Cz",
+        "primitive": "log-power difference",
+        "band": "delta/gamma",
+        "band_hz": [
+          [
+            1.0,
+            4.0
+          ],
+          [
+            30.0,
+            45.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "index": 8,
+        "name": "Cz:w0:delta_over_gamma",
+        "family": "ratio",
+        "quantizer_low": 0.7817689372899288,
+        "quantizer_high": 8.164598986810022
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.3,
+          0.6
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 9,
+        "name": "Cz:delta:w1:log_absolute",
+        "family": "rich",
+        "quantizer_low": -0.8813220836864435,
+        "quantizer_high": 5.114953464506119
+      },
+      {
+        "channel": "C4",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 10,
+        "name": "C4:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.7695508497536148,
+        "quantizer_high": 4.173974654818137
+      },
+      {
+        "channel": "C4",
+        "primitive": "log-power difference",
+        "band": "beta/delta",
+        "band_hz": [
+          [
+            13.0,
+            30.0
+          ],
+          [
+            1.0,
+            4.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "index": 11,
+        "name": "C4:w0:beta_over_delta",
+        "family": "ratio",
+        "quantizer_low": -3.7009623251895887,
+        "quantizer_high": 2.6927569474974704
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.25,
+          0.45
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "index": 12,
+        "name": "Cz:erp_p2_window_mean",
+        "family": "rich",
+        "quantizer_low": -5.917206206565449,
+        "quantizer_high": 12.829528553091365
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.25
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "index": 13,
+        "name": "Cz:erp_n2_window_mean",
+        "family": "rich",
+        "quantizer_low": -23.293165610201473,
+        "quantizer_high": 11.720445380234578
+      },
+      {
+        "channel": "Cz",
+        "primitive": "log-power difference",
+        "band": "beta/delta",
+        "band_hz": [
+          [
+            13.0,
+            30.0
+          ],
+          [
+            1.0,
+            4.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "index": 14,
+        "name": "Cz:w0:beta_over_delta",
+        "family": "ratio",
+        "quantizer_low": -4.366662931780797,
+        "quantizer_high": 1.9304264324022806
+      },
+      {
+        "channel": "Cz",
+        "primitive": "Hjorth mobility",
+        "band": "broadband",
+        "band_hz": [
+          1.0,
+          45.0
+        ],
+        "window_s": [
+          0.0,
+          1.0
+        ],
+        "signed": false,
+        "hardware": "one first difference, two variances, one square root",
+        "index": 15,
+        "name": "Cz:hjorth_mobility",
+        "family": "rich",
+        "quantizer_low": 0.029699836875847083,
+        "quantizer_high": 0.09095084817571411
+      }
+    ]
+  },
+  "severe__fixed": {
+    "task": "severe",
+    "n_features": 16,
+    "n_classes": 2,
+    "scores": {
+      "dataset_macro_validation": 0.6201207850598327,
+      "per_user_baseline_deep_users": 0.7486369355868296,
+      "deep_users": 12,
+      "dataset_macro_8bit": 0.6208529978641042
+    },
+    "standardized_form": {
+      "mean": [
+        2.330920058954186,
+        6.221285170882767,
+        1.6772958026922553,
+        22.63634358853771,
+        0.4006643759911209,
+        11.24671036853714,
+        -11.389633220000459,
+        4.673756698779276,
+        4.675570430576766,
+        1.508253875926481,
+        5.420368231761699,
+        1.5948983652094038,
+        2.398708343322115,
+        1.3057119307375549,
+        0.6528689360079681,
+        -2.7453052976458294
+      ],
+      "sd": [
+        1.46597783545724,
+        3.0508349817643263,
+        1.3947934120928722,
+        15.068775951248364,
+        0.4251153009654404,
+        6.495683736371172,
+        10.039355654781914,
+        1.6442154129203728,
+        0.9667363613373926,
+        1.3380313796032428,
+        1.0227826827535258,
+        3.7414091371654346,
+        1.342043509366658,
+        1.2804739971339032,
+        0.3020827426731524,
+        6.852791501688805
+      ],
+      "W": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.18280468814993844,
+          0.0181011095443206,
+          0.19404000237724955,
+          0.010523173287598999,
+          0.060792522726673535,
+          -0.009861329014766211,
+          -0.02217546849843511,
+          -7.586582880897124e-05,
+          -0.02345620339308634,
+          0.10490840255756503,
+          0.05605766196466947,
+          0.18877303217289912,
+          -0.003233621816565364,
+          0.08792584507629599,
+          0.1258729559427472,
+          0.14864328272732164
+        ]
+      ],
+      "b": [
+        0.0,
+        -0.0865496472996354
+      ]
+    },
+    "folded_form": {
+      "W_eff": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.1246981255299276,
+          0.00593316572430691,
+          0.13911737802524796,
+          0.0006983429391773001,
+          0.14300243390113979,
+          -0.0015181356443741002,
+          -0.0022088537612344234,
+          -4.614105196485305e-05,
+          -0.024263288659833585,
+          0.07840503904226281,
+          0.05480896666509015,
+          0.050455062585301025,
+          -0.0024094761414191306,
+          0.06866663850503893,
+          0.4166837033750692,
+          0.02169090985632496
+        ]
+      ],
+      "b_eff": [
+        0.0,
+        -1.4071725440170484
+      ]
+    },
+    "max_abs_difference_between_forms": 1.3322676295501878e-15,
+    "columns": [
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 0,
+        "name": "Cz:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.1421758700880336,
+        "quantizer_high": 5.094701544242948
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential erp_rms",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.0,
+          0.6
+        ],
+        "signed": false,
+        "hardware": "mean or RMS over the window",
+        "index": 1,
+        "name": "Cz:erp_erp_rms",
+        "family": "rich",
+        "quantizer_low": 2.058918162750315,
+        "quantizer_high": 15.242246429231797
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 2,
+        "name": "Cz:theta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.4982950508475965,
+        "quantizer_high": 4.524620318968613
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 3,
+        "name": "Cz:erp_n2p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 3.7897116774599504,
+        "quantizer_high": 68.58911411517097
+      },
+      {
+        "channel": "C3-C4",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "index": 4,
+        "name": "C3-C4:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.7222745663432016,
+        "quantizer_high": 0.9580291888844615
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.3,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 5,
+        "name": "Cz:erp_p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 1.8769363866185662,
+        "quantizer_high": 31.202181994217316
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 6,
+        "name": "Cz:erp_n2_amplitude",
+        "family": "rich",
+        "quantizer_low": -43.258663732474105,
+        "quantizer_high": 1.7718766705097078
+      },
+      {
+        "channel": "Cz",
+        "primitive": "log-power difference",
+        "band": "delta/gamma",
+        "band_hz": [
+          [
+            1.0,
+            4.0
+          ],
+          [
+            30.0,
+            45.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "index": 7,
+        "name": "Cz:w0:delta_over_gamma",
+        "family": "ratio",
+        "quantizer_low": 0.7817689372899288,
+        "quantizer_high": 8.164598986810022
+      },
+      {
+        "channel": "Cz",
+        "primitive": "AR-model band power",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "least-squares AR fit per trial, then spectrum evaluation",
+        "index": 8,
+        "name": "mvar:parametric_power:theta:Cz",
+        "family": "MVAR",
+        "quantizer_low": 2.523381682743419,
+        "quantizer_high": 6.788060481899193
+      },
+      {
+        "channel": "C4",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 9,
+        "name": "C4:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.7695508497536148,
+        "quantizer_high": 4.173974654818137
+      },
+      {
+        "channel": "Cz",
+        "primitive": "AR-model band power",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "least-squares AR fit per trial, then spectrum evaluation",
+        "index": 10,
+        "name": "mvar:parametric_power:delta:Cz",
+        "family": "MVAR",
+        "quantizer_low": 3.1033810287604777,
+        "quantizer_high": 7.741961271948556
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.25,
+          0.45
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "index": 11,
+        "name": "Cz:erp_p2_window_mean",
+        "family": "rich",
+        "quantizer_low": -5.917206206565449,
+        "quantizer_high": 12.829528553091365
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.3,
+          0.6
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 12,
+        "name": "Cz:delta:w1:log_absolute",
+        "family": "rich",
+        "quantizer_low": -0.8813220836864435,
+        "quantizer_high": 5.114953464506119
+      },
+      {
+        "channel": "C3",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 13,
+        "name": "C3:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.8514122892050022,
+        "quantizer_high": 3.9758937605880544
+      },
+      {
+        "channel": "Cz-C3",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "index": 14,
+        "name": "Cz-C3:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.34084357828684614,
+        "quantizer_high": 0.9798164381118419
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.25
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "index": 15,
+        "name": "Cz:erp_n2_window_mean",
+        "family": "rich",
+        "quantizer_low": -23.293165610201473,
+        "quantizer_high": 11.720445380234578
+      }
+    ]
+  },
+  "severe__no_mvar": {
+    "task": "severe",
+    "n_features": 16,
+    "n_classes": 2,
+    "scores": {
+      "dataset_macro_validation": 0.6170676401845245,
+      "per_user_baseline_deep_users": 0.7540195622194563,
+      "deep_users": 12,
+      "dataset_macro_8bit": 0.6171604758050618
+    },
+    "standardized_form": {
+      "mean": [
+        2.330920058954186,
+        6.221285170882767,
+        1.6772958026922553,
+        0.4006643759911209,
+        11.24671036853714,
+        22.63634358853771,
+        -11.389633220000459,
+        1.3057119307375549,
+        4.673756698779276,
+        2.398708343322115,
+        1.508253875926481,
+        -0.7965465426114552,
+        1.5948983652094038,
+        -2.7453052976458294,
+        -1.5946268879115169,
+        0.0525175702035154
+      ],
+      "sd": [
+        1.46597783545724,
+        3.0508349817643263,
+        1.3947934120928722,
+        0.4251153009654404,
+        6.495683736371172,
+        15.068775951248364,
+        10.039355654781914,
+        1.2804739971339032,
+        1.6442154129203728,
+        1.342043509366658,
+        1.3380313796032428,
+        1.4137791701102287,
+        3.7414091371654346,
+        6.852791501688805,
+        1.3817643512543811,
+        0.013638663957943657
+      ],
+      "W": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.3381191955831106,
+          -0.016828821225085274,
+          0.17237042479584955,
+          0.12780935778212943,
+          -0.003135100003246426,
+          0.006974115589570323,
+          -0.012496419859435606,
+          0.10544567516005984,
+          -0.0027009624387307174,
+          0.0019573799735243293,
+          0.06293328830352869,
+          -0.032992104101448004,
+          0.18916299727325872,
+          0.1371180994220987,
+          0.14214171709379084,
+          -0.07700182098950946
+        ]
+      ],
+      "b": [
+        0.0,
+        -0.08528756194027562
+      ]
+    },
+    "folded_form": {
+      "W_eff": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.23064413895292687,
+          -0.005516136180972007,
+          0.12358132989544998,
+          0.30064633639832133,
+          -0.0004826435723297478,
+          0.0004628189849084959,
+          -0.001244743217507525,
+          0.08234893906169112,
+          -0.0016427059480809778,
+          0.0014585070900183133,
+          0.047034239452732315,
+          -0.023336108494847674,
+          0.05055929205769042,
+          0.02000908671864703,
+          0.1028697237446841,
+          -5.645847806423941
+        ]
+      ],
+      "b_eff": [
+        0.0,
+        -0.6935830565875465
+      ]
+    },
+    "max_abs_difference_between_forms": 1.5543122344752192e-15,
+    "columns": [
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 0,
+        "name": "Cz:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.1421758700880336,
+        "quantizer_high": 5.094701544242948
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential erp_rms",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.0,
+          0.6
+        ],
+        "signed": false,
+        "hardware": "mean or RMS over the window",
+        "index": 1,
+        "name": "Cz:erp_erp_rms",
+        "family": "rich",
+        "quantizer_low": 2.058918162750315,
+        "quantizer_high": 15.242246429231797
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 2,
+        "name": "Cz:theta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.4982950508475965,
+        "quantizer_high": 4.524620318968613
+      },
+      {
+        "channel": "C3-C4",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "index": 3,
+        "name": "C3-C4:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.7222745663432016,
+        "quantizer_high": 0.9580291888844615
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.3,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 4,
+        "name": "Cz:erp_p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 1.8769363866185662,
+        "quantizer_high": 31.202181994217316
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 5,
+        "name": "Cz:erp_n2p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 3.7897116774599504,
+        "quantizer_high": 68.58911411517097
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "index": 6,
+        "name": "Cz:erp_n2_amplitude",
+        "family": "rich",
+        "quantizer_low": -43.258663732474105,
+        "quantizer_high": 1.7718766705097078
+      },
+      {
+        "channel": "C3",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 7,
+        "name": "C3:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.8514122892050022,
+        "quantizer_high": 3.9758937605880544
+      },
+      {
+        "channel": "Cz",
+        "primitive": "log-power difference",
+        "band": "delta/gamma",
+        "band_hz": [
+          [
+            1.0,
+            4.0
+          ],
+          [
+            30.0,
+            45.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "index": 8,
+        "name": "Cz:w0:delta_over_gamma",
+        "family": "ratio",
+        "quantizer_low": 0.7817689372899288,
+        "quantizer_high": 8.164598986810022
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.3,
+          0.6
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 9,
+        "name": "Cz:delta:w1:log_absolute",
+        "family": "rich",
+        "quantizer_low": -0.8813220836864435,
+        "quantizer_high": 5.114953464506119
+      },
+      {
+        "channel": "C4",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "index": 10,
+        "name": "C4:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.7695508497536148,
+        "quantizer_high": 4.173974654818137
+      },
+      {
+        "channel": "C4",
+        "primitive": "log-power difference",
+        "band": "beta/delta",
+        "band_hz": [
+          [
+            13.0,
+            30.0
+          ],
+          [
+            1.0,
+            4.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "index": 11,
+        "name": "C4:w0:beta_over_delta",
+        "family": "ratio",
+        "quantizer_low": -3.7009623251895887,
+        "quantizer_high": 2.6927569474974704
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.25,
+          0.45
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "index": 12,
+        "name": "Cz:erp_p2_window_mean",
+        "family": "rich",
+        "quantizer_low": -5.917206206565449,
+        "quantizer_high": 12.829528553091365
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.25
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "index": 13,
+        "name": "Cz:erp_n2_window_mean",
+        "family": "rich",
+        "quantizer_low": -23.293165610201473,
+        "quantizer_high": 11.720445380234578
+      },
+      {
+        "channel": "Cz",
+        "primitive": "log-power difference",
+        "band": "beta/delta",
+        "band_hz": [
+          [
+            13.0,
+            30.0
+          ],
+          [
+            1.0,
+            4.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "index": 14,
+        "name": "Cz:w0:beta_over_delta",
+        "family": "ratio",
+        "quantizer_low": -4.366662931780797,
+        "quantizer_high": 1.9304264324022806
+      },
+      {
+        "channel": "Cz",
+        "primitive": "Hjorth mobility",
+        "band": "broadband",
+        "band_hz": [
+          1.0,
+          45.0
+        ],
+        "window_s": [
+          0.0,
+          1.0
+        ],
+        "signed": false,
+        "hardware": "one first difference, two variances, one square root",
+        "index": 15,
+        "name": "Cz:hjorth_mobility",
+        "family": "rich",
+        "quantizer_low": 0.029699836875847083,
+        "quantizer_high": 0.09095084817571411
+      }
+    ]
+  }
+}

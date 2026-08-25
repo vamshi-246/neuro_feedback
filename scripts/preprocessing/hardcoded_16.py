@@ -43,6 +43,7 @@ from sklearn.metrics import accuracy_score, balanced_accuracy_score
 
 from feature_extraction import WINDOWS_S
 from rich_feature_extraction import (
+    BROADBAND_HZ,
     ERP_RMS_WINDOW_S,
     N2_MEAN_WINDOW_S,
     N2_SEARCH_S,
@@ -136,6 +137,16 @@ def describe(name):
                 "window_s": window, "signed": stat != "erp_rms",
                 "hardware": "peak search in the window" if peak
                             else "mean or RMS over the window"}
+    if ":hjorth_" in name:
+        channel, stat = name.split(":hjorth_", 1)
+        # Both are variance ratios on the broadband response window: mobility is
+        # sd(dx)/sd(x), complexity is mobility(dx)/mobility(x). No spectrum needed.
+        return {"channel": channel, "primitive": f"Hjorth {stat}",
+                "band": "broadband", "band_hz": list(BROADBAND_HZ),
+                "window_s": [WINDOWS_S[0][0], WINDOWS_S[-1][1]], "signed": False,
+                "hardware": "two first differences, three variances, two square roots"
+                            if stat == "complexity"
+                            else "one first difference, two variances, one square root"}
     channel, band, window, kind = name.split(":")
     return {"channel": channel, "primitive": f"band power ({kind})", "band": band,
             "band_hz": BAND_HZ.get(band), "window_s": WINDOWS_S[int(window[1:])],
