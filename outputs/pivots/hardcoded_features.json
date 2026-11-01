@@ -1,0 +1,509 @@
+{
+  "Three classes: Low / Moderate / High": {
+    "scores": {
+      "everything in the pool": {
+        "columns": 599,
+        "dataset_macro": 0.4325101808061828,
+        "pooled_balanced": 0.4865933597026035,
+        "plain_accuracy": 0.4479203075847606
+      },
+      "the fixed list (16 columns)": {
+        "columns": 16,
+        "dataset_macro": 0.45029190114410844,
+        "pooled_balanced": 0.4952021363206527,
+        "plain_accuracy": 0.4425026214610276
+      },
+      "no-MVAR list, reselected (16 columns)": {
+        "columns": 16,
+        "dataset_macro": 0.45290810646887153,
+        "pooled_balanced": 0.4836368708289891,
+        "plain_accuracy": 0.43708493533729464
+      },
+      "the fixed list, 8-bit quantized": {
+        "columns": 16,
+        "dataset_macro": 0.44805118775289604,
+        "pooled_balanced": 0.49727917940030375,
+        "plain_accuracy": 0.4435512058720727
+      }
+    },
+    "columns": [
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "Cz:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.1421758700880336,
+        "quantizer_high": 5.094701544242948
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential erp_rms",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.0,
+          0.6
+        ],
+        "signed": false,
+        "hardware": "mean or RMS over the window",
+        "name": "Cz:erp_erp_rms",
+        "family": "rich",
+        "quantizer_low": 2.058918162750315,
+        "quantizer_high": 15.242246429231797
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "Cz:theta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.4982950508475965,
+        "quantizer_high": 4.524620318968613
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "name": "Cz:erp_n2p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 3.7897116774599504,
+        "quantizer_high": 68.58911411517097
+      },
+      {
+        "channel": "C3-C4",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "name": "C3-C4:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.7222745663432016,
+        "quantizer_high": 0.9580291888844615
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.3,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "name": "Cz:erp_p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 1.8769363866185662,
+        "quantizer_high": 31.202181994217316
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "name": "Cz:erp_n2_amplitude",
+        "family": "rich",
+        "quantizer_low": -43.258663732474105,
+        "quantizer_high": 1.7718766705097078
+      },
+      {
+        "channel": "Cz",
+        "primitive": "log-power difference",
+        "band": "delta/gamma",
+        "band_hz": [
+          [
+            1.0,
+            4.0
+          ],
+          [
+            30.0,
+            45.0
+          ]
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "subtract two log powers already computed",
+        "name": "Cz:w0:delta_over_gamma",
+        "family": "ratio",
+        "quantizer_low": 0.7817689372899288,
+        "quantizer_high": 8.164598986810022
+      },
+      {
+        "channel": "Cz",
+        "primitive": "AR-model band power",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "least-squares AR fit per trial, then spectrum evaluation",
+        "name": "mvar:parametric_power:theta:Cz",
+        "family": "MVAR",
+        "quantizer_low": 2.523381682743419,
+        "quantizer_high": 6.788060481899193
+      },
+      {
+        "channel": "C4",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "C4:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.7695508497536148,
+        "quantizer_high": 4.173974654818137
+      },
+      {
+        "channel": "Cz",
+        "primitive": "AR-model band power",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "least-squares AR fit per trial, then spectrum evaluation",
+        "name": "mvar:parametric_power:delta:Cz",
+        "family": "MVAR",
+        "quantizer_low": 3.1033810287604777,
+        "quantizer_high": 7.741961271948556
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.25,
+          0.45
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "name": "Cz:erp_p2_window_mean",
+        "family": "rich",
+        "quantizer_low": -5.917206206565449,
+        "quantizer_high": 12.829528553091365
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.3,
+          0.6
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "Cz:delta:w1:log_absolute",
+        "family": "rich",
+        "quantizer_low": -0.8813220836864435,
+        "quantizer_high": 5.114953464506119
+      },
+      {
+        "channel": "C3",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "C3:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.8514122892050022,
+        "quantizer_high": 3.9758937605880544
+      },
+      {
+        "channel": "Cz-C3",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "name": "Cz-C3:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.34084357828684614,
+        "quantizer_high": 0.9798164381118419
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2_window_mean",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.25
+        ],
+        "signed": true,
+        "hardware": "mean or RMS over the window",
+        "name": "Cz:erp_n2_window_mean",
+        "family": "rich",
+        "quantizer_low": -23.293165610201473,
+        "quantizer_high": 11.720445380234578
+      }
+    ]
+  },
+  "Severe or not (rating >= 7)": {
+    "scores": {
+      "everything in the pool": {
+        "columns": 599,
+        "dataset_macro": 0.6309526307856074,
+        "pooled_balanced": 0.6811797528774877,
+        "plain_accuracy": 0.6829779797273681
+      },
+      "the fixed list (8 columns)": {
+        "columns": 8,
+        "dataset_macro": 0.6038611975331561,
+        "pooled_balanced": 0.6738181848565111,
+        "plain_accuracy": 0.6731911918909472
+      },
+      "no-MVAR list, reselected (8 columns)": {
+        "columns": 8,
+        "dataset_macro": 0.6098586243392724,
+        "pooled_balanced": 0.6718449419033462,
+        "plain_accuracy": 0.6728416637539322
+      },
+      "the fixed list, 8-bit quantized": {
+        "columns": 8,
+        "dataset_macro": 0.6075858473098682,
+        "pooled_balanced": 0.6778374387491806,
+        "plain_accuracy": 0.6784341139461727
+      }
+    },
+    "columns": [
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "Cz:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.1421758700880336,
+        "quantizer_high": 5.094701544242948
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential erp_rms",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.0,
+          0.6
+        ],
+        "signed": false,
+        "hardware": "mean or RMS over the window",
+        "name": "Cz:erp_erp_rms",
+        "family": "rich",
+        "quantizer_low": 2.058918162750315,
+        "quantizer_high": 15.242246429231797
+      },
+      {
+        "channel": "Cz",
+        "primitive": "band power (log_absolute)",
+        "band": "theta",
+        "band_hz": [
+          4.0,
+          8.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "Cz:theta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.4982950508475965,
+        "quantizer_high": 4.524620318968613
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential n2p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.15,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "name": "Cz:erp_n2p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 3.7897116774599504,
+        "quantizer_high": 68.58911411517097
+      },
+      {
+        "channel": "C4",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "C4:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.7695508497536148,
+        "quantizer_high": 4.173974654818137
+      },
+      {
+        "channel": "Cz",
+        "primitive": "evoked potential p2_amplitude",
+        "band": "1-30 Hz passband",
+        "band_hz": [
+          1.0,
+          30.0
+        ],
+        "window_s": [
+          0.3,
+          0.55
+        ],
+        "signed": true,
+        "hardware": "peak search in the window",
+        "name": "Cz:erp_p2_amplitude",
+        "family": "rich",
+        "quantizer_low": 1.8769363866185662,
+        "quantizer_high": 31.202181994217316
+      },
+      {
+        "channel": "C3-C4",
+        "primitive": "cross-channel correlation",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": null,
+        "signed": true,
+        "hardware": "band-pass both channels, one Pearson correlation",
+        "name": "C3-C4:delta:coupling",
+        "family": "rich",
+        "quantizer_low": -0.7222745663432016,
+        "quantizer_high": 0.9580291888844615
+      },
+      {
+        "channel": "C3",
+        "primitive": "band power (log_absolute)",
+        "band": "delta",
+        "band_hz": [
+          1.0,
+          4.0
+        ],
+        "window_s": [
+          0.0,
+          0.3
+        ],
+        "signed": true,
+        "hardware": "one band power, then log",
+        "name": "C3:delta:w0:log_absolute",
+        "family": "rich",
+        "quantizer_low": -1.8514122892050022,
+        "quantizer_high": 3.9758937605880544
+      }
+    ]
+  }
+}

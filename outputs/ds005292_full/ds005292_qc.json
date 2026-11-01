@@ -1,0 +1,2766 @@
+{
+  "allow_subject_skip": false,
+  "archive_written": true,
+  "bands_hz": [
+    {
+      "high": 13.0,
+      "low": 8.0,
+      "name": "alpha"
+    },
+    {
+      "high": 30.0,
+      "low": 13.0,
+      "name": "beta"
+    },
+    {
+      "high": 8.0,
+      "low": 4.0,
+      "name": "theta"
+    }
+  ],
+  "baseline_window_s": [
+    -0.5,
+    0.0
+  ],
+  "build_id": "7f9fff8924754172b1d87c766e58d6cb",
+  "build_status": "complete",
+  "cache_only": true,
+  "channels": [
+    "Fz",
+    "Cz",
+    "C3",
+    "C4"
+  ],
+  "created_utc": "2026-08-11T17:44:06.852875+00:00",
+  "expected_subject_keys": [
+    [
+      "ds005292",
+      "sub-001"
+    ],
+    [
+      "ds005292",
+      "sub-002"
+    ],
+    [
+      "ds005292",
+      "sub-003"
+    ],
+    [
+      "ds005292",
+      "sub-004"
+    ],
+    [
+      "ds005292",
+      "sub-005"
+    ],
+    [
+      "ds005292",
+      "sub-006"
+    ],
+    [
+      "ds005292",
+      "sub-007"
+    ],
+    [
+      "ds005292",
+      "sub-008"
+    ],
+    [
+      "ds005292",
+      "sub-009"
+    ],
+    [
+      "ds005292",
+      "sub-010"
+    ],
+    [
+      "ds005292",
+      "sub-011"
+    ],
+    [
+      "ds005292",
+      "sub-012"
+    ],
+    [
+      "ds005292",
+      "sub-013"
+    ],
+    [
+      "ds005292",
+      "sub-014"
+    ],
+    [
+      "ds005292",
+      "sub-015"
+    ],
+    [
+      "ds005292",
+      "sub-016"
+    ],
+    [
+      "ds005292",
+      "sub-017"
+    ],
+    [
+      "ds005292",
+      "sub-018"
+    ],
+    [
+      "ds005292",
+      "sub-019"
+    ],
+    [
+      "ds005292",
+      "sub-020"
+    ],
+    [
+      "ds005292",
+      "sub-021"
+    ],
+    [
+      "ds005292",
+      "sub-022"
+    ],
+    [
+      "ds005292",
+      "sub-023"
+    ],
+    [
+      "ds005292",
+      "sub-024"
+    ],
+    [
+      "ds005292",
+      "sub-025"
+    ],
+    [
+      "ds005292",
+      "sub-026"
+    ],
+    [
+      "ds005292",
+      "sub-027"
+    ],
+    [
+      "ds005292",
+      "sub-028"
+    ],
+    [
+      "ds005292",
+      "sub-029"
+    ],
+    [
+      "ds005292",
+      "sub-030"
+    ],
+    [
+      "ds005292",
+      "sub-031"
+    ],
+    [
+      "ds005292",
+      "sub-032"
+    ],
+    [
+      "ds005292",
+      "sub-033"
+    ],
+    [
+      "ds005292",
+      "sub-034"
+    ],
+    [
+      "ds005292",
+      "sub-035"
+    ],
+    [
+      "ds005292",
+      "sub-036"
+    ],
+    [
+      "ds005292",
+      "sub-037"
+    ],
+    [
+      "ds005292",
+      "sub-038"
+    ],
+    [
+      "ds005292",
+      "sub-039"
+    ],
+    [
+      "ds005292",
+      "sub-040"
+    ],
+    [
+      "ds005292",
+      "sub-041"
+    ],
+    [
+      "ds005292",
+      "sub-042"
+    ],
+    [
+      "ds005292",
+      "sub-043"
+    ],
+    [
+      "ds005292",
+      "sub-044"
+    ],
+    [
+      "ds005292",
+      "sub-045"
+    ],
+    [
+      "ds005292",
+      "sub-046"
+    ],
+    [
+      "ds005292",
+      "sub-047"
+    ],
+    [
+      "ds005292",
+      "sub-048"
+    ],
+    [
+      "ds005292",
+      "sub-049"
+    ],
+    [
+      "ds005292",
+      "sub-050"
+    ],
+    [
+      "ds005292",
+      "sub-051"
+    ],
+    [
+      "ds005292",
+      "sub-052"
+    ],
+    [
+      "ds005292",
+      "sub-053"
+    ],
+    [
+      "ds005292",
+      "sub-054"
+    ],
+    [
+      "ds005292",
+      "sub-055"
+    ],
+    [
+      "ds005292",
+      "sub-056"
+    ],
+    [
+      "ds005292",
+      "sub-057"
+    ],
+    [
+      "ds005292",
+      "sub-058"
+    ],
+    [
+      "ds005292",
+      "sub-059"
+    ],
+    [
+      "ds005292",
+      "sub-060"
+    ],
+    [
+      "ds005292",
+      "sub-061"
+    ],
+    [
+      "ds005292",
+      "sub-062"
+    ],
+    [
+      "ds005292",
+      "sub-063"
+    ],
+    [
+      "ds005292",
+      "sub-064"
+    ],
+    [
+      "ds005292",
+      "sub-065"
+    ],
+    [
+      "ds005292",
+      "sub-066"
+    ],
+    [
+      "ds005292",
+      "sub-067"
+    ],
+    [
+      "ds005292",
+      "sub-068"
+    ],
+    [
+      "ds005292",
+      "sub-069"
+    ],
+    [
+      "ds005292",
+      "sub-070"
+    ],
+    [
+      "ds005292",
+      "sub-071"
+    ],
+    [
+      "ds005292",
+      "sub-072"
+    ],
+    [
+      "ds005292",
+      "sub-073"
+    ],
+    [
+      "ds005292",
+      "sub-074"
+    ],
+    [
+      "ds005292",
+      "sub-075"
+    ],
+    [
+      "ds005292",
+      "sub-076"
+    ],
+    [
+      "ds005292",
+      "sub-077"
+    ],
+    [
+      "ds005292",
+      "sub-078"
+    ],
+    [
+      "ds005292",
+      "sub-079"
+    ],
+    [
+      "ds005292",
+      "sub-080"
+    ],
+    [
+      "ds005292",
+      "sub-081"
+    ],
+    [
+      "ds005292",
+      "sub-082"
+    ],
+    [
+      "ds005292",
+      "sub-083"
+    ],
+    [
+      "ds005292",
+      "sub-084"
+    ],
+    [
+      "ds005292",
+      "sub-085"
+    ],
+    [
+      "ds005292",
+      "sub-086"
+    ],
+    [
+      "ds005292",
+      "sub-087"
+    ],
+    [
+      "ds005292",
+      "sub-088"
+    ],
+    [
+      "ds005292",
+      "sub-089"
+    ],
+    [
+      "ds005292",
+      "sub-090"
+    ],
+    [
+      "ds005292",
+      "sub-091"
+    ],
+    [
+      "ds005292",
+      "sub-092"
+    ],
+    [
+      "ds005292",
+      "sub-093"
+    ],
+    [
+      "ds005292",
+      "sub-094"
+    ],
+    [
+      "ds005292",
+      "sub-095"
+    ],
+    [
+      "ds005292",
+      "sub-096"
+    ],
+    [
+      "ds005292",
+      "sub-097"
+    ],
+    [
+      "ds005292",
+      "sub-098"
+    ],
+    [
+      "ds005292",
+      "sub-099"
+    ],
+    [
+      "ds005292",
+      "sub-100"
+    ],
+    [
+      "ds005292",
+      "sub-101"
+    ],
+    [
+      "ds005292",
+      "sub-102"
+    ],
+    [
+      "ds005292",
+      "sub-103"
+    ],
+    [
+      "ds005292",
+      "sub-104"
+    ],
+    [
+      "ds005292",
+      "sub-105"
+    ],
+    [
+      "ds005292",
+      "sub-106"
+    ],
+    [
+      "ds005292",
+      "sub-107"
+    ],
+    [
+      "ds005292",
+      "sub-108"
+    ],
+    [
+      "ds005292",
+      "sub-109"
+    ],
+    [
+      "ds005292",
+      "sub-110"
+    ],
+    [
+      "ds005292",
+      "sub-111"
+    ],
+    [
+      "ds005292",
+      "sub-112"
+    ],
+    [
+      "ds005292",
+      "sub-113"
+    ],
+    [
+      "ds005292",
+      "sub-114"
+    ],
+    [
+      "ds005292",
+      "sub-115"
+    ],
+    [
+      "ds005292",
+      "sub-116"
+    ],
+    [
+      "ds005292",
+      "sub-117"
+    ],
+    [
+      "ds005292",
+      "sub-118"
+    ],
+    [
+      "ds005292",
+      "sub-119"
+    ],
+    [
+      "ds005292",
+      "sub-120"
+    ],
+    [
+      "ds005292",
+      "sub-121"
+    ],
+    [
+      "ds005292",
+      "sub-122"
+    ],
+    [
+      "ds005292",
+      "sub-123"
+    ],
+    [
+      "ds005292",
+      "sub-124"
+    ],
+    [
+      "ds005292",
+      "sub-125"
+    ],
+    [
+      "ds005292",
+      "sub-126"
+    ],
+    [
+      "ds005292",
+      "sub-127"
+    ],
+    [
+      "ds005292",
+      "sub-128"
+    ],
+    [
+      "ds005292",
+      "sub-129"
+    ],
+    [
+      "ds005292",
+      "sub-130"
+    ],
+    [
+      "ds005292",
+      "sub-131"
+    ],
+    [
+      "ds005292",
+      "sub-132"
+    ],
+    [
+      "ds005292",
+      "sub-133"
+    ],
+    [
+      "ds005292",
+      "sub-134"
+    ],
+    [
+      "ds005292",
+      "sub-135"
+    ],
+    [
+      "ds005292",
+      "sub-136"
+    ],
+    [
+      "ds005292",
+      "sub-137"
+    ],
+    [
+      "ds005292",
+      "sub-138"
+    ],
+    [
+      "ds005292",
+      "sub-139"
+    ],
+    [
+      "ds005292",
+      "sub-140"
+    ],
+    [
+      "ds005292",
+      "sub-141"
+    ],
+    [
+      "ds005292",
+      "sub-142"
+    ]
+  ],
+  "output_path": "D:\\Neuro_feedback\\neuro_feedback_new\\outputs\\ds005292_full\\ds005292_features.npz",
+  "post_windows_s": [
+    [
+      0.0,
+      0.3
+    ],
+    [
+      0.3,
+      0.6
+    ],
+    [
+      0.6,
+      1.0
+    ]
+  ],
+  "schema_version": 1,
+  "selected_datasets": [
+    "ds005292"
+  ],
+  "subject_failures": [],
+  "subjects": [
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-001"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-002"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-003"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-004"
+    },
+    {
+      "accepted_trials": 28,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 28,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-005"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-006"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-007"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-008"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-009"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-010"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-011"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-012"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-013"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-014"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-015"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-016"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-017"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-018"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-019"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-020"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-021"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-022"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-023"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-024"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-025"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-026"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-027"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-028"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-029"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-030"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-031"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-032"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-033"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-034"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-035"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-036"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-037"
+    },
+    {
+      "accepted_trials": 26,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 26,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-038"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-039"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-040"
+    },
+    {
+      "accepted_trials": 27,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 27,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-041"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-042"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-043"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-044"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-045"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-046"
+    },
+    {
+      "accepted_trials": 23,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 23,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-047"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-048"
+    },
+    {
+      "accepted_trials": 18,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 18,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-049"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-050"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-051"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-052"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-053"
+    },
+    {
+      "accepted_trials": 17,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 17,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-054"
+    },
+    {
+      "accepted_trials": 25,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 25,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-055"
+    },
+    {
+      "accepted_trials": 26,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 26,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-056"
+    },
+    {
+      "accepted_trials": 26,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 26,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-057"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-058"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-059"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-060"
+    },
+    {
+      "accepted_trials": 28,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 28,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-061"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-062"
+    },
+    {
+      "accepted_trials": 17,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 17,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-063"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-064"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-065"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-066"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-067"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-068"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-069"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-070"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-071"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-072"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-073"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-074"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-075"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-076"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-077"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-078"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-079"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-080"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-081"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-082"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-083"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-084"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-085"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-086"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-087"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-088"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-089"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-090"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-091"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-092"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-093"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-094"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-095"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-096"
+    },
+    {
+      "accepted_trials": 24,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 24,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-097"
+    },
+    {
+      "accepted_trials": 21,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 21,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-098"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-099"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-100"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-101"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-102"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-103"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-104"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-105"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-106"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-107"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-108"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-109"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-110"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-111"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-112"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-113"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-114"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-115"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-116"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-117"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-118"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-119"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-120"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-121"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-122"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-123"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-124"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-125"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-126"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-127"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-128"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 29,
+          "reason": "out_of_range_rating"
+        }
+      ],
+      "rejected_trials": 1,
+      "rejections": {
+        "out_of_range_rating": 1
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-129"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-130"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-131"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-132"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-133"
+    },
+    {
+      "accepted_trials": 29,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 29,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-134"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-135"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-136"
+    },
+    {
+      "accepted_trials": 26,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 26,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-137"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-138"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-139"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-140"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-141"
+    },
+    {
+      "accepted_trials": 30,
+      "dataset_id": "ds005292",
+      "derivative_stage": "rerefer",
+      "input_trials": 30,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-142"
+    }
+  ],
+  "successful_subject_keys": [
+    [
+      "ds005292",
+      "sub-001"
+    ],
+    [
+      "ds005292",
+      "sub-002"
+    ],
+    [
+      "ds005292",
+      "sub-003"
+    ],
+    [
+      "ds005292",
+      "sub-004"
+    ],
+    [
+      "ds005292",
+      "sub-005"
+    ],
+    [
+      "ds005292",
+      "sub-006"
+    ],
+    [
+      "ds005292",
+      "sub-007"
+    ],
+    [
+      "ds005292",
+      "sub-008"
+    ],
+    [
+      "ds005292",
+      "sub-009"
+    ],
+    [
+      "ds005292",
+      "sub-010"
+    ],
+    [
+      "ds005292",
+      "sub-011"
+    ],
+    [
+      "ds005292",
+      "sub-012"
+    ],
+    [
+      "ds005292",
+      "sub-013"
+    ],
+    [
+      "ds005292",
+      "sub-014"
+    ],
+    [
+      "ds005292",
+      "sub-015"
+    ],
+    [
+      "ds005292",
+      "sub-016"
+    ],
+    [
+      "ds005292",
+      "sub-017"
+    ],
+    [
+      "ds005292",
+      "sub-018"
+    ],
+    [
+      "ds005292",
+      "sub-019"
+    ],
+    [
+      "ds005292",
+      "sub-020"
+    ],
+    [
+      "ds005292",
+      "sub-021"
+    ],
+    [
+      "ds005292",
+      "sub-022"
+    ],
+    [
+      "ds005292",
+      "sub-023"
+    ],
+    [
+      "ds005292",
+      "sub-024"
+    ],
+    [
+      "ds005292",
+      "sub-025"
+    ],
+    [
+      "ds005292",
+      "sub-026"
+    ],
+    [
+      "ds005292",
+      "sub-027"
+    ],
+    [
+      "ds005292",
+      "sub-028"
+    ],
+    [
+      "ds005292",
+      "sub-029"
+    ],
+    [
+      "ds005292",
+      "sub-030"
+    ],
+    [
+      "ds005292",
+      "sub-031"
+    ],
+    [
+      "ds005292",
+      "sub-032"
+    ],
+    [
+      "ds005292",
+      "sub-033"
+    ],
+    [
+      "ds005292",
+      "sub-034"
+    ],
+    [
+      "ds005292",
+      "sub-035"
+    ],
+    [
+      "ds005292",
+      "sub-036"
+    ],
+    [
+      "ds005292",
+      "sub-037"
+    ],
+    [
+      "ds005292",
+      "sub-038"
+    ],
+    [
+      "ds005292",
+      "sub-039"
+    ],
+    [
+      "ds005292",
+      "sub-040"
+    ],
+    [
+      "ds005292",
+      "sub-041"
+    ],
+    [
+      "ds005292",
+      "sub-042"
+    ],
+    [
+      "ds005292",
+      "sub-043"
+    ],
+    [
+      "ds005292",
+      "sub-044"
+    ],
+    [
+      "ds005292",
+      "sub-045"
+    ],
+    [
+      "ds005292",
+      "sub-046"
+    ],
+    [
+      "ds005292",
+      "sub-047"
+    ],
+    [
+      "ds005292",
+      "sub-048"
+    ],
+    [
+      "ds005292",
+      "sub-049"
+    ],
+    [
+      "ds005292",
+      "sub-050"
+    ],
+    [
+      "ds005292",
+      "sub-051"
+    ],
+    [
+      "ds005292",
+      "sub-052"
+    ],
+    [
+      "ds005292",
+      "sub-053"
+    ],
+    [
+      "ds005292",
+      "sub-054"
+    ],
+    [
+      "ds005292",
+      "sub-055"
+    ],
+    [
+      "ds005292",
+      "sub-056"
+    ],
+    [
+      "ds005292",
+      "sub-057"
+    ],
+    [
+      "ds005292",
+      "sub-058"
+    ],
+    [
+      "ds005292",
+      "sub-059"
+    ],
+    [
+      "ds005292",
+      "sub-060"
+    ],
+    [
+      "ds005292",
+      "sub-061"
+    ],
+    [
+      "ds005292",
+      "sub-062"
+    ],
+    [
+      "ds005292",
+      "sub-063"
+    ],
+    [
+      "ds005292",
+      "sub-064"
+    ],
+    [
+      "ds005292",
+      "sub-065"
+    ],
+    [
+      "ds005292",
+      "sub-066"
+    ],
+    [
+      "ds005292",
+      "sub-067"
+    ],
+    [
+      "ds005292",
+      "sub-068"
+    ],
+    [
+      "ds005292",
+      "sub-069"
+    ],
+    [
+      "ds005292",
+      "sub-070"
+    ],
+    [
+      "ds005292",
+      "sub-071"
+    ],
+    [
+      "ds005292",
+      "sub-072"
+    ],
+    [
+      "ds005292",
+      "sub-073"
+    ],
+    [
+      "ds005292",
+      "sub-074"
+    ],
+    [
+      "ds005292",
+      "sub-075"
+    ],
+    [
+      "ds005292",
+      "sub-076"
+    ],
+    [
+      "ds005292",
+      "sub-077"
+    ],
+    [
+      "ds005292",
+      "sub-078"
+    ],
+    [
+      "ds005292",
+      "sub-079"
+    ],
+    [
+      "ds005292",
+      "sub-080"
+    ],
+    [
+      "ds005292",
+      "sub-081"
+    ],
+    [
+      "ds005292",
+      "sub-082"
+    ],
+    [
+      "ds005292",
+      "sub-083"
+    ],
+    [
+      "ds005292",
+      "sub-084"
+    ],
+    [
+      "ds005292",
+      "sub-085"
+    ],
+    [
+      "ds005292",
+      "sub-086"
+    ],
+    [
+      "ds005292",
+      "sub-087"
+    ],
+    [
+      "ds005292",
+      "sub-088"
+    ],
+    [
+      "ds005292",
+      "sub-089"
+    ],
+    [
+      "ds005292",
+      "sub-090"
+    ],
+    [
+      "ds005292",
+      "sub-091"
+    ],
+    [
+      "ds005292",
+      "sub-092"
+    ],
+    [
+      "ds005292",
+      "sub-093"
+    ],
+    [
+      "ds005292",
+      "sub-094"
+    ],
+    [
+      "ds005292",
+      "sub-095"
+    ],
+    [
+      "ds005292",
+      "sub-096"
+    ],
+    [
+      "ds005292",
+      "sub-097"
+    ],
+    [
+      "ds005292",
+      "sub-098"
+    ],
+    [
+      "ds005292",
+      "sub-099"
+    ],
+    [
+      "ds005292",
+      "sub-100"
+    ],
+    [
+      "ds005292",
+      "sub-101"
+    ],
+    [
+      "ds005292",
+      "sub-102"
+    ],
+    [
+      "ds005292",
+      "sub-103"
+    ],
+    [
+      "ds005292",
+      "sub-104"
+    ],
+    [
+      "ds005292",
+      "sub-105"
+    ],
+    [
+      "ds005292",
+      "sub-106"
+    ],
+    [
+      "ds005292",
+      "sub-107"
+    ],
+    [
+      "ds005292",
+      "sub-108"
+    ],
+    [
+      "ds005292",
+      "sub-109"
+    ],
+    [
+      "ds005292",
+      "sub-110"
+    ],
+    [
+      "ds005292",
+      "sub-111"
+    ],
+    [
+      "ds005292",
+      "sub-112"
+    ],
+    [
+      "ds005292",
+      "sub-113"
+    ],
+    [
+      "ds005292",
+      "sub-114"
+    ],
+    [
+      "ds005292",
+      "sub-115"
+    ],
+    [
+      "ds005292",
+      "sub-116"
+    ],
+    [
+      "ds005292",
+      "sub-117"
+    ],
+    [
+      "ds005292",
+      "sub-118"
+    ],
+    [
+      "ds005292",
+      "sub-119"
+    ],
+    [
+      "ds005292",
+      "sub-120"
+    ],
+    [
+      "ds005292",
+      "sub-121"
+    ],
+    [
+      "ds005292",
+      "sub-122"
+    ],
+    [
+      "ds005292",
+      "sub-123"
+    ],
+    [
+      "ds005292",
+      "sub-124"
+    ],
+    [
+      "ds005292",
+      "sub-125"
+    ],
+    [
+      "ds005292",
+      "sub-126"
+    ],
+    [
+      "ds005292",
+      "sub-127"
+    ],
+    [
+      "ds005292",
+      "sub-128"
+    ],
+    [
+      "ds005292",
+      "sub-129"
+    ],
+    [
+      "ds005292",
+      "sub-130"
+    ],
+    [
+      "ds005292",
+      "sub-131"
+    ],
+    [
+      "ds005292",
+      "sub-132"
+    ],
+    [
+      "ds005292",
+      "sub-133"
+    ],
+    [
+      "ds005292",
+      "sub-134"
+    ],
+    [
+      "ds005292",
+      "sub-135"
+    ],
+    [
+      "ds005292",
+      "sub-136"
+    ],
+    [
+      "ds005292",
+      "sub-137"
+    ],
+    [
+      "ds005292",
+      "sub-138"
+    ],
+    [
+      "ds005292",
+      "sub-139"
+    ],
+    [
+      "ds005292",
+      "sub-140"
+    ],
+    [
+      "ds005292",
+      "sub-141"
+    ],
+    [
+      "ds005292",
+      "sub-142"
+    ]
+  ]
+}

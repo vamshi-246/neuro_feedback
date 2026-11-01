@@ -1,0 +1,6348 @@
+{
+  "allow_subject_skip": false,
+  "archive_written": true,
+  "bands_hz": [
+    {
+      "high": 13.0,
+      "low": 8.0,
+      "name": "alpha"
+    },
+    {
+      "high": 30.0,
+      "low": 13.0,
+      "name": "beta"
+    },
+    {
+      "high": 8.0,
+      "low": 4.0,
+      "name": "theta"
+    }
+  ],
+  "baseline_window_s": [
+    -0.5,
+    0.0
+  ],
+  "build_id": "9b30d2ad9cc843d9b6c1d6273e06174a",
+  "build_status": "complete",
+  "cache_only": true,
+  "channels": [
+    "Fz",
+    "Cz",
+    "C3",
+    "C4"
+  ],
+  "created_utc": "2026-08-11T17:57:38.117751+00:00",
+  "expected_subject_keys": [
+    [
+      "ds005293",
+      "sub-001"
+    ],
+    [
+      "ds005293",
+      "sub-002"
+    ],
+    [
+      "ds005293",
+      "sub-003"
+    ],
+    [
+      "ds005293",
+      "sub-004"
+    ],
+    [
+      "ds005293",
+      "sub-005"
+    ],
+    [
+      "ds005293",
+      "sub-006"
+    ],
+    [
+      "ds005293",
+      "sub-007"
+    ],
+    [
+      "ds005293",
+      "sub-008"
+    ],
+    [
+      "ds005293",
+      "sub-009"
+    ],
+    [
+      "ds005293",
+      "sub-010"
+    ],
+    [
+      "ds005293",
+      "sub-011"
+    ],
+    [
+      "ds005293",
+      "sub-012"
+    ],
+    [
+      "ds005293",
+      "sub-013"
+    ],
+    [
+      "ds005293",
+      "sub-014"
+    ],
+    [
+      "ds005293",
+      "sub-015"
+    ],
+    [
+      "ds005293",
+      "sub-016"
+    ],
+    [
+      "ds005293",
+      "sub-017"
+    ],
+    [
+      "ds005293",
+      "sub-018"
+    ],
+    [
+      "ds005293",
+      "sub-019"
+    ],
+    [
+      "ds005293",
+      "sub-020"
+    ],
+    [
+      "ds005293",
+      "sub-021"
+    ],
+    [
+      "ds005293",
+      "sub-022"
+    ],
+    [
+      "ds005293",
+      "sub-023"
+    ],
+    [
+      "ds005293",
+      "sub-024"
+    ],
+    [
+      "ds005293",
+      "sub-025"
+    ],
+    [
+      "ds005293",
+      "sub-026"
+    ],
+    [
+      "ds005293",
+      "sub-027"
+    ],
+    [
+      "ds005293",
+      "sub-028"
+    ],
+    [
+      "ds005293",
+      "sub-029"
+    ],
+    [
+      "ds005293",
+      "sub-030"
+    ],
+    [
+      "ds005293",
+      "sub-031"
+    ],
+    [
+      "ds005293",
+      "sub-032"
+    ],
+    [
+      "ds005293",
+      "sub-033"
+    ],
+    [
+      "ds005293",
+      "sub-034"
+    ],
+    [
+      "ds005293",
+      "sub-035"
+    ],
+    [
+      "ds005293",
+      "sub-036"
+    ],
+    [
+      "ds005293",
+      "sub-037"
+    ],
+    [
+      "ds005293",
+      "sub-038"
+    ],
+    [
+      "ds005293",
+      "sub-039"
+    ],
+    [
+      "ds005293",
+      "sub-040"
+    ],
+    [
+      "ds005293",
+      "sub-041"
+    ],
+    [
+      "ds005293",
+      "sub-042"
+    ],
+    [
+      "ds005293",
+      "sub-043"
+    ],
+    [
+      "ds005293",
+      "sub-044"
+    ],
+    [
+      "ds005293",
+      "sub-045"
+    ],
+    [
+      "ds005293",
+      "sub-046"
+    ],
+    [
+      "ds005293",
+      "sub-047"
+    ],
+    [
+      "ds005293",
+      "sub-048"
+    ],
+    [
+      "ds005293",
+      "sub-049"
+    ],
+    [
+      "ds005293",
+      "sub-050"
+    ],
+    [
+      "ds005293",
+      "sub-051"
+    ],
+    [
+      "ds005293",
+      "sub-052"
+    ],
+    [
+      "ds005293",
+      "sub-053"
+    ],
+    [
+      "ds005293",
+      "sub-054"
+    ],
+    [
+      "ds005293",
+      "sub-055"
+    ],
+    [
+      "ds005293",
+      "sub-056"
+    ],
+    [
+      "ds005293",
+      "sub-057"
+    ],
+    [
+      "ds005293",
+      "sub-058"
+    ],
+    [
+      "ds005293",
+      "sub-059"
+    ],
+    [
+      "ds005293",
+      "sub-060"
+    ],
+    [
+      "ds005293",
+      "sub-061"
+    ],
+    [
+      "ds005293",
+      "sub-062"
+    ],
+    [
+      "ds005293",
+      "sub-063"
+    ],
+    [
+      "ds005293",
+      "sub-064"
+    ],
+    [
+      "ds005293",
+      "sub-065"
+    ],
+    [
+      "ds005293",
+      "sub-066"
+    ],
+    [
+      "ds005293",
+      "sub-067"
+    ],
+    [
+      "ds005293",
+      "sub-068"
+    ],
+    [
+      "ds005293",
+      "sub-069"
+    ],
+    [
+      "ds005293",
+      "sub-070"
+    ],
+    [
+      "ds005293",
+      "sub-071"
+    ],
+    [
+      "ds005293",
+      "sub-072"
+    ],
+    [
+      "ds005293",
+      "sub-073"
+    ],
+    [
+      "ds005293",
+      "sub-074"
+    ],
+    [
+      "ds005293",
+      "sub-075"
+    ],
+    [
+      "ds005293",
+      "sub-076"
+    ],
+    [
+      "ds005293",
+      "sub-077"
+    ],
+    [
+      "ds005293",
+      "sub-078"
+    ],
+    [
+      "ds005293",
+      "sub-079"
+    ],
+    [
+      "ds005293",
+      "sub-080"
+    ],
+    [
+      "ds005293",
+      "sub-081"
+    ],
+    [
+      "ds005293",
+      "sub-082"
+    ],
+    [
+      "ds005293",
+      "sub-083"
+    ],
+    [
+      "ds005293",
+      "sub-084"
+    ],
+    [
+      "ds005293",
+      "sub-085"
+    ],
+    [
+      "ds005293",
+      "sub-086"
+    ],
+    [
+      "ds005293",
+      "sub-087"
+    ],
+    [
+      "ds005293",
+      "sub-088"
+    ],
+    [
+      "ds005293",
+      "sub-089"
+    ],
+    [
+      "ds005293",
+      "sub-090"
+    ],
+    [
+      "ds005293",
+      "sub-091"
+    ],
+    [
+      "ds005293",
+      "sub-092"
+    ],
+    [
+      "ds005293",
+      "sub-093"
+    ],
+    [
+      "ds005293",
+      "sub-094"
+    ],
+    [
+      "ds005293",
+      "sub-095"
+    ]
+  ],
+  "output_path": "D:\\Neuro_feedback\\neuro_feedback_new\\outputs\\ds005293_full\\ds005293_features.npz",
+  "post_windows_s": [
+    [
+      0.0,
+      0.3
+    ],
+    [
+      0.3,
+      0.6
+    ],
+    [
+      0.6,
+      1.0
+    ]
+  ],
+  "schema_version": 1,
+  "selected_datasets": [
+    "ds005293"
+  ],
+  "subject_failures": [],
+  "subjects": [
+    {
+      "accepted_trials": 80,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-001"
+    },
+    {
+      "accepted_trials": 69,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 69,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-002"
+    },
+    {
+      "accepted_trials": 78,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 78,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-003"
+    },
+    {
+      "accepted_trials": 74,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 74,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-004"
+    },
+    {
+      "accepted_trials": 76,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 77,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 1,
+      "rejections": {
+        "missing_rating": 1
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-005"
+    },
+    {
+      "accepted_trials": 67,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 69,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 69,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 2,
+      "rejections": {
+        "missing_rating": 2
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-006"
+    },
+    {
+      "accepted_trials": 78,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 1,
+      "rejections": {
+        "missing_rating": 1
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-007"
+    },
+    {
+      "accepted_trials": 73,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 78,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 5,
+      "rejections": {
+        "missing_rating": 5
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-008"
+    },
+    {
+      "accepted_trials": 73,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 7,
+      "rejections": {
+        "missing_rating": 7
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-009"
+    },
+    {
+      "accepted_trials": 72,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 73,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 1,
+      "rejections": {
+        "missing_rating": 1
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-010"
+    },
+    {
+      "accepted_trials": 79,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 1,
+      "rejections": {
+        "missing_rating": 1
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-011"
+    },
+    {
+      "accepted_trials": 78,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 1,
+      "rejections": {
+        "missing_rating": 1
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-012"
+    },
+    {
+      "accepted_trials": 70,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 73,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 3,
+      "rejections": {
+        "missing_rating": 3
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-013"
+    },
+    {
+      "accepted_trials": 72,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 44,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 74,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 8,
+      "rejections": {
+        "missing_rating": 8
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-014"
+    },
+    {
+      "accepted_trials": 80,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [],
+      "rejected_trials": 0,
+      "rejections": {},
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-015"
+    },
+    {
+      "accepted_trials": 75,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 5,
+      "rejections": {
+        "missing_rating": 5
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-016"
+    },
+    {
+      "accepted_trials": 71,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 76,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 5,
+      "rejections": {
+        "missing_rating": 5
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-017"
+    },
+    {
+      "accepted_trials": 73,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 17,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 55,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 7,
+      "rejections": {
+        "missing_rating": 7
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-018"
+    },
+    {
+      "accepted_trials": 71,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 77,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 2,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 69,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 6,
+      "rejections": {
+        "missing_rating": 6
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-019"
+    },
+    {
+      "accepted_trials": 76,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 3,
+      "rejections": {
+        "missing_rating": 3
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-020"
+    },
+    {
+      "accepted_trials": 70,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 10,
+      "rejections": {
+        "missing_rating": 10
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-021"
+    },
+    {
+      "accepted_trials": 71,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 75,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 77,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 78,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 79,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 8,
+      "rejections": {
+        "missing_rating": 8
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-022"
+    },
+    {
+      "accepted_trials": 59,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 70,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 17,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 58,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 11,
+      "rejections": {
+        "missing_rating": 11
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-023"
+    },
+    {
+      "accepted_trials": 73,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 78,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 54,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 71,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 5,
+      "rejections": {
+        "missing_rating": 5
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-024"
+    },
+    {
+      "accepted_trials": 72,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 80,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 8,
+      "rejections": {
+        "missing_rating": 8
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-025"
+    },
+    {
+      "accepted_trials": 77,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 2,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 3,
+      "rejections": {
+        "missing_rating": 3
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-026"
+    },
+    {
+      "accepted_trials": 73,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 55,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 7,
+      "rejections": {
+        "missing_rating": 7
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-027"
+    },
+    {
+      "accepted_trials": 67,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 13,
+      "rejections": {
+        "missing_rating": 13
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-028"
+    },
+    {
+      "accepted_trials": 54,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 58,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 4,
+      "rejections": {
+        "missing_rating": 4
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-029"
+    },
+    {
+      "accepted_trials": 72,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 78,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 6,
+      "rejections": {
+        "missing_rating": 6
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-030"
+    },
+    {
+      "accepted_trials": 60,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 67,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 48,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 7,
+      "rejections": {
+        "missing_rating": 7
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-031"
+    },
+    {
+      "accepted_trials": 69,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 11,
+      "rejections": {
+        "missing_rating": 11
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-032"
+    },
+    {
+      "accepted_trials": 76,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 3,
+      "rejections": {
+        "missing_rating": 3
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-033"
+    },
+    {
+      "accepted_trials": 66,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 74,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 8,
+      "rejections": {
+        "missing_rating": 8
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-034"
+    },
+    {
+      "accepted_trials": 69,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 77,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 11,
+      "rejections": {
+        "missing_rating": 11
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-035"
+    },
+    {
+      "accepted_trials": 68,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 48,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 76,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 12,
+      "rejections": {
+        "missing_rating": 12
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-036"
+    },
+    {
+      "accepted_trials": 67,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 77,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 52,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 77,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 10,
+      "rejections": {
+        "missing_rating": 10
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-037"
+    },
+    {
+      "accepted_trials": 70,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 48,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 10,
+      "rejections": {
+        "missing_rating": 10
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-038"
+    },
+    {
+      "accepted_trials": 72,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 2,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 67,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 8,
+      "rejections": {
+        "missing_rating": 8
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-039"
+    },
+    {
+      "accepted_trials": 64,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 55,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 65,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 72,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 73,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 16,
+      "rejections": {
+        "missing_rating": 16
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-040"
+    },
+    {
+      "accepted_trials": 71,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 78,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 67,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 70,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 77,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 78,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 7,
+      "rejections": {
+        "missing_rating": 7
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-041"
+    },
+    {
+      "accepted_trials": 76,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 78,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 2,
+      "rejections": {
+        "missing_rating": 2
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-042"
+    },
+    {
+      "accepted_trials": 67,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 12,
+      "rejections": {
+        "missing_rating": 12
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-043"
+    },
+    {
+      "accepted_trials": 54,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 71,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 45,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 52,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-044"
+    },
+    {
+      "accepted_trials": 65,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 75,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 10,
+      "rejections": {
+        "missing_rating": 10
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-045"
+    },
+    {
+      "accepted_trials": 59,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 63,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 21,
+      "rejections": {
+        "missing_rating": 21
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-046"
+    },
+    {
+      "accepted_trials": 62,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 48,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 65,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-047"
+    },
+    {
+      "accepted_trials": 53,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 17,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 55,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 65,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 67,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 71,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 77,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 27,
+      "rejections": {
+        "missing_rating": 27
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-048"
+    },
+    {
+      "accepted_trials": 43,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 59,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 46,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 51,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 59,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 16,
+      "rejections": {
+        "missing_rating": 16
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-049"
+    },
+    {
+      "accepted_trials": 68,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 12,
+      "rejections": {
+        "missing_rating": 12
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-050"
+    },
+    {
+      "accepted_trials": 66,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 14,
+      "rejections": {
+        "missing_rating": 14
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-051"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-052"
+    },
+    {
+      "accepted_trials": 69,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 71,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 2,
+      "rejections": {
+        "missing_rating": 2
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-053"
+    },
+    {
+      "accepted_trials": 59,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 21,
+      "rejections": {
+        "missing_rating": 21
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-054"
+    },
+    {
+      "accepted_trials": 57,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 54,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 74,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 76,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 22,
+      "rejections": {
+        "missing_rating": 22
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-055"
+    },
+    {
+      "accepted_trials": 67,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 13,
+      "rejections": {
+        "missing_rating": 13
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-056"
+    },
+    {
+      "accepted_trials": 65,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 15,
+      "rejections": {
+        "missing_rating": 15
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-057"
+    },
+    {
+      "accepted_trials": 62,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 77,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 15,
+      "rejections": {
+        "missing_rating": 15
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-058"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 64,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 70,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 16,
+      "rejections": {
+        "missing_rating": 16
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-059"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 78,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 47,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 15,
+      "rejections": {
+        "missing_rating": 15
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-060"
+    },
+    {
+      "accepted_trials": 66,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 14,
+      "rejections": {
+        "missing_rating": 14
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-061"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-062"
+    },
+    {
+      "accepted_trials": 40,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 43,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 3,
+      "rejections": {
+        "missing_rating": 3
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-063"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-064"
+    },
+    {
+      "accepted_trials": 62,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-065"
+    },
+    {
+      "accepted_trials": 61,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 17,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 19,
+      "rejections": {
+        "missing_rating": 19
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-066"
+    },
+    {
+      "accepted_trials": 60,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 77,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 17,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 58,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 72,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-067"
+    },
+    {
+      "accepted_trials": 57,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 2,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 48,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 61,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 67,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 68,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 23,
+      "rejections": {
+        "missing_rating": 23
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-068"
+    },
+    {
+      "accepted_trials": 57,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 71,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 14,
+      "rejections": {
+        "missing_rating": 14
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-069"
+    },
+    {
+      "accepted_trials": 59,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 20,
+      "rejections": {
+        "missing_rating": 20
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-070"
+    },
+    {
+      "accepted_trials": 68,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 61,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 66,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 77,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 11,
+      "rejections": {
+        "missing_rating": 11
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-071"
+    },
+    {
+      "accepted_trials": 58,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 75,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 47,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-072"
+    },
+    {
+      "accepted_trials": 57,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 74,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-073"
+    },
+    {
+      "accepted_trials": 65,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 14,
+      "rejections": {
+        "missing_rating": 14
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-074"
+    },
+    {
+      "accepted_trials": 51,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 64,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 13,
+      "rejections": {
+        "missing_rating": 13
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-075"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 77,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 2,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 52,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 14,
+      "rejections": {
+        "missing_rating": 14
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-076"
+    },
+    {
+      "accepted_trials": 61,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 55,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 19,
+      "rejections": {
+        "missing_rating": 19
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-077"
+    },
+    {
+      "accepted_trials": 66,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 78,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 12,
+      "rejections": {
+        "missing_rating": 12
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-078"
+    },
+    {
+      "accepted_trials": 66,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 65,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 14,
+      "rejections": {
+        "missing_rating": 14
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-079"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 73,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 10,
+      "rejections": {
+        "missing_rating": 10
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-080"
+    },
+    {
+      "accepted_trials": 62,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 14,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-081"
+    },
+    {
+      "accepted_trials": 54,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 67,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 13,
+      "rejections": {
+        "missing_rating": 13
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-082"
+    },
+    {
+      "accepted_trials": 70,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 10,
+      "rejections": {
+        "missing_rating": 10
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-083"
+    },
+    {
+      "accepted_trials": 69,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 66,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 11,
+      "rejections": {
+        "missing_rating": 11
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-084"
+    },
+    {
+      "accepted_trials": 60,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 52,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 54,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 66,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 19,
+      "rejections": {
+        "missing_rating": 19
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-085"
+    },
+    {
+      "accepted_trials": 56,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 72,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 16,
+      "rejections": {
+        "missing_rating": 16
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-086"
+    },
+    {
+      "accepted_trials": 61,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 79,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 47,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 70,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 18,
+      "rejections": {
+        "missing_rating": 18
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-087"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 76,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 38,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 13,
+      "rejections": {
+        "missing_rating": 13
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-088"
+    },
+    {
+      "accepted_trials": 65,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 76,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 13,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 22,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 11,
+      "rejections": {
+        "missing_rating": 11
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-089"
+    },
+    {
+      "accepted_trials": 59,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 75,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 17,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 43,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 45,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 46,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 63,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 68,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 75,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 16,
+      "rejections": {
+        "missing_rating": 16
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-090"
+    },
+    {
+      "accepted_trials": 62,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 3,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 61,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 18,
+      "rejections": {
+        "missing_rating": 18
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-091"
+    },
+    {
+      "accepted_trials": 62,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 55,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 18,
+      "rejections": {
+        "missing_rating": 18
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-092"
+    },
+    {
+      "accepted_trials": 59,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 76,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 8,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 18,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 25,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 33,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 34,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 37,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-093"
+    },
+    {
+      "accepted_trials": 61,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 4,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 7,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 11,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 16,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 20,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 24,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 26,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 31,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 32,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 39,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 19,
+      "rejections": {
+        "missing_rating": 19
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-094"
+    },
+    {
+      "accepted_trials": 63,
+      "dataset_id": "ds005293",
+      "derivative_stage": "rerefer",
+      "input_trials": 80,
+      "rejected_trial_details": [
+        {
+          "epoch_index": 1,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 5,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 6,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 9,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 10,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 12,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 15,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 19,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 21,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 23,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 27,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 28,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 29,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 30,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 35,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 36,
+          "reason": "missing_rating"
+        },
+        {
+          "epoch_index": 40,
+          "reason": "missing_rating"
+        }
+      ],
+      "rejected_trials": 17,
+      "rejections": {
+        "missing_rating": 17
+      },
+      "sampling_rate_hz": 1000.0,
+      "subject_id": "sub-095"
+    }
+  ],
+  "successful_subject_keys": [
+    [
+      "ds005293",
+      "sub-001"
+    ],
+    [
+      "ds005293",
+      "sub-002"
+    ],
+    [
+      "ds005293",
+      "sub-003"
+    ],
+    [
+      "ds005293",
+      "sub-004"
+    ],
+    [
+      "ds005293",
+      "sub-005"
+    ],
+    [
+      "ds005293",
+      "sub-006"
+    ],
+    [
+      "ds005293",
+      "sub-007"
+    ],
+    [
+      "ds005293",
+      "sub-008"
+    ],
+    [
+      "ds005293",
+      "sub-009"
+    ],
+    [
+      "ds005293",
+      "sub-010"
+    ],
+    [
+      "ds005293",
+      "sub-011"
+    ],
+    [
+      "ds005293",
+      "sub-012"
+    ],
+    [
+      "ds005293",
+      "sub-013"
+    ],
+    [
+      "ds005293",
+      "sub-014"
+    ],
+    [
+      "ds005293",
+      "sub-015"
+    ],
+    [
+      "ds005293",
+      "sub-016"
+    ],
+    [
+      "ds005293",
+      "sub-017"
+    ],
+    [
+      "ds005293",
+      "sub-018"
+    ],
+    [
+      "ds005293",
+      "sub-019"
+    ],
+    [
+      "ds005293",
+      "sub-020"
+    ],
+    [
+      "ds005293",
+      "sub-021"
+    ],
+    [
+      "ds005293",
+      "sub-022"
+    ],
+    [
+      "ds005293",
+      "sub-023"
+    ],
+    [
+      "ds005293",
+      "sub-024"
+    ],
+    [
+      "ds005293",
+      "sub-025"
+    ],
+    [
+      "ds005293",
+      "sub-026"
+    ],
+    [
+      "ds005293",
+      "sub-027"
+    ],
+    [
+      "ds005293",
+      "sub-028"
+    ],
+    [
+      "ds005293",
+      "sub-029"
+    ],
+    [
+      "ds005293",
+      "sub-030"
+    ],
+    [
+      "ds005293",
+      "sub-031"
+    ],
+    [
+      "ds005293",
+      "sub-032"
+    ],
+    [
+      "ds005293",
+      "sub-033"
+    ],
+    [
+      "ds005293",
+      "sub-034"
+    ],
+    [
+      "ds005293",
+      "sub-035"
+    ],
+    [
+      "ds005293",
+      "sub-036"
+    ],
+    [
+      "ds005293",
+      "sub-037"
+    ],
+    [
+      "ds005293",
+      "sub-038"
+    ],
+    [
+      "ds005293",
+      "sub-039"
+    ],
+    [
+      "ds005293",
+      "sub-040"
+    ],
+    [
+      "ds005293",
+      "sub-041"
+    ],
+    [
+      "ds005293",
+      "sub-042"
+    ],
+    [
+      "ds005293",
+      "sub-043"
+    ],
+    [
+      "ds005293",
+      "sub-044"
+    ],
+    [
+      "ds005293",
+      "sub-045"
+    ],
+    [
+      "ds005293",
+      "sub-046"
+    ],
+    [
+      "ds005293",
+      "sub-047"
+    ],
+    [
+      "ds005293",
+      "sub-048"
+    ],
+    [
+      "ds005293",
+      "sub-049"
+    ],
+    [
+      "ds005293",
+      "sub-050"
+    ],
+    [
+      "ds005293",
+      "sub-051"
+    ],
+    [
+      "ds005293",
+      "sub-052"
+    ],
+    [
+      "ds005293",
+      "sub-053"
+    ],
+    [
+      "ds005293",
+      "sub-054"
+    ],
+    [
+      "ds005293",
+      "sub-055"
+    ],
+    [
+      "ds005293",
+      "sub-056"
+    ],
+    [
+      "ds005293",
+      "sub-057"
+    ],
+    [
+      "ds005293",
+      "sub-058"
+    ],
+    [
+      "ds005293",
+      "sub-059"
+    ],
+    [
+      "ds005293",
+      "sub-060"
+    ],
+    [
+      "ds005293",
+      "sub-061"
+    ],
+    [
+      "ds005293",
+      "sub-062"
+    ],
+    [
+      "ds005293",
+      "sub-063"
+    ],
+    [
+      "ds005293",
+      "sub-064"
+    ],
+    [
+      "ds005293",
+      "sub-065"
+    ],
+    [
+      "ds005293",
+      "sub-066"
+    ],
+    [
+      "ds005293",
+      "sub-067"
+    ],
+    [
+      "ds005293",
+      "sub-068"
+    ],
+    [
+      "ds005293",
+      "sub-069"
+    ],
+    [
+      "ds005293",
+      "sub-070"
+    ],
+    [
+      "ds005293",
+      "sub-071"
+    ],
+    [
+      "ds005293",
+      "sub-072"
+    ],
+    [
+      "ds005293",
+      "sub-073"
+    ],
+    [
+      "ds005293",
+      "sub-074"
+    ],
+    [
+      "ds005293",
+      "sub-075"
+    ],
+    [
+      "ds005293",
+      "sub-076"
+    ],
+    [
+      "ds005293",
+      "sub-077"
+    ],
+    [
+      "ds005293",
+      "sub-078"
+    ],
+    [
+      "ds005293",
+      "sub-079"
+    ],
+    [
+      "ds005293",
+      "sub-080"
+    ],
+    [
+      "ds005293",
+      "sub-081"
+    ],
+    [
+      "ds005293",
+      "sub-082"
+    ],
+    [
+      "ds005293",
+      "sub-083"
+    ],
+    [
+      "ds005293",
+      "sub-084"
+    ],
+    [
+      "ds005293",
+      "sub-085"
+    ],
+    [
+      "ds005293",
+      "sub-086"
+    ],
+    [
+      "ds005293",
+      "sub-087"
+    ],
+    [
+      "ds005293",
+      "sub-088"
+    ],
+    [
+      "ds005293",
+      "sub-089"
+    ],
+    [
+      "ds005293",
+      "sub-090"
+    ],
+    [
+      "ds005293",
+      "sub-091"
+    ],
+    [
+      "ds005293",
+      "sub-092"
+    ],
+    [
+      "ds005293",
+      "sub-093"
+    ],
+    [
+      "ds005293",
+      "sub-094"
+    ],
+    [
+      "ds005293",
+      "sub-095"
+    ]
+  ]
+}
