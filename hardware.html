@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pain Classifier RTL Pipeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a single-column engineering spec. Each pipeline stage is a numbered
+   block with three bands: what it does (plain words), the exact maths, hardware notes. */
+:root {
+  --paper: #f6f7f5;
+  --panel: #ffffff;
+  --ink: #1a2227;
+  --muted: #56636b;
+  --rule: #d6dcdc;
+  --accent: #0e6b73;
+  --accent-soft: #dcefee;
+  --fixed: #a35f00;
+  --fixed-soft: #f8ecd9;
+  --nomvar: #5b46a8;
+  --nomvar-soft: #ebe7f7;
+  --risk: #b3261e;
+  --risk-soft: #f9e4e2;
+  --code-bg: #eef1f0;
+  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12181b; --panel: #192125; --ink: #e3e9ea; --muted: #9aa8ae; --rule: #2d3a3f;
+    --accent: #5cc3c9; --accent-soft: #173336; --fixed: #e3a24a; --fixed-soft: #332715;
+    --nomvar: #a996ec; --nomvar-soft: #26213b; --risk: #ff8a80; --risk-soft: #3a1d1b;
+    --code-bg: #1f2a2e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12181b; --panel: #192125; --ink: #e3e9ea; --muted: #9aa8ae; --rule: #2d3a3f;
+  --accent: #5cc3c9; --accent-soft: #173336; --fixed: #e3a24a; --fixed-soft: #332715;
+  --nomvar: #a996ec; --nomvar-soft: #26213b; --risk: #ff8a80; --risk-soft: #3a1d1b;
+  --code-bg: #1f2a2e; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 15px/1.6 var(--font-body);
+}
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 80px; display: grid; gap: 28px; }
+.prose { max-width: 68ch; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.2; margin: 0; }
+h1 { font-size: 2.1rem; font-weight: 600; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; font-weight: 600; }
+h3 { font-size: 1.08rem; font-weight: 600; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+code, .mono { font-family: var(--font-mono); font-size: 0.86em; }
+:not(pre) > code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+pre {
+  margin: 0; background: var(--code-bg); border-radius: 8px; padding: 14px 16px;
+  font: 13px/1.55 var(--font-mono); overflow-x: auto; white-space: pre;
+}
+.stack { display: grid; gap: 12px; }
+.stack-lg { display: grid; gap: 20px; }
+
+header.top { display: grid; gap: 10px; border-bottom: 2px solid var(--ink); padding-bottom: 18px; }
+.eyebrow { font: 500 0.78rem var(--font-mono); color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+.lede { font-size: 1.08rem; color: var(--ink); max-width: 68ch; }
+.meta { color: var(--muted); font-size: 0.85rem; }
+
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 22px; }
+.steps { margin: 0; padding-left: 1.4em; display: grid; gap: 6px; }
+.steps li::marker { font-family: var(--font-mono); color: var(--accent); }
+
+.chip { display: inline-block; font: 500 0.74rem/1.5 var(--font-mono); padding: 1px 8px; border-radius: 999px; white-space: nowrap; vertical-align: 1px; }
+.chip.both { background: var(--accent-soft); color: var(--accent); }
+.chip.fixed { background: var(--fixed-soft); color: var(--fixed); }
+.chip.nomvar { background: var(--nomvar-soft); color: var(--nomvar); }
+
+.callout { border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 14px 18px; border-radius: 0 8px 8px 0; display: grid; gap: 8px; }
+.callout.risk { border-color: var(--risk); background: var(--risk-soft); }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 0.78rem var(--font-body); color: var(--muted); background: var(--code-bg); white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.num, th.num { text-align: right; font-family: var(--font-mono); font-size: 0.8rem; white-space: nowrap; }
+td.name { font-family: var(--font-mono); font-size: 0.78rem; white-space: nowrap; }
+tr.bias td { background: var(--accent-soft); font-weight: 500; }
+
+.stage { display: grid; gap: 14px; padding-top: 6px; }
+.stage-head { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+.stage-num { font: 600 0.85rem var(--font-mono); color: var(--panel); background: var(--accent); border-radius: 6px; padding: 2px 9px; }
+.band-label { font: 600 0.74rem var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.trio { display: grid; gap: 14px; }
+.trio > div { display: grid; gap: 6px; }
+ul.notes { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.sub { border-top: 1px dashed var(--rule); padding-top: 14px; display: grid; gap: 10px; }
+
+figure { margin: 0; display: grid; gap: 10px; }
+figure .canvas { overflow-x: auto; background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 12px; }
+figure svg { display: block; width: 100%; height: auto; min-width: 760px; color: var(--ink); }
+figcaption { color: var(--muted); font-size: 0.86rem; max-width: 75ch; }
+svg text { font-family: var(--font-body); font-size: 12px; fill: currentColor; }
+svg .small { font-size: 10.5px; fill: var(--muted); }
+svg .title { font-weight: 600; font-size: 12.5px; }
+svg .box { fill: var(--panel); stroke: currentColor; stroke-width: 1.3; }
+svg .box-acc { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+svg .box-fixed { fill: var(--fixed-soft); stroke: var(--fixed); stroke-width: 1.4; stroke-dasharray: 5 3; }
+svg .box-nomvar { fill: var(--nomvar-soft); stroke: var(--nomvar); stroke-width: 1.4; stroke-dasharray: 5 3; }
+svg .wire { stroke: currentColor; stroke-width: 1.3; fill: none; }
+svg .wire-fixed { stroke: var(--fixed); stroke-width: 1.3; fill: none; stroke-dasharray: 5 3; }
+svg .bar { fill: var(--accent); }
+svg .bar-faint { fill: var(--rule); }
+svg .bar-alt { fill: var(--nomvar); }
+svg .bar-dash { fill: none; stroke: var(--accent); stroke-width: 1.4; stroke-dasharray: 4 3; }
+svg .grid { stroke: var(--rule); stroke-width: 1; }
+svg .onset { stroke: var(--risk); stroke-width: 1.6; }
+svg .onset-label { fill: var(--risk); font-weight: 600; }
+svg .head { fill: currentColor; }
+
+.compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.compare .panel { display: grid; gap: 8px; align-content: start; }
+.compare .panel.fixed { border-top: 4px solid var(--fixed); }
+.compare .panel.nomvar { border-top: 4px solid var(--nomvar); }
+.big { font: 600 1.6rem var(--font-display); font-variant-numeric: tabular-nums; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 3px 14px; font-size: 0.88rem; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+
+@media (max-width: 560px) {
+  .wrap { padding: 26px 16px 60px; }
+  h1 { font-size: 1.7rem; }
+  .panel { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header class="top">
+  <span class="eyebrow">Hardware spec · laser-pain EEG classifier</span>
+  <h1>Pain Classifier RTL Pipeline</h1>
+  <p class="lede">Every step between the electrodes and the pain class, with the exact arithmetic each step performs, so each one can be mapped to a hardware block. One laser hit goes in, one pain class comes out.</p>
+  <p class="meta">Source of truth on <code>main</code> (commit <code>0760a82</code>): <code>scripts/preprocessing/rich_feature_extraction.py</code>, <code>mvar_features.py</code>, <code>outputs/deploy/deployment_model.json</code>. All weights and coefficients below were generated from those files, not typed by hand.</p>
+</header>
+
+<section class="stack" aria-labelledby="s-summary">
+  <h2 id="s-summary">The whole pipeline in six steps</h2>
+  <div class="panel">
+    <ol class="steps">
+      <li><strong>Capture.</strong> When the laser fires, keep a 3-second clip from each electrode: 1 s before the hit and 2 s after (3,000 samples at 1000 per second).</li>
+      <li><strong>Filter.</strong> Pass each clip through band filters. Each filter keeps only one range of brain-wave speeds. Each filter runs forward through the clip, then backward.</li>
+      <li><strong>Measure.</strong> Compute 16 numbers (features) from the filtered clips: wave strengths, the size of the brain's response "dip and bump", and how similar two electrodes are.</li>
+      <li><strong>Squeeze.</strong> Map each of the 16 numbers onto a 0–255 scale (8 bits).</li>
+      <li><strong>Score.</strong> Multiply the 16 values by 48 stored weights and add 3 stored biases. That gives 3 scores: Low, Moderate, High.</li>
+      <li><strong>Decide.</strong> The biggest score is the answer.</li>
+    </ol>
+  </div>
+  <p class="prose">Nothing carries over from one laser hit to the next. There is no memory, no neural-network layers and no softmax. The classifier itself is only 48 multiply-and-add operations. Almost all of the hardware effort goes into steps 2 and 3.</p>
+</section>
+
+<section class="stack" aria-labelledby="s-variant">
+  <h2 id="s-variant">Choose a variant before RTL starts</h2>
+  <p class="prose">Two versions of the model are exported. They share 13 of their 16 features and the same 6-step structure. They differ in one expensive block.</p>
+  <div class="compare">
+    <div class="panel fixed">
+      <span class="chip fixed">fixed</span>
+      <span class="big">0.4459</span>
+      <span class="meta">balanced accuracy, 3 classes, unseen people</span>
+      <dl class="kv">
+        <dt>Electrodes</dt><dd>4 (Fz, Cz, C3, C4)</dd>
+        <dt>Filters</dt><dd>6 filter runs</dd>
+        <dt>Hard block</dt><dd>MVAR: a 40×40 matrix solve per trial, plus 7 complex 4×4 inversions</dd>
+        <dt>Severe task</dt><dd>0.6201</dd>
+      </dl>
+    </div>
+    <div class="panel nomvar">
+      <span class="chip nomvar">no-MVAR · recommended</span>
+      <span class="big">0.4386</span>
+      <span class="meta">balanced accuracy, 3 classes, unseen people</span>
+      <dl class="kv">
+        <dt>Electrodes</dt><dd>3 (Cz, C3, C4) — no Fz</dd>
+        <dt>Filters</dt><dd>9 filter runs</dd>
+        <dt>Hard block</dt><dd>none; the hardest piece is one square root and one divide</dd>
+        <dt>Severe task</dt><dd>0.6171</dd>
+      </dl>
+    </div>
+  </div>
+  <p class="prose">The 0.7-point gap is about the size of this project's measurement noise (±0.7 points). Chance is 0.333. No-MVAR swaps the matrix solver for three extra filters, which a shared filter engine handles easily. Throughout this page, <span class="chip both">both</span> marks blocks every variant needs, <span class="chip fixed">fixed</span> marks blocks only the fixed variant needs, and <span class="chip nomvar">no-MVAR</span> marks blocks only no-MVAR needs.</p>
+  <div class="callout">
+    <strong>Checked for this page: the 8-bit hardware arithmetic loses nothing.</strong>
+    <p>We ran the exact steps 4–6 the RTL will perform (8-bit codes into the stored weights) on all 5,722 validation trials. Fixed scores 0.4470 and no-MVAR 0.4384, and each matches the full-precision model's class on 99.5% and 99.7% of trials. The weights in that test were still full precision. Choosing their fixed-point width is an open item (step 5).</p>
+  </div>
+</section>
+
+<section class="stack" aria-labelledby="s-blocks">
+  <h2 id="s-blocks">Hardware blocks</h2>
+  <figure>
+    <div class="canvas">
+      <svg viewBox="0 0 1180 400" role="img" aria-label="Block diagram: electrodes and ADC feed an epoch buffer captured on the laser trigger; a shared filter bank feeds four feature units; MVAR reads the buffer directly and is used only by the fixed variant; 16 features go through an 8-bit quantizer into a 48-MAC linear layer with weight ROM and writable bias registers, then an argmax outputs the class.">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" class="head"/>
+          </marker>
+        </defs>
+        <!-- control FSM -->
+        <rect x="150" y="12" width="1000" height="34" rx="6" class="box"/>
+        <text x="650" y="34" text-anchor="middle" class="title">Control FSM: wait for trigger → hold epoch → filter → measure → quantize → score → decide</text>
+
+        <!-- electrodes -->
+        <rect x="10" y="150" width="112" height="96" rx="8" class="box"/>
+        <text x="66" y="174" text-anchor="middle" class="title">Electrodes</text>
+        <text x="66" y="192" text-anchor="middle">+ ADC</text>
+        <text x="66" y="212" text-anchor="middle" class="small">Cz · C3 · C4</text>
+        <text x="66" y="228" text-anchor="middle" class="small">+ Fz (fixed only)</text>
+
+        <!-- trigger -->
+        <text x="210" y="80" text-anchor="middle" class="small">laser trigger</text>
+        <line x1="210" y1="86" x2="210" y2="146" class="wire" marker-end="url(#arrow)"/>
+
+        <!-- epoch buffer -->
+        <rect x="150" y="150" width="122" height="96" rx="8" class="box-acc"/>
+        <text x="211" y="174" text-anchor="middle" class="title">Epoch buffer</text>
+        <text x="211" y="194" text-anchor="middle" class="small">always recording</text>
+        <text x="211" y="210" text-anchor="middle" class="small">3000 samples / ch</text>
+        <text x="211" y="226" text-anchor="middle" class="small">BRAM</text>
+        <line x1="122" y1="198" x2="146" y2="198" class="wire" marker-end="url(#arrow)"/>
+        <text x="134" y="140" text-anchor="middle" class="small">µV, 1 kHz</text>
+
+        <!-- filter bank -->
+        <rect x="302" y="150" width="140" height="96" rx="8" class="box-acc"/>
+        <text x="372" y="174" text-anchor="middle" class="title">Filter bank</text>
+        <text x="372" y="194" text-anchor="middle" class="small">4 biquads per filter</text>
+        <text x="372" y="210" text-anchor="middle" class="small">forward, then reverse</text>
+        <text x="372" y="226" text-anchor="middle" class="small">one shared engine</text>
+        <line x1="272" y1="198" x2="298" y2="198" class="wire" marker-end="url(#arrow)"/>
+
+        <!-- feature units -->
+        <rect x="490" y="64" width="190" height="40" rx="6" class="box"/>
+        <text x="585" y="82" text-anchor="middle" class="title">Band power + log</text>
+        <text x="585" y="97" text-anchor="middle" class="small">8 of 16 features</text>
+        <rect x="490" y="114" width="190" height="40" rx="6" class="box"/>
+        <text x="585" y="132" text-anchor="middle" class="title">ERP unit (dip &amp; bump)</text>
+        <text x="585" y="147" text-anchor="middle" class="small">6 features, Cz only</text>
+        <rect x="490" y="164" width="190" height="40" rx="6" class="box"/>
+        <text x="585" y="182" text-anchor="middle" class="title">Correlation</text>
+        <text x="585" y="197" text-anchor="middle" class="small">1–2 features</text>
+        <rect x="490" y="214" width="190" height="40" rx="6" class="box-nomvar"/>
+        <text x="585" y="232" text-anchor="middle" class="title">Hjorth mobility</text>
+        <text x="585" y="247" text-anchor="middle" class="small">no-MVAR only</text>
+        <rect x="490" y="300" width="190" height="52" rx="6" class="box-fixed"/>
+        <text x="585" y="320" text-anchor="middle" class="title">MVAR power</text>
+        <text x="585" y="336" text-anchor="middle" class="small">fixed only · matrix solver</text>
+        <!-- fan-out from filter bank -->
+        <line x1="442" y1="198" x2="462" y2="198" class="wire"/>
+        <line x1="462" y1="84" x2="462" y2="234" class="wire"/>
+        <line x1="462" y1="84" x2="486" y2="84" class="wire" marker-end="url(#arrow)"/>
+        <line x1="462" y1="134" x2="486" y2="134" class="wire" marker-end="url(#arrow)"/>
+        <line x1="462" y1="184" x2="486" y2="184" class="wire" marker-end="url(#arrow)"/>
+        <line x1="462" y1="234" x2="486" y2="234" class="wire" marker-end="url(#arrow)"/>
+        <text x="460" y="270" text-anchor="middle" class="small">filtered clips</text>
+        <!-- MVAR reads raw buffer -->
+        <polyline points="211,246 211,326 486,326" class="wire-fixed" marker-end="url(#arrow)"/>
+        <text x="350" y="318" text-anchor="middle" class="small">raw samples, all 4 ch</text>
+
+        <!-- feature registers -->
+        <rect x="726" y="150" width="96" height="96" rx="8" class="box"/>
+        <text x="774" y="180" text-anchor="middle" class="title">Feature</text>
+        <text x="774" y="196" text-anchor="middle" class="title">registers</text>
+        <text x="774" y="218" text-anchor="middle" class="small">16 signed</text>
+        <polyline points="680,84 704,84 704,198 722,198" class="wire" marker-end="url(#arrow)"/>
+        <line x1="680" y1="134" x2="704" y2="134" class="wire"/>
+        <line x1="680" y1="184" x2="704" y2="184" class="wire"/>
+        <line x1="680" y1="234" x2="704" y2="234" class="wire"/>
+        <polyline points="680,326 704,326 704,234" class="wire-fixed"/>
+
+        <!-- quantizer -->
+        <rect x="852" y="150" width="96" height="96" rx="8" class="box"/>
+        <text x="900" y="180" text-anchor="middle" class="title">Quantizer</text>
+        <text x="900" y="200" text-anchor="middle" class="small">clip + scale</text>
+        <text x="900" y="216" text-anchor="middle" class="small">→ 0…255</text>
+        <line x1="822" y1="198" x2="848" y2="198" class="wire" marker-end="url(#arrow)"/>
+
+        <!-- MAC -->
+        <rect x="978" y="150" width="104" height="96" rx="8" class="box-acc"/>
+        <text x="1030" y="180" text-anchor="middle" class="title">Linear layer</text>
+        <text x="1030" y="200" text-anchor="middle" class="small">48 MACs</text>
+        <text x="1030" y="216" text-anchor="middle" class="small">+ 3 biases</text>
+        <line x1="948" y1="198" x2="974" y2="198" class="wire" marker-end="url(#arrow)"/>
+        <text x="961" y="140" text-anchor="middle" class="small">16 × 8-bit</text>
+        <!-- weight ROM -->
+        <rect x="968" y="66" width="124" height="48" rx="6" class="box"/>
+        <text x="1030" y="86" text-anchor="middle" class="title">Weights + biases</text>
+        <text x="1030" y="103" text-anchor="middle" class="small">loadable registers</text>
+        <line x1="1030" y1="114" x2="1030" y2="146" class="wire" marker-end="url(#arrow)"/>
+
+        <!-- argmax -->
+        <rect x="1100" y="150" width="72" height="96" rx="8" class="box"/>
+        <text x="1136" y="186" text-anchor="middle" class="title">Argmax</text>
+        <text x="1136" y="206" text-anchor="middle" class="small">2 compares</text>
+        <line x1="1082" y1="198" x2="1096" y2="198" class="wire" marker-end="url(#arrow)"/>
+        <text x="1136" y="268" text-anchor="middle" class="small">class out</text>
+        <text x="1136" y="283" text-anchor="middle" class="small">0 Low · 1 Mod</text>
+        <text x="1136" y="298" text-anchor="middle" class="small">2 High</text>
+        <line x1="1136" y1="246" x2="1136" y2="256" class="wire"/>
+      </svg>
+    </div>
+    <figcaption>Figure 1. Data moves left to right once per laser hit. Teal boxes are where most of the area goes. The MVAR path (amber, dashed) reads raw samples straight from the buffer and exists only in the fixed variant. Hjorth (violet, dashed) exists only in no-MVAR.</figcaption>
+  </figure>
+</section>
+
+<section class="stack" aria-labelledby="s-time">
+  <h2 id="s-time">Where each feature looks in the clip</h2>
+  <figure>
+    <div class="canvas">
+      <svg viewBox="0 0 990 330" role="img" aria-label="Timeline of one 3-second epoch from -1.0 to +2.0 seconds with the laser at 0. Filtering spans the whole epoch. The ERP baseline is -0.5 to 0 s. Band power windows are 0 to 0.3 and 0.3 to 0.6 s. N2 search 0.15 to 0.30 s, N2 mean 0.15 to 0.25 s, P2 mean 0.25 to 0.45 s, P2 search from the N2 sample to 0.55 s, RMS 0 to 0.6 s, correlation, Hjorth and MVAR 0 to 1.0 s.">
+        <!-- grid -->
+        <line x1="220" y1="18" x2="220" y2="278" class="grid"/>
+        <line x1="345" y1="18" x2="345" y2="278" class="grid"/>
+        <line x1="545" y1="18" x2="545" y2="278" class="grid"/>
+        <line x1="620" y1="18" x2="620" y2="278" class="grid"/>
+        <line x1="720" y1="18" x2="720" y2="278" class="grid"/>
+        <line x1="845" y1="18" x2="845" y2="278" class="grid"/>
+        <line x1="970" y1="18" x2="970" y2="278" class="grid"/>
+        <!-- rows -->
+        <text x="208" y="34" text-anchor="end">Filtering span</text>
+        <rect x="220" y="22" width="750" height="16" rx="3" class="bar-faint"/>
+        <text x="208" y="62" text-anchor="end">ERP baseline</text>
+        <rect x="345" y="50" width="125" height="16" rx="3" class="bar"/>
+        <text x="208" y="90" text-anchor="end">Band power w0 · w1</text>
+        <rect x="470" y="78" width="74" height="16" rx="3" class="bar"/>
+        <rect x="546" y="78" width="74" height="16" rx="3" class="bar-alt"/>
+        <text x="508" y="90" text-anchor="middle" style="fill: var(--panel); font-size: 10.5px;">w0</text>
+        <text x="583" y="90" text-anchor="middle" style="fill: var(--panel); font-size: 10.5px;">w1</text>
+        <text x="208" y="118" text-anchor="end">N2 dip search (min)</text>
+        <rect x="507.5" y="106" width="37.5" height="16" rx="3" class="bar"/>
+        <text x="208" y="146" text-anchor="end">N2 window mean</text>
+        <rect x="507.5" y="134" width="25" height="16" rx="3" class="bar"/>
+        <text x="208" y="174" text-anchor="end">P2 window mean</text>
+        <rect x="532.5" y="162" width="50" height="16" rx="3" class="bar"/>
+        <text x="208" y="202" text-anchor="end">P2 bump search (max)</text>
+        <rect x="508" y="191" width="37" height="14" rx="3" class="bar-dash"/>
+        <rect x="545" y="190" width="62.5" height="16" rx="3" class="bar"/>
+        <text x="614" y="202" class="small">starts just after the N2 sample</text>
+        <text x="208" y="230" text-anchor="end">ERP RMS</text>
+        <rect x="470" y="218" width="150" height="16" rx="3" class="bar"/>
+        <text x="208" y="258" text-anchor="end">Correlation · Hjorth · MVAR</text>
+        <rect x="470" y="246" width="250" height="16" rx="3" class="bar"/>
+        <!-- onset -->
+        <line x1="470" y1="14" x2="470" y2="282" class="onset"/>
+        <text x="476" y="14" class="onset-label" style="font-size: 11px;">laser</text>
+        <!-- axis -->
+        <line x1="220" y1="282" x2="970" y2="282" class="wire"/>
+        <text x="220" y="298" text-anchor="middle">−1.0 s</text>
+        <text x="345" y="298" text-anchor="middle">−0.5</text>
+        <text x="470" y="298" text-anchor="middle">0</text>
+        <text x="545" y="298" text-anchor="middle">0.3</text>
+        <text x="620" y="298" text-anchor="middle">0.6</text>
+        <text x="720" y="298" text-anchor="middle">1.0</text>
+        <text x="845" y="298" text-anchor="middle">1.5</text>
+        <text x="970" y="298" text-anchor="middle">2.0 s</text>
+        <text x="208" y="316" text-anchor="end" class="small">sample index</text>
+        <text x="220" y="316" text-anchor="middle" class="small">0</text>
+        <text x="345" y="316" text-anchor="middle" class="small">500</text>
+        <text x="470" y="316" text-anchor="middle" class="small">1000</text>
+        <text x="545" y="316" text-anchor="middle" class="small">1300</text>
+        <text x="620" y="316" text-anchor="middle" class="small">1600</text>
+        <text x="720" y="316" text-anchor="middle" class="small">2000</text>
+        <text x="845" y="316" text-anchor="middle" class="small">2500</text>
+        <text x="970" y="316" text-anchor="middle" class="small">3000</text>
+      </svg>
+    </div>
+    <figcaption>Figure 2. One epoch, laser at sample 1000. Every feature reads only samples 500–1999. The rest of the epoch (0–499 and 2000–2999) exists so the filters can settle before and after the region that matters. Ranges are written <code>[start, end)</code>: the start sample is included, the end sample is not, as in Python slicing.</figcaption>
+  </figure>
+</section>
+
+<section class="stack-lg" aria-labelledby="s-stages">
+  <h2 id="s-stages">Stage by stage</h2>
+
+  <!-- STAGE 1 -->
+  <article class="stage panel">
+    <div class="stage-head"><span class="stage-num">1</span><h3>Trigger and epoch buffer</h3><span class="chip both">both</span></div>
+    <div class="trio">
+      <div><span class="band-label">What it does</span>
+        <p>Keeps the last few seconds from every electrode at all times. When the laser trigger arrives, it freezes a 3-second clip around the hit so the rest of the pipeline can work on it.</p></div>
+      <div><span class="band-label">Exact maths</span>
+<pre>epoch[c][n],  c = channel,  n = 0 … 2999
+sample rate      1000 Hz   (1 sample = 1 ms)
+laser onset      n = 1000  (clip spans −1.0 s … +1.999 s)
+units            microvolts (µV)</pre></div>
+      <div><span class="band-label">Hardware notes</span>
+        <ul class="notes">
+          <li>The buffer must record continuously, because the clip starts 1 s <em>before</em> the trigger. A circular buffer that freezes about 2 s after the trigger works.</li>
+          <li>Size: 3 channels × 3000 samples (no-MVAR) or 4 × 3000 (fixed). At 24 bits per sample that is 216 or 288 kbit, a handful of BRAM36 blocks.</li>
+          <li>Measured on 12 cleaned training subjects, |x| never exceeded 91 µV, and 99% of samples were under 37 µV. A live headset without artifact cleaning sees blinks of several hundred µV, so leave headroom above that.</li>
+          <li>Training rejected any trial whose stored onset was more than 0.51 samples (about half a millisecond) from the expected position. The trigger needs to be sample-accurate.</li>
+          <li>The ADC's least-significant bit must map to a known µV value. The evoked-potential (ERP) features are in µV, so the weights assume that scale.</li>
+        </ul></div>
+    </div>
+  </article>
+
+  <!-- STAGE 2 -->
+  <article class="stage panel">
+    <div class="stage-head"><span class="stage-num">2</span><h3>Filter bank</h3><span class="chip both">both</span></div>
+    <div class="trio">
+      <div><span class="band-label">What it does</span>
+        <p>Brain waves come at different speeds. Each filter keeps one speed range and removes the rest. Each filter runs forward through the clip, then backward through the result, so the output is not shifted in time.</p></div>
+      <div><span class="band-label">Which filters run, per variant</span>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Band</th><th>Range</th><th>Used for</th><th>Fixed</th><th>No-MVAR</th></tr></thead>
+          <tbody>
+            <tr><td>delta</td><td>1–4 Hz</td><td>slow-wave power, correlation</td><td>Cz, C3, C4</td><td>Cz, C3, C4</td></tr>
+            <tr><td>theta</td><td>4–8 Hz</td><td>power</td><td>Cz</td><td>Cz</td></tr>
+            <tr><td>beta</td><td>13–30 Hz</td><td>power ratio</td><td>—</td><td>Cz, C4</td></tr>
+            <tr><td>gamma</td><td>30–45 Hz</td><td>power ratio</td><td>Cz</td><td>Cz</td></tr>
+            <tr><td>ERP</td><td>1–30 Hz</td><td>dip &amp; bump response</td><td>Cz</td><td>Cz</td></tr>
+            <tr><td>broadband</td><td>1–45 Hz</td><td>Hjorth mobility</td><td>—</td><td>Cz</td></tr>
+            <tr><td colspan="3"><strong>Filter runs per trial</strong></td><td><strong>6</strong></td><td><strong>9</strong></td></tr>
+          </tbody>
+        </table></div></div>
+      <div><span class="band-label">Exact maths</span>
+<pre>Each filter = 4th-order Butterworth band-pass = 4 "biquads" in series.
+One biquad (a small 2nd-order filter step), per sample:
+    y[n] = b0·x[n] + b1·x[n−1] + b2·x[n−2] − a1·y[n−1] − a2·y[n−2]
+
+Zero-phase run (scipy sosfiltfilt, default settings):
+  1. Pad 27 samples on each end by odd reflection:
+       left  pad k = 1…27 :  2·x[0]    − x[k]
+       right pad k = 1…27 :  2·x[2999] − x[2999−k]
+     → 3054 samples
+  2. Forward pass. Each biquad's 2 state values start at zi · (first padded sample),
+     where zi = that filter's steady-state constants (4 × 2 numbers, precomputed).
+  3. Reverse the result and run the same 4 biquads again. State starts at
+     zi · (last forward output).
+  4. Reverse again and drop 27 samples from each end → 3000 samples.</pre></div>
+      <div><span class="band-label">Hardware notes</span>
+        <ul class="notes">
+          <li><strong>One time-shared biquad engine is enough.</strong> Every numerator is <code>[1, 2, 1]</code> or <code>[1, −2, 1]</code>, which is shifts and adds. Only <code>a1</code> and <code>a2</code> need real multipliers, plus one gain multiply in the first biquad. That is about 9 multiplies per sample per pass, so about 55 k per filter run. All 9 runs total about 0.5 M multiplies, roughly 5 ms at 100 MHz with one multiplier. Laser hits are seconds apart.</li>
+          <li>The reverse pass reads the forward output backwards, so you need a 3054-sample scratch buffer per filter run.</li>
+          <li><strong>Precision is the real risk.</strong> The delta filter's poles sit only 0.0015 inside the unit circle, and its first-stage gain is 7.7 × 10⁻⁹. Plan on ≥ 32-bit coefficients and state, or floating point, and confirm against the golden model. A cheaper option is to downsample before the slow-wave filters, but that changes the numbers and has to be re-scored in Python first.</li>
+          <li>Don't skip the padding and start-state steps. The delta filter's memory is about 0.66 s, longer than the 0.5 s gap between the clip edge and the first window it feeds.</li>
+          <li>scipy runs each biquad in "transposed direct form II". In fixed point, matching that form makes bit-exact comparison easier.</li>
+        </ul></div>
+      <div><span class="band-label">Biquad coefficients at 1000 Hz</span>
+        <div class="table-wrap"><table><thead><tr><th>Filter</th><th class="num">Biquad</th><th class="num">b0</th><th class="num">b1</th><th class="num">b2</th><th class="num">a1</th><th class="num">a2</th><th class="num">max pole radius</th></tr></thead><tbody><tr><td rowspan="4"><strong>delta</strong> 1–4 Hz</td><td class="num">1</td><td class="num">+7.6991e−9</td><td class="num">+1.5398e−8</td><td class="num">+7.6991e−9</td><td class="num">−1.976390172085</td><td class="num">+0.976716378650</td><td class="num" rowspan="4">0.998488</td></tr><tr><td class="num">2</td><td class="num">+1</td><td class="num">+2</td><td class="num">+1</td><td class="num">−1.988074335187</td><td class="num">+0.988665632552</td></tr><tr><td class="num">3</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.988716229174</td><td class="num">+0.988791361164</td></tr><tr><td class="num">4</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.996935578114</td><td class="num">+0.996977446663</td></tr><tr><td rowspan="4"><strong>theta</strong> 4–8 Hz</td><td class="num">1</td><td class="num">+2.4136e−8</td><td class="num">+4.8272e−8</td><td class="num">+2.4136e−8</td><td class="num">−1.972183265537</td><td class="num">+0.973841049344</td><td class="num" rowspan="4">0.996701</td></tr><tr><td class="num">2</td><td class="num">+1</td><td class="num">+2</td><td class="num">+1</td><td class="num">−1.979321263757</td><td class="num">+0.980261873361</td></tr><tr><td class="num">3</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.985056774297</td><td class="num">+0.987454766603</td></tr><tr><td class="num">4</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.992753026960</td><td class="num">+0.993412050218</td></tr><tr><td rowspan="4"><strong>beta</strong> 13–30 Hz <span class="chip nomvar">no-MVAR</span></td><td class="num">1</td><td class="num">+7.1024e−6</td><td class="num">+1.4205e−5</td><td class="num">+7.1024e−6</td><td class="num">−1.869552494516</td><td class="num">+0.890314526512</td><td class="num" rowspan="4">0.987254</td></tr><tr><td class="num">2</td><td class="num">+1</td><td class="num">+2</td><td class="num">+1</td><td class="num">−1.911419493189</td><td class="num">+0.921776938635</td></tr><tr><td class="num">3</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.912818141394</td><td class="num">+0.945552466679</td></tr><tr><td class="num">4</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.967736783712</td><td class="num">+0.974670258793</td></tr><tr><td rowspan="4"><strong>gamma</strong> 30–45 Hz</td><td class="num">1</td><td class="num">+4.3727e−6</td><td class="num">+8.7454e−6</td><td class="num">+4.3727e−6</td><td class="num">−1.850908254664</td><td class="num">+0.910314497885</td><td class="num" rowspan="4">0.985383</td></tr><tr><td class="num">2</td><td class="num">+1</td><td class="num">+2</td><td class="num">+1</td><td class="num">−1.879212081147</td><td class="num">+0.922779916890</td></tr><tr><td class="num">3</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.882757890713</td><td class="num">+0.958287137011</td></tr><tr><td class="num">4</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.935026566058</td><td class="num">+0.970978718496</td></tr><tr><td rowspan="4"><strong>ERP</strong> 1–30 Hz</td><td class="num">1</td><td class="num">+5.4884e−5</td><td class="num">+1.0977e−4</td><td class="num">+5.4884e−5</td><td class="num">−1.694782045006</td><td class="num">+0.721923575262</td><td class="num" rowspan="4">0.997714</td></tr><tr><td class="num">2</td><td class="num">+1</td><td class="num">+2</td><td class="num">+1</td><td class="num">−1.841668596285</td><td class="num">+0.874296727149</td></tr><tr><td class="num">3</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.987859317972</td><td class="num">+0.987903456281</td></tr><tr><td class="num">4</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.995393995497</td><td class="num">+0.995434078889</td></tr><tr><td rowspan="4"><strong>broadband</strong> 1–45 Hz <span class="chip nomvar">no-MVAR</span></td><td class="num">1</td><td class="num">+2.6065e−4</td><td class="num">+5.2130e−4</td><td class="num">+2.6065e−4</td><td class="num">−1.545360238473</td><td class="num">+0.604418594537</td><td class="num" rowspan="4">0.997675</td></tr><tr><td class="num">2</td><td class="num">+1</td><td class="num">+2</td><td class="num">+1</td><td class="num">−1.743427078141</td><td class="num">+0.814633155853</td></tr><tr><td class="num">3</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.988049659385</td><td class="num">+0.988092053112</td></tr><tr><td class="num">4</td><td class="num">+1</td><td class="num">−2</td><td class="num">+1</td><td class="num">−1.995315182489</td><td class="num">+0.995355046695</td></tr></tbody></table></div>
+        <p class="meta">All 6 filters were generated with <code>butter(4, [lo, hi], btype="bandpass", output="sos")</code>. In every row, <code>a0 = 1</code>.</p></div>
+    </div>
+  </article>
+
+  <!-- STAGE 3 -->
+  <article class="stage panel">
+    <div class="stage-head"><span class="stage-num">3</span><h3>Feature units: 16 numbers per trial</h3><span class="chip both">both</span></div>
+    <p class="prose">The 16 features come from five kinds of unit. Every unit works on samples already sitting in a buffer, so each is a short loop of accumulates followed by one final calculation.</p>
+
+    <div class="sub">
+      <h3>3a · Band power + log <span class="chip both">both</span></h3>
+      <p class="prose"><strong>Plain:</strong> how strong one wave band is during one window. Used by 8 features, counting the two ratio features as built on top of it.</p>
+<pre>P = (1/N) · Σ y[n]²        over the window, y = band-filtered signal
+f = ln( max(P, 1e−12) )    natural log
+windows:  w0 = [1000, 1300)  w1 = [1300, 1600)   N = 300
+
+ratio features:  f_band_a − f_band_b   (same channel, same window)
+  Cz:w0:delta_over_gamma = f(Cz, delta, w0) − f(Cz, gamma, w0)
+  Cz:w0:beta_over_delta  = f(Cz, beta,  w0) − f(Cz, delta, w0)   (no-MVAR)
+  C4:w0:beta_over_delta  = f(C4, beta,  w0) − f(C4, delta, w0)   (no-MVAR)</pre>
+      <ul class="notes">
+        <li>Hardware: square-and-accumulate (one multiplier), then one log per power value. Logs per trial: 6 (fixed) or 8 (no-MVAR).</li>
+        <li>Compute log₂ with a leading-one detector plus a small lookup table. Then <code>ln x = 0.693147 · log₂ x</code>, and you can fold that constant into the weights. You can also skip the divide by N: <code>ln(Σ) − ln(300)</code> shifts every value by a constant, which can be folded into the quantizer's lower bound.</li>
+        <li>Measured range of P: 0.003 to 430 µV², about 18 bits of dynamic range before the log.</li>
+      </ul>
+    </div>
+
+    <div class="sub">
+      <h3>3b · ERP unit: the brain's "dip and bump" <span class="chip both">both</span></h3>
+      <p class="prose"><strong>Plain:</strong> about 0.2 s after a laser hit, the signal at Cz dips (N2) and then bumps up (P2). Bigger responses go with more pain. This unit measures 6 things about that shape, all on the Cz 1–30 Hz signal <code>e</code>.</p>
+<pre>base  = mean e[500 … 999]                 (500 samples, before the laser)
+e'    = e − base                          (baseline correction)
+
+N2    = min  e'[1150, 1300)               n2 = index of the FIRST minimum
+P2    = max  e'[n2+1, 1550)               searched only after the dip
+N2P2  = P2 − N2
+N2mean = mean e'[1150, 1250)              (100 samples)
+P2mean = mean e'[1250, 1450)              (200 samples)
+RMS    = sqrt( mean e'[1000, 1600)² )     (600 samples)</pre>
+      <ul class="notes">
+        <li>You don't need to subtract the baseline from every sample. Accumulate on the raw <code>e</code> and correct at the end. Min, max and means shift by <code>base</code>. For RMS, use <code>Σe'² = Σe² − 2·base·Σe + N·base²</code>.</li>
+        <li>That correction also means the unit can run during the reverse filter pass, which produces samples newest-first. Keep a running max of samples seen so far. When a new N2 minimum is found at sample <code>i</code>, the running max at that moment is exactly <code>max e'[i+1, 1550)</code>. Use <code>&lt;=</code> when updating the minimum, so the earliest minimum wins, as in numpy.</li>
+        <li>One square root per trial. Measured: |e'| ≤ 55 µV, and Σe² over 600 samples ≤ 3 × 10⁵ µV².</li>
+      </ul>
+    </div>
+
+    <div class="sub">
+      <h3>3c · Correlation between two electrodes <span class="chip both">both</span></h3>
+      <p class="prose"><strong>Plain:</strong> do two electrodes' slow waves move up and down together? The answer is +1 (perfectly together) through 0 down to −1 (opposite). Fixed uses C3–C4 and Cz–C3; no-MVAR uses C3–C4 only.</p>
+<pre>x, y = delta-filtered (1–4 Hz) signals of the two channels, samples [1000, 2000)
+r = Σ(x−x̄)(y−ȳ) / sqrt( Σ(x−x̄)² · Σ(y−ȳ)² )
+
+single pass, N = 1000:
+r = (N·Σxy − Σx·Σy) / sqrt( (N·Σx² − (Σx)²) · (N·Σy² − (Σy)²) )</pre>
+      <ul class="notes">
+        <li>Five accumulators, then one multiply, one square root and one divide per pair. The result doesn't depend on signal scale, so ADC gain doesn't matter here.</li>
+        <li>The single-pass form subtracts large, nearly equal numbers, so give the accumulators wide headroom (N = 1000 adds about 10 bits).</li>
+      </ul>
+    </div>
+
+    <div class="sub">
+      <h3>3d · Hjorth mobility <span class="chip nomvar">no-MVAR</span></h3>
+      <p class="prose"><strong>Plain:</strong> how fast the signal wiggles compared with how big it is. Computed once, on Cz.</p>
+<pre>b = Cz broadband (1–45 Hz) signal, samples [1000, 2000)    (1000 values)
+d[n] = b[n+1] − b[n]                                       (999 values)
+var(v) = (1/count) · Σ (v − mean v)²     population variance
+mobility = sqrt( var(d) / var(b) )</pre>
+      <ul class="notes">
+        <li>Single-pass sums for both variances, then one divide and one square root. The counts are 999 and 1000, and they don't cancel exactly. Keep them as written to match Python.</li>
+        <li>The value only ranges from about 0.03 to 0.09, so its weight is large (about 8.5). That is expected.</li>
+      </ul>
+    </div>
+
+    <div class="sub">
+      <h3>3e · MVAR band power <span class="chip fixed">fixed</span></h3>
+      <p class="prose"><strong>Plain:</strong> fits a small prediction model to all four electrodes at once, then reads the Cz delta and theta strength out of that model. It produces 2 features, and it is the only reason the fixed variant needs Fz.</p>
+<pre>1. Take samples [1000, 2000) of all 4 RAW channels (Fz, Cz, C3, C4), not band-filtered.
+2. Low-pass and keep every 4th sample: 81-tap Hamming FIR, cutoff 125 Hz,
+   centred (zero-phase), zero-padded at the segment edges   → 250 samples at 250 Hz.
+3. Subtract each channel's mean.
+4. Least-squares model of order 10 (each sample predicted from the last 10, all channels):
+     H = 40 × 240 matrix of lagged samples,  T = 4 × 240 targets
+     G = H·Hᵀ  (40 × 40),  G += 1e−6 · trace(G)/40 · I
+     solve G · X = H · Tᵀ   (40 × 4)  → coefficient matrices A1 … A10 (each 4 × 4)
+     Σ = residual covariance (4 × 4)
+5. For f = 1, 2, 3 Hz (delta) and 4, 5, 6, 7 Hz (theta):
+     A(f) = I − Σk Ak · e^(−j·2π·f·k / 250)      (4 × 4 complex)
+     S(f) = A(f)⁻¹ · Σ · (A(f)⁻¹)ᴴ               take the Cz diagonal entry
+6. feature = ln( mean of S_Cz(f) over the band's frequencies )</pre>
+      <ul class="notes">
+        <li>Cost per trial: about 190 k multiply-adds to build G, about 21 k for a 40 × 40 Cholesky solve, then 7 complex 4 × 4 inversions. It needs floating point or careful wide fixed point.</li>
+        <li>This is the block to drop if area or schedule is tight. If you keep it, a soft processor (MicroBlaze) or an HLS block is far quicker to get right than hand-written RTL.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- STAGE 4 -->
+  <article class="stage panel">
+    <div class="stage-head"><span class="stage-num">4</span><h3>8-bit quantizer</h3><span class="chip both">both</span></div>
+    <div class="trio">
+      <div><span class="band-label">What it does</span>
+        <p>Every feature has a known typical range, taken from the training data's 1st and 99th percentiles. This stage clips each feature to its range and maps it onto 0–255, so the classifier only has to multiply 8-bit numbers.</p></div>
+      <div><span class="band-label">Exact maths</span>
+<pre>q_i = round( clip( (x_i − lo_i) / (hi_i − lo_i), 0, 1 ) · 255 )      i = 1 … 16
+    = clamp( round( (x_i − lo_i) · s_i ), 0, 255 ),   s_i = 255 / (hi_i − lo_i)
+rounding: numpy rounds exact halves to the nearest EVEN integer (2.5 → 2, 3.5 → 4)</pre></div>
+      <div><span class="band-label">Hardware notes</span>
+        <ul class="notes">
+          <li>Per feature: one subtract, one multiply by a stored constant, round, clamp. Sixteen per trial.</li>
+          <li>15 of 16 features can be negative, so everything before this stage is signed. The output is unsigned 0–255.</li>
+          <li>Any constant you folded in step 3 (dropping ÷N, using log₂, dropping filter gain) moves <code>lo</code> and <code>hi</code> by the same transform. Update both bounds and nothing else changes.</li>
+          <li>Half-to-even rounding affects only exact ties, which are rare. Matching it keeps the golden-model comparison clean.</li>
+        </ul></div>
+    </div>
+  </article>
+
+  <!-- STAGE 5 -->
+  <article class="stage panel">
+    <div class="stage-head"><span class="stage-num">5</span><h3>Linear layer: three scores</h3><span class="chip both">both</span></div>
+    <div class="trio">
+      <div><span class="band-label">What it does</span>
+        <p>Each pain level has 16 weights and one bias. Its score is each 8-bit feature times its weight, added up, plus the bias.</p></div>
+      <div><span class="band-label">Exact maths</span>
+<pre>score_k = bq_k + Σ_i Wq[k][i] · q_i          k = 0 Low, 1 Moderate, 2 High
+                                            48 multiply-adds, 3 bias adds
+Weights for 8-bit inputs, derived from the exported float weights:
+    Wq[k][i] = W_eff[k][i] · (hi_i − lo_i) / 255
+    bq_k     = b_eff[k] + Σ_i W_eff[k][i] · lo_i</pre></div>
+      <div><span class="band-label">Hardware notes</span>
+        <ul class="notes">
+          <li>One MAC unit looping 48 times is plenty, or 3 MACs running 16 cycles each.</li>
+          <li><strong>The weights are still floating point.</strong> Wq ranges from about 10⁻⁵ to 3 × 10⁻³ in the fixed variant. Multiply every Wq and bq by the same power of two before rounding to integers. A shared scale never changes which score is biggest. Pick the bit width with the golden model.</li>
+          <li><strong>Make the weights, biases and quantizer bounds loadable</strong> (registers or BRAM initialized from a file), not hard-coded. They will change if the model is retrained (see the reference-electrode risk below). With loadable values, retraining needs no RTL change.</li>
+          <li>Optional per-user calibration adds 3 numbers to the biases after a short setup session. Writable bias registers are all it needs.</li>
+        </ul></div>
+    </div>
+  </article>
+
+  <!-- STAGE 6 -->
+  <article class="stage panel">
+    <div class="stage-head"><span class="stage-num">6</span><h3>Decision</h3><span class="chip both">both</span></div>
+    <div class="trio">
+      <div><span class="band-label">Exact maths</span>
+<pre>class = index of the largest score          (ties go to the LOWER index, as numpy argmax)
+  0 = Low       rating below 4
+  1 = Moderate  rating 4 to below 7
+  2 = High      rating 7 or above
+
+Severe-pain model (yes/no): its "no" row is all zeros, so only one score exists.
+  severe = (s > 0),   s = bq_1 + Σ_i Wq[1][i] · q_i    (s = 0 → not severe)</pre></div>
+      <div><span class="band-label">Hardware notes</span>
+        <ul class="notes">
+          <li>Two comparators and a 2-bit output register.</li>
+          <li>If the device should also offer the severe yes/no output, it is a second set of 16 weights plus 1 bias, using the same MAC and the same features. Its weights are in the JSON under <code>severe__fixed</code> and <code>severe__no_mvar</code>.</li>
+        </ul></div>
+    </div>
+  </article>
+</section>
+
+<section class="stack" aria-labelledby="s-weights">
+  <h2 id="s-weights">Feature lists, bounds and weights</h2>
+  <p class="prose">The feature order below is the order the weights expect, and it differs between the two variants. "W_eff" weights apply to full-precision feature values. "Wq" weights apply to the 8-bit codes, which is what the RTL stores. Both come from <code>deployment_model.json</code>; Wq and bq are derived from it by the formula in step 5.</p>
+
+  <h3><span class="chip nomvar">no-MVAR</span> three classes (recommended)</h3>
+  <div class="table-wrap"><table><thead><tr><th class="num">#</th><th>Feature (JSON name)</th><th>Meaning</th><th class="num">lo</th><th class="num">hi</th><th class="num">W_eff Low</th><th class="num">W_eff Mod</th><th class="num">W_eff High</th><th class="num">Wq Low</th><th class="num">Wq Mod</th><th class="num">Wq High</th></tr></thead><tbody><tr><td class="num">1</td><td class="name">Cz:delta:w0:log_absolute</td><td>delta power, Cz, 0–0.3 s, ln</td><td class="num">−1.1422</td><td class="num">+5.0947</td><td class="num">−0.124314</td><td class="num">−0.053006</td><td class="num">+0.177320</td><td class="num">−3.0405e−3</td><td class="num">−1.2964e−3</td><td class="num">+4.3370e−3</td></tr><tr><td class="num">2</td><td class="name">Cz:erp_erp_rms</td><td>ERP RMS, 0–0.6 s</td><td class="num">+2.0589</td><td class="num">+15.2422</td><td class="num">+0.025950</td><td class="num">−0.018418</td><td class="num">−0.007532</td><td class="num">+1.3416e−3</td><td class="num">−9.5222e−4</td><td class="num">−3.8938e−4</td></tr><tr><td class="num">3</td><td class="name">Cz:theta:w0:log_absolute</td><td>theta power, Cz, 0–0.3 s, ln</td><td class="num">−1.4983</td><td class="num">+4.5246</td><td class="num">−0.047003</td><td class="num">−0.041742</td><td class="num">+0.088745</td><td class="num">−1.1102e−3</td><td class="num">−9.8591e−4</td><td class="num">+2.0961e−3</td></tr><tr><td class="num">4</td><td class="name">C3-C4:delta:coupling</td><td>delta correlation C3-C4</td><td class="num">−0.7223</td><td class="num">+0.9580</td><td class="num">−0.227931</td><td class="num">+0.009556</td><td class="num">+0.218374</td><td class="num">−1.5019e−3</td><td class="num">+6.2972e−5</td><td class="num">+1.4390e−3</td></tr><tr><td class="num">5</td><td class="name">Cz:erp_p2_amplitude</td><td>P2 bump peak</td><td class="num">+1.8769</td><td class="num">+31.2022</td><td class="num">−0.010297</td><td class="num">+0.008801</td><td class="num">+0.001496</td><td class="num">−1.1841e−3</td><td class="num">+1.0121e−3</td><td class="num">+1.7204e−4</td></tr><tr><td class="num">6</td><td class="name">Cz:erp_n2p2_amplitude</td><td>P2 − N2 (dip-to-bump size)</td><td class="num">+3.7897</td><td class="num">+68.5891</td><td class="num">−0.004973</td><td class="num">+0.003817</td><td class="num">+0.001156</td><td class="num">−1.2638e−3</td><td class="num">+9.7007e−4</td><td class="num">+2.9376e−4</td></tr><tr><td class="num">7</td><td class="name">Cz:erp_n2_amplitude</td><td>N2 dip peak (negative)</td><td class="num">−43.2587</td><td class="num">+1.7719</td><td class="num">+0.006894</td><td class="num">−0.004916</td><td class="num">−0.001978</td><td class="num">+1.2174e−3</td><td class="num">−8.6811e−4</td><td class="num">−3.4932e−4</td></tr><tr><td class="num">8</td><td class="name">C3:delta:w0:log_absolute</td><td>delta power, C3, 0–0.3 s, ln</td><td class="num">−1.8514</td><td class="num">+3.9759</td><td class="num">−0.046650</td><td class="num">−0.017077</td><td class="num">+0.063727</td><td class="num">−1.0660e−3</td><td class="num">−3.9026e−4</td><td class="num">+1.4563e−3</td></tr><tr><td class="num">9</td><td class="name">Cz:w0:delta_over_gamma</td><td>ln delta − ln gamma, Cz, 0–0.3 s</td><td class="num">+0.7818</td><td class="num">+8.1646</td><td class="num">−0.012454</td><td class="num">+0.010572</td><td class="num">+0.001881</td><td class="num">−3.6056e−4</td><td class="num">+3.0609e−4</td><td class="num">+5.4473e−5</td></tr><tr><td class="num">10</td><td class="name">Cz:delta:w1:log_absolute</td><td>delta power, Cz, 0.3–0.6 s, ln</td><td class="num">−0.8813</td><td class="num">+5.1150</td><td class="num">−0.000617</td><td class="num">+0.002120</td><td class="num">−0.001503</td><td class="num">−1.4506e−5</td><td class="num">+4.9845e−5</td><td class="num">−3.5339e−5</td></tr><tr><td class="num">11</td><td class="name">C4:delta:w0:log_absolute</td><td>delta power, C4, 0–0.3 s, ln</td><td class="num">−1.7696</td><td class="num">+4.1740</td><td class="num">+0.048500</td><td class="num">−0.063799</td><td class="num">+0.015299</td><td class="num">+1.1304e−3</td><td class="num">−1.4870e−3</td><td class="num">+3.5659e−4</td></tr><tr><td class="num">12</td><td class="name">C4:w0:beta_over_delta</td><td>ln beta − ln delta, C4, 0–0.3 s</td><td class="num">−3.7010</td><td class="num">+2.6928</td><td class="num">+0.091977</td><td class="num">−0.057056</td><td class="num">−0.034921</td><td class="num">+2.3062e−3</td><td class="num">−1.4306e−3</td><td class="num">−8.7558e−4</td></tr><tr><td class="num">13</td><td class="name">Cz:erp_p2_window_mean</td><td>ERP mean, 0.25–0.45 s</td><td class="num">−5.9172</td><td class="num">+12.8295</td><td class="num">−0.024415</td><td class="num">−0.012375</td><td class="num">+0.036790</td><td class="num">−1.7949e−3</td><td class="num">−9.0977e−4</td><td class="num">+2.7046e−3</td></tr><tr><td class="num">14</td><td class="name">Cz:erp_n2_window_mean</td><td>ERP mean, 0.15–0.25 s</td><td class="num">−23.2932</td><td class="num">+11.7204</td><td class="num">−0.010118</td><td class="num">−0.004866</td><td class="num">+0.014983</td><td class="num">−1.3892e−3</td><td class="num">−6.6808e−4</td><td class="num">+2.0573e−3</td></tr><tr><td class="num">15</td><td class="name">Cz:w0:beta_over_delta</td><td>ln beta − ln delta, Cz, 0–0.3 s</td><td class="num">−4.3667</td><td class="num">+1.9304</td><td class="num">−0.079370</td><td class="num">−0.004010</td><td class="num">+0.083380</td><td class="num">−1.9600e−3</td><td class="num">−9.9022e−5</td><td class="num">+2.0590e−3</td></tr><tr><td class="num">16</td><td class="name">Cz:hjorth_mobility</td><td>Hjorth mobility, Cz, 0–1.0 s</td><td class="num">+0.0297</td><td class="num">+0.0910</td><td class="num">+8.477138</td><td class="num">−3.630961</td><td class="num">−4.846177</td><td class="num">+2.0362e−3</td><td class="num">−8.7216e−4</td><td class="num">−1.1641e−3</td></tr><tr class="bias"><td></td><td class="name">bias</td><td>added to each score</td><td></td><td></td><td class="num">+0.119143</td><td class="num">+0.346652</td><td class="num">−0.465795</td><td class="num">+0.842650</td><td class="num">+1.126859</td><td class="num">−1.969509</td></tr></tbody></table><p class="meta" style="padding: 8px 10px;">Validation: 0.4386 full precision, 0.4385 with 8-bit inputs (exporter's check). Bias row: b_eff under W_eff, bq under Wq.</p></div>
+
+  <h3><span class="chip fixed">fixed</span> three classes</h3>
+  <div class="table-wrap"><table><thead><tr><th class="num">#</th><th>Feature (JSON name)</th><th>Meaning</th><th class="num">lo</th><th class="num">hi</th><th class="num">W_eff Low</th><th class="num">W_eff Mod</th><th class="num">W_eff High</th><th class="num">Wq Low</th><th class="num">Wq Mod</th><th class="num">Wq High</th></tr></thead><tbody><tr><td class="num">1</td><td class="name">Cz:delta:w0:log_absolute</td><td>delta power, Cz, 0–0.3 s, ln</td><td class="num">−1.1422</td><td class="num">+5.0947</td><td class="num">−0.032143</td><td class="num">−0.055807</td><td class="num">+0.087950</td><td class="num">−7.8616e−4</td><td class="num">−1.3650e−3</td><td class="num">+2.1511e−3</td></tr><tr><td class="num">2</td><td class="name">Cz:erp_erp_rms</td><td>ERP RMS, 0–0.6 s</td><td class="num">+2.0589</td><td class="num">+15.2422</td><td class="num">+0.025835</td><td class="num">−0.025626</td><td class="num">−0.000209</td><td class="num">+1.3357e−3</td><td class="num">−1.3249e−3</td><td class="num">−1.0804e−5</td></tr><tr><td class="num">3</td><td class="name">Cz:theta:w0:log_absolute</td><td>theta power, Cz, 0–0.3 s, ln</td><td class="num">−1.4983</td><td class="num">+4.5246</td><td class="num">−0.056986</td><td class="num">−0.046723</td><td class="num">+0.103709</td><td class="num">−1.3460e−3</td><td class="num">−1.1036e−3</td><td class="num">+2.4495e−3</td></tr><tr><td class="num">4</td><td class="name">Cz:erp_n2p2_amplitude</td><td>P2 − N2 (dip-to-bump size)</td><td class="num">+3.7897</td><td class="num">+68.5891</td><td class="num">−0.004128</td><td class="num">+0.002886</td><td class="num">+0.001242</td><td class="num">−1.0490e−3</td><td class="num">+7.3342e−4</td><td class="num">+3.1559e−4</td></tr><tr><td class="num">5</td><td class="name">C3-C4:delta:coupling</td><td>delta correlation C3-C4</td><td class="num">−0.7223</td><td class="num">+0.9580</td><td class="num">−0.207528</td><td class="num">+0.085505</td><td class="num">+0.122023</td><td class="num">−1.3675e−3</td><td class="num">+5.6343e−4</td><td class="num">+8.0406e−4</td></tr><tr><td class="num">6</td><td class="name">Cz:erp_p2_amplitude</td><td>P2 bump peak</td><td class="num">+1.8769</td><td class="num">+31.2022</td><td class="num">−0.007412</td><td class="num">+0.006872</td><td class="num">+0.000540</td><td class="num">−8.5240e−4</td><td class="num">+7.9029e−4</td><td class="num">+6.2101e−5</td></tr><tr><td class="num">7</td><td class="name">Cz:erp_n2_amplitude</td><td>N2 dip peak (negative)</td><td class="num">−43.2587</td><td class="num">+1.7719</td><td class="num">+0.006197</td><td class="num">−0.003625</td><td class="num">−0.002572</td><td class="num">+1.0944e−3</td><td class="num">−6.4022e−4</td><td class="num">−4.5416e−4</td></tr><tr><td class="num">8</td><td class="name">Cz:w0:delta_over_gamma</td><td>ln delta − ln gamma, Cz, 0–0.3 s</td><td class="num">+0.7818</td><td class="num">+8.1646</td><td class="num">−0.044127</td><td class="num">+0.035031</td><td class="num">+0.009097</td><td class="num">−1.2776e−3</td><td class="num">+1.0142e−3</td><td class="num">+2.6337e−4</td></tr><tr><td class="num">9</td><td class="name">mvar:parametric_power:theta:Cz</td><td>MVAR theta power, Cz</td><td class="num">+2.5234</td><td class="num">+6.7881</td><td class="num">−0.038117</td><td class="num">+0.056890</td><td class="num">−0.018773</td><td class="num">−6.3748e−4</td><td class="num">+9.5145e−4</td><td class="num">−3.1397e−4</td></tr><tr><td class="num">10</td><td class="name">C4:delta:w0:log_absolute</td><td>delta power, C4, 0–0.3 s, ln</td><td class="num">−1.7696</td><td class="num">+4.1740</td><td class="num">−0.040662</td><td class="num">−0.013382</td><td class="num">+0.054045</td><td class="num">−9.4775e−4</td><td class="num">−3.1192e−4</td><td class="num">+1.2597e−3</td></tr><tr><td class="num">11</td><td class="name">mvar:parametric_power:delta:Cz</td><td>MVAR delta power, Cz</td><td class="num">+3.1034</td><td class="num">+7.7420</td><td class="num">−0.019206</td><td class="num">−0.022709</td><td class="num">+0.041914</td><td class="num">−3.4936e−4</td><td class="num">−4.1308e−4</td><td class="num">+7.6244e−4</td></tr><tr><td class="num">12</td><td class="name">Cz:erp_p2_window_mean</td><td>ERP mean, 0.25–0.45 s</td><td class="num">−5.9172</td><td class="num">+12.8295</td><td class="num">−0.026787</td><td class="num">−0.010020</td><td class="num">+0.036806</td><td class="num">−1.9693e−3</td><td class="num">−7.3661e−4</td><td class="num">+2.7059e−3</td></tr><tr><td class="num">13</td><td class="name">Cz:delta:w1:log_absolute</td><td>delta power, Cz, 0.3–0.6 s, ln</td><td class="num">−0.8813</td><td class="num">+5.1150</td><td class="num">−0.024301</td><td class="num">+0.024759</td><td class="num">−0.000458</td><td class="num">−5.7142e−4</td><td class="num">+5.8219e−4</td><td class="num">−1.0768e−5</td></tr><tr><td class="num">14</td><td class="name">C3:delta:w0:log_absolute</td><td>delta power, C3, 0–0.3 s, ln</td><td class="num">−1.8514</td><td class="num">+3.9759</td><td class="num">−0.039736</td><td class="num">−0.014457</td><td class="num">+0.054192</td><td class="num">−9.0805e−4</td><td class="num">−3.3036e−4</td><td class="num">+1.2384e−3</td></tr><tr><td class="num">15</td><td class="name">Cz-C3:delta:coupling</td><td>delta correlation Cz-C3</td><td class="num">−0.3408</td><td class="num">+0.9798</td><td class="num">−0.163752</td><td class="num">−0.110338</td><td class="num">+0.274090</td><td class="num">−8.4808e−4</td><td class="num">−5.7145e−4</td><td class="num">+1.4195e−3</td></tr><tr><td class="num">16</td><td class="name">Cz:erp_n2_window_mean</td><td>ERP mean, 0.15–0.25 s</td><td class="num">−23.2932</td><td class="num">+11.7204</td><td class="num">−0.009120</td><td class="num">−0.006874</td><td class="num">+0.015994</td><td class="num">−1.2523e−3</td><td class="num">−9.4387e−4</td><td class="num">+2.1961e−3</td></tr><tr class="bias"><td></td><td class="name">bias</td><td>added to each score</td><td></td><td></td><td class="num">+1.082443</td><td class="num">−0.034831</td><td class="num">−1.047612</td><td class="num">+1.513386</td><td class="num">+0.551174</td><td class="num">−2.064561</td></tr></tbody></table><p class="meta" style="padding: 8px 10px;">Validation: 0.4459 full precision, 0.4464 with 8-bit inputs (exporter's check). Bias row: b_eff under W_eff, bq under Wq.</p></div>
+</section>
+
+<section class="stack" aria-labelledby="s-cost">
+  <h2 id="s-cost">Work per trial</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Item</th><th class="num">No-MVAR</th><th class="num">Fixed</th></tr></thead>
+    <tbody>
+      <tr><td>Electrodes</td><td class="num">3</td><td class="num">4</td></tr>
+      <tr><td>Epoch buffer (samples)</td><td class="num">9,000</td><td class="num">12,000</td></tr>
+      <tr><td>Filter runs (forward + reverse)</td><td class="num">9</td><td class="num">6</td></tr>
+      <tr><td>Filter multiplies, about</td><td class="num">0.50 M</td><td class="num">0.33 M</td></tr>
+      <tr><td>Logarithms</td><td class="num">8</td><td class="num">8</td></tr>
+      <tr><td>Square roots</td><td class="num">3</td><td class="num">3</td></tr>
+      <tr><td>Divides</td><td class="num">2</td><td class="num">2</td></tr>
+      <tr><td>Matrix solve (40 × 40) and complex 4 × 4 inverses</td><td class="num">none</td><td class="num">1 + 7</td></tr>
+      <tr><td>Classifier multiply-adds</td><td class="num">48</td><td class="num">48</td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta">Fixed's 8 logs are 6 from band power plus 2 from MVAR. Its 2 divides are the two correlations. No-MVAR's are one correlation plus Hjorth.</p>
+</section>
+
+<section class="stack" aria-labelledby="s-risks">
+  <h2 id="s-risks">Gaps between the training data and a real headset</h2>
+  <div class="callout risk">
+    <strong>1. Reference electrode: the biggest open risk.</strong>
+    <p>Every training recording was re-referenced to the average of 32–64 electrodes (checked in the file headers of all 9 datasets). A 3- or 4-electrode headset cannot compute that average. The software side has to retrain with a reference the headset can actually produce, and that will change the weights. The RTL is unaffected as long as weights and bounds are loadable (step 5).</p>
+  </div>
+  <div class="callout risk">
+    <strong>2. Artifact cleaning.</strong>
+    <p>The training data had blinks and muscle noise removed by ICA before any feature was computed. The device has none of that, so a simple trial-rejection rule (for example, an amplitude limit) needs to be specified and added, either in the capture stage or as a "no answer" flag.</p>
+  </div>
+  <div class="callout risk">
+    <strong>3. Units and timing.</strong>
+    <p>Features assume µV and a laser onset accurate to about a millisecond. The ADC scale and the trigger path both need to be pinned down early.</p>
+  </div>
+</section>
+
+<section class="stack" aria-labelledby="s-next">
+  <h2 id="s-next">Suggested build and test order</h2>
+  <ol class="steps panel">
+    <li><strong>Golden model first.</strong> Write a Python model that does the RTL's fixed-point arithmetic exactly, stage by stage, and check its class output against the float model on the validation set.</li>
+    <li><strong>Test vectors from real trials.</strong> For a few hundred validation trials, dump the raw epoch, the filter outputs, the 16 features, the 16 codes, the 3 scores and the class. The testbench compares each stage separately, so a mismatch points at one block.</li>
+    <li><strong>Build back to front.</strong> Linear layer and argmax first (smallest, and testable from the dumped codes), then the quantizer, then the feature units, then the filter engine and buffer.</li>
+    <li><strong>Replace the old RTL.</strong> The current <code>RTL/</code> modules (alpha/beta/theta thresholds and <code>sigmoid_cell.v</code>) belong to the old designs and don't match this model.</li>
+  </ol>
+</section>
+
+</main>
+</body>
+</html>
