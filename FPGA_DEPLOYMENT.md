@@ -2,6 +2,12 @@
 
 Everything the hardware build needs, and where each piece comes from.
 
+> **Status:** the `three_class__no_mvar` model is now implemented as synthesizable RTL
+> in [RTL/](RTL/) (3 channels: Cz, C3, C4, so no Fz and no AR solver). See
+> [RTL_REPORT.md](RTL_REPORT.md). Note that the "Fz is never used" remark below is only
+> true for the no-MVAR list: the fixed list's MVAR columns fit a 4-channel model that
+> includes Fz.
+
 Read this instead of [LSTM_HARDWARE_REFERENCE.md](LSTM_HARDWARE_REFERENCE.md). That
 document is accurate, but it specifies the LSTM prototype, which scored **0.4479** and
 was superseded. Nothing in the current result chain uses it.

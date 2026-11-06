@@ -9,3 +9,14 @@ __pycache__/
 #       --out outputs/rich_full/rich_all9_features.npz
 outputs/**/*.npz
 outputs/**/*.pt
+
+# RTL simulation outputs (vectors in sim/*.mem are kept; ROM copies come from RTL/mem)
+sim/*.vvp
+sim/*.log
+sim/*.vcd
+sim/coef.mem
+sim/thresh.mem
+sim/weights.mem
+sim/bias.mem
+RTL/*.rpt
+RTL/.Xil/

@@ -1,0 +1,10 @@
+0: ds005285 sub-001 epoch 1: class 2
+1: ds005285 sub-001 epoch 6: class 1
+2: ds005473 sub-011 epoch 1: class 2
+3: ds005473 sub-011 epoch 2: class 0
+4: ds005293 sub-043 epoch 1: class 2
+5: ds005293 sub-043 epoch 2: class 1
+6: ds005280 sub-004 epoch 1: class 2
+7: ds005280 sub-004 epoch 3: class 0
+8: stress: 200 uV noise + 490 uV square burst (input/filters saturate)
+9: all-zero epoch

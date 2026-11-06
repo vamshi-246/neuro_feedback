@@ -1,0 +1,29 @@
+{
+  "trials": 5722,
+  "subjects": 136,
+  "dataset_macro_float_path": 0.4384028364271686,
+  "dataset_macro_hardware": 0.4384028364271686,
+  "class_agreement": 1.0,
+  "codes_identical_fraction": 0.9980448269835722,
+  "codes_max_abs_diff": 1,
+  "codes_off_by_one_fraction": 0.0019551730164278224,
+  "per_feature_mismatch_fraction": [
+    0.00122,
+    0.0007,
+    0.00052,
+    0.0021,
+    0.00315,
+    0.00175,
+    0.00157,
+    0.00192,
+    0.00594,
+    0.0014,
+    0.00175,
+    0.0028,
+    0.00297,
+    0.0014,
+    0.00087,
+    0.00122
+  ],
+  "float_codes_match_archive": 1.0
+}
